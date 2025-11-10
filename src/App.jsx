@@ -1,17 +1,17 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black to-gray-900">
+    <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800 shadow-2xl">
+      <nav className="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-gray-800 to-black rounded-xl flex items-center justify-center shadow-2xl border border-gray-700">
-                <span className="text-white font-bold text-lg">SI</span>
+              <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold">SI</span>
               </div>
               <div>
                 <h1 className="text-xl font-bold text-white">Swarm Intelligence</h1>
@@ -21,21 +21,20 @@ function App() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              <a href="#features" className="text-gray-400 hover:text-white transition-colors font-medium">Features</a>
-              <a href="#how-it-works" className="text-gray-400 hover:text-white transition-colors font-medium">How it Works</a>
-              <a href="#use-cases" className="text-gray-400 hover:text-white transition-colors font-medium">Use Cases</a>
-              <a href="#getting-started" className="text-gray-400 hover:text-white transition-colors font-medium">Get Started</a>
+              <a href="#overview" className="text-gray-400 hover:text-white transition-colors">Vue d'Ensemble</a>
+              <a href="#architecture" className="text-gray-400 hover:text-white transition-colors">Architecture</a>
+              <a href="#quickstart" className="text-gray-400 hover:text-white transition-colors">Démarrage</a>
+              <a href="#use-cases" className="text-gray-400 hover:text-white transition-colors">Cas d'Usage</a>
+              <a href="#resources" className="text-gray-400 hover:text-white transition-colors">Ressources</a>
               <button
                 onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
-                className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors font-medium shadow-2xl hover:shadow-2xl mr-4"
+                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
               >
-                <span className="flex items-center gap-2">
-                  💬 Discord
-                </span>
+                Discord
               </button>
               <button
                 onClick={() => window.open('https://www.npmjs.com/package/@anthropic-ai/claude-code', '_blank')}
-                className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium shadow-2xl hover:shadow-2xl border border-gray-800"
+                className="bg-black text-white px-4 py-2 rounded-lg border border-gray-700 hover:bg-gray-900 transition-colors"
               >
                 Launch Swarm
               </button>
@@ -44,7 +43,7 @@ function App() {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg text-gray-400 hover:bg-gray-900"
+              className="md:hidden p-2 rounded-lg text-gray-400 hover:bg-gray-800"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -55,23 +54,22 @@ function App() {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-gray-900 border-t border-gray-800 shadow-2xl">
+          <div className="md:hidden bg-gray-900 border-t border-gray-800">
             <div className="px-4 py-2 space-y-1">
-              <a href="#features" className="block px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white">Features</a>
-              <a href="#how-it-works" className="block px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white">How it Works</a>
-              <a href="#use-cases" className="block px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white">Use Cases</a>
-              <a href="#getting-started" className="block px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white">Get Started</a>
+              <a href="#overview" className="block px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white">Vue d'Ensemble</a>
+              <a href="#architecture" className="block px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white">Architecture</a>
+              <a href="#quickstart" className="block px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white">Démarrage</a>
+              <a href="#use-cases" className="block px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white">Cas d'Usage</a>
+              <a href="#resources" className="block px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white">Ressources</a>
               <button
                 onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
-                className="w-full bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 font-medium shadow-xl mb-2"
+                className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 mb-2"
               >
-                <span className="flex items-center justify-center gap-2">
-                  💬 Discord
-                </span>
+                Discord
               </button>
               <button
                 onClick={() => window.open('https://www.npmjs.com/package/@anthropic-ai/claude-code', '_blank')}
-                className="w-full bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 font-medium shadow-xl border border-gray-800"
+                className="w-full bg-black text-white px-4 py-2 rounded-lg border border-gray-700 hover:bg-gray-900"
               >
                 Launch Swarm
               </button>
@@ -81,484 +79,443 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Animated background effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-indigo-900/20 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
-
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          {/* Hype badge */}
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 text-purple-300 rounded-full text-sm font-bold mb-8 border border-purple-500/30 shadow-2xl backdrop-blur-sm animate-bounce">
-            <div className="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
-            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              🔥 REJOIGNEZ LA RÉVOLUTION - 1,247+ MEMBRES ACTIFS
-            </span>
-            <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-full text-sm text-gray-300 mb-8">
+            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+            <span>Construire et Déployer Une Armée d'Agents en 20 Minutes</span>
           </div>
 
-          {/* Main headline with emoji effects */}
-          <h2 className="text-5xl sm:text-6xl md:text-8xl font-black text-white mb-6 leading-tight">
-            <span className="block mb-2 animate-pulse">⚡</span>
-            L'ÈRE DES
-            <br />
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-pulse drop-shadow-2xl">
-              AGENTS IA
-            </span>
-            <br />
-            <span className="text-3xl md:text-4xl text-gray-300 font-bold">
-              EST ARRIVÉE 🚀
-            </span>
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Swarm
+            <span className="text-blue-400"> Intelligence</span>
           </h2>
 
-          {/* Compelling description */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed font-medium">
-            <span className="text-purple-400 font-bold">Imaginez:</span> Une armée d'agents IA qui travaillent
-            <span className="text-blue-400 font-bold"> 24/7</span> pour vous.
-            <br />
-            <span className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
-            10x PLUS RAPIDE • 100x PLUS PUISSANT
-            </span>
+          <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
+            L'IA Multi-Agent qui Révolutionne Votre Productivité.
+            Orchestrez 10+ agents spécialisés travaillant de concert pour accomplir n'importe quelle mission complexe.
           </p>
 
-          {/* Free Service & Support Info */}
-          <div className="mb-8">
-            <div className="inline-flex items-center gap-4 px-6 py-3 bg-gradient-to-r from-green-600/20 to-emerald-600/20 text-green-300 rounded-full text-sm font-bold border border-green-500/30 shadow-2xl backdrop-blur-sm">
-              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-green-400 font-bold text-lg">💎 100% GRATUIT • SUPPORT TECHNIQUE 24/7</span>
-              <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
-            </div>
-          </div>
-
-          {/* Social proof stats */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
-            <div className="group">
-              <div className="text-3xl font-black text-purple-400 group-hover:scale-110 transition-transform">
-                🔥 2.8K+
-              </div>
-              <div className="text-gray-400 font-medium">Discord Members</div>
-            </div>
-            <div className="group">
-              <div className="text-3xl font-black text-blue-400 group-hover:scale-110 transition-transform">
-                ⚡ 50K+
-              </div>
-              <div className="text-gray-400 font-medium">Tasks Automated</div>
-            </div>
-            <div className="group">
-              <div className="text-3xl font-black text-green-400 group-hover:scale-110 transition-transform">
-                🏆 99.9%
-              </div>
-              <div className="text-gray-400 font-medium">Success Rate</div>
-            </div>
-          </div>
-
-          {/* AI Models Support */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">
-              Modèles IA Supportés
-            </h3>
-            <div className="flex flex-wrap justify-center gap-8">
-              <div className="group bg-gray-900/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 text-center max-w-xs">
-                <div className="relative mb-4">
-                  <img
-                    src="/asset/image.png"
-                    alt="GLM 4.6 Model"
-                    className="w-20 h-20 mx-auto rounded-lg object-cover shadow-2xl"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.nextElementSibling.style.display = 'flex';
-                    }}
-                  />
-                  <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-2xl" style={{display: 'none'}}>
-                    GLM
-                  </div>
-                </div>
-                <h4 className="text-xl font-bold text-white mb-2">GLM 4.6</h4>
-                <p className="text-gray-400 text-sm">Modèle de pointe pour analyses avancées</p>
-              </div>
-              <div className="group bg-gray-900/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 text-center max-w-xs">
-                <div className="relative mb-4">
-                  <img
-                    src="/asset/IMG_2210.png"
-                    alt="Minimax M2 Model"
-                    className="w-20 h-20 mx-auto rounded-lg object-cover shadow-2xl"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.nextElementSibling.style.display = 'flex';
-                    }}
-                  />
-                  <div className="w-20 h-20 mx-auto bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-2xl" style={{display: 'none'}}>
-                    MM
-                  </div>
-                </div>
-                <h4 className="text-xl font-bold text-white mb-2">Minimax M2</h4>
-                <p className="text-gray-400 text-sm">Performance maximale pour tâches complexes</p>
-              </div>
-            </div>
-          </div>
-
-          {/* IRRESISTIBLE Discord CTA */}
-          <div className="mb-8">
-            <div className="inline-block p-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl animate-pulse">
-              <button
-                onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
-                className="relative bg-black text-white px-12 py-6 rounded-2xl font-black text-xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-purple-500/50 border-2 border-transparent"
-              >
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-bounce">
-                  HOT
-                </span>
-                <span className="flex items-center gap-3">
-                  <span className="text-3xl">💬</span>
-                  <span>REJOINDRE LE DISCORD</span>
-                  <span className="text-3xl animate-pulse">→</span>
-                </span>
-                <div className="text-sm text-gray-400 mt-1 font-normal">
-                  Accès immédiat • Communauté exclusive • Support 24/7
-                </div>
-              </button>
-            </div>
-            <div className="text-center mt-4 text-gray-500 animate-pulse">
-              ⚠️ Places limitées - {Math.floor(Math.random() * 50 + 20)} places restantes
-            </div>
-          </div>
-
-          {/* Secondary CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button
-              onClick={() => window.open('#getting-started', '_self')}
-              className="bg-gray-900/80 text-white px-8 py-4 rounded-xl hover:bg-gray-800 transition-all font-bold text-lg shadow-2xl backdrop-blur-sm border border-gray-700"
+              onClick={() => window.open('#quickstart', '_self')}
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
-              📖 Voir Comment Ça Marche
+              Commencer (5 min)
             </button>
             <button
               onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE', '_blank')}
-              className="bg-gray-900/80 text-white px-8 py-4 rounded-xl hover:bg-gray-800 transition-all font-bold text-lg shadow-2xl backdrop-blur-sm border border-gray-700"
+              className="bg-gray-800 text-white px-8 py-3 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors font-medium"
             >
-              ⭐ GitHub
+              Documentation
             </button>
           </div>
-        </div>
-      </section>
 
-      {/* Key Benefits */}
-      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50 relative">
-        {/* Background effects */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 to-blue-900/10"></div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-12">
-            <h3 className="text-4xl md:text-5xl font-black text-white mb-4">
-              <span className="hype-gradient">POURQUOI NOUS SOMMES</span>
-            </h3>
-            <div className="text-2xl font-bold text-purple-400 animate-pulse">
-              🚀 LA RÉVOLUTION DE L'AUTOMATION 🚀
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: "⚡",
-                title: "VITESSE FOU",
-                description: "Agents travaillant en parallèle 24/7",
-                benefit: "1000X PLUS RAPIDE",
-                gradient: "from-yellow-500 to-orange-500"
-              },
-              {
-                icon: "🧠",
-                title: "IA ULTRA INTELLIGENTE",
-                description: "Apprentissage et adaptation en temps réel",
-                benefit: "150+ QI MOYEN",
-                gradient: "from-purple-500 to-pink-500"
-              },
-              {
-                icon: "💎",
-                title: "RÉSULTATS GARANTIS",
-                description: "Précision chirurgicale sur toutes tâches",
-                benefit: "99.97% PRÉCISION",
-                gradient: "from-blue-500 to-cyan-500"
-              },
-              {
-                icon: "🔥",
-                title: "CROISSANCE EXPONENTIELLE",
-                description: "Scaling infini sans limites",
-                benefit: "∞ POTENTIEL",
-                gradient: "from-red-500 to-orange-500"
-              },
-              {
-                icon: "👑",
-                title: "DOMINATION MARCHÉ",
-                description: "Avantage concurrentiel absolu",
-                benefit: "#1 CHOIX",
-                gradient: "from-green-500 to-emerald-500"
-              },
-              {
-                icon: "🌟",
-                title: "FUTUR MAINTENANT",
-                description: "Technologie de demain disponible aujourd'hui",
-                benefit: "2040 AVANCÉ",
-                gradient: "from-indigo-500 to-purple-500"
-              }
-            ].map((benefit, index) => (
-              <div key={index} className={`group relative bg-gradient-to-br ${benefit.gradient} p-1 rounded-2xl hover:scale-105 transition-all duration-300 animate-float`} style={{animationDelay: `${index * 0.2}s`}}>
-                <div className="bg-gray-900 p-6 rounded-xl h-full">
-                  <div className="text-5xl mb-3 animate-bounce">{benefit.icon}</div>
-                  <h4 className="text-xl font-black text-white mb-2">{benefit.title}</h4>
-                  <p className="text-gray-300 text-sm mb-3 leading-relaxed">{benefit.description}</p>
-                  <div className={`bg-gradient-to-r ${benefit.gradient} bg-clip-text text-transparent font-black text-lg font-bold`}>
-                    {benefit.benefit}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* FOMO Discord CTA */}
-          <div className="mt-16 text-center">
-            <div className="inline-block p-0.5 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-full animate-pulse">
-              <button
-                onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
-                className="bg-black text-white px-8 py-4 rounded-full font-black text-lg hover:scale-110 transition-all duration-300 shadow-2xl animate-glow-pulse"
-              >
-                <span className="flex items-center gap-2">
-                  🔥 REJOINDRE {Math.floor(Math.random() * 100 + 50)}+ DÉVELOPPEURS DÉJÀ 👑
-                </span>
-              </button>
-            </div>
-            <div className="mt-4 text-purple-400 font-bold animate-pulse">
-              ⚠️ DERNIÈRE CHANCE - FERMETURE BIENTÔT ⚠️
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8 bg-black/50 relative">
-        {/* Animated background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/20 to-purple-900/20"></div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-12">
-            <h3 className="text-4xl md:text-5xl font-black text-white mb-4">
-              <span className="hype-gradient">COMMENT ÊTRE UN DIEU</span>
-            </h3>
-            <div className="text-2xl font-bold text-blue-400 animate-pulse">
-              ⚡ 3 ÉTAPES VERS LA DOMINATION TOTALE ⚡
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            {[
-              {
-                step: "🔥",
-                title: "DÉCHAIÎNER LE PODIUM",
-                description: "Activez votre swarm comme un boss",
-                time: "CLIQUEZ • INSTANTANÉ",
-                gradient: "from-red-500 to-orange-500"
-              },
-              {
-                step: "👑",
-                title: "RÉGNER EN MAÎTRE",
-                description: "Agents IA à votre service absolu",
-                time: "30 SECONDES • DOMINATION",
-                gradient: "from-purple-500 to-pink-500"
-              },
-              {
-                step: "🚀",
-                title: "CONQUÉRIR LE MONDE",
-                description: "Automatisation galactique activée",
-                time: "ILLIMITÉ • PUISSANCE ∞",
-                gradient: "from-blue-500 to-cyan-500"
-              }
-            ].map((step, index) => (
-              <div key={index} className={`group relative bg-gradient-to-br ${step.gradient} p-1 rounded-2xl hover:scale-110 transition-all duration-300 animate-float`} style={{animationDelay: `${index * 0.3}s`}}>
-                <div className="bg-gray-900 p-6 rounded-xl h-full text-center">
-                  <div className="text-6xl mb-4 animate-bounce">{step.step}</div>
-                  <h4 className="text-2xl font-black text-white mb-3">{step.title}</h4>
-                  <p className="text-gray-300 mb-4 leading-relaxed">{step.description}</p>
-                  <div className={`bg-gradient-to-r ${step.gradient} bg-clip-text text-transparent font-black text-lg font-bold`}>
-                    {step.time}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Ultimate Discord CTA */}
-          <div className="text-center mb-16">
-            <div className="inline-block relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-2xl animate-pulse blur-xl"></div>
-              <button
-                onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
-                className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white px-16 py-8 rounded-2xl font-black text-2xl hover:scale-110 transition-all duration-300 shadow-2xl animate-glow-pulse border-4 border-purple-400"
-              >
-                <span className="absolute -top-3 -right-3 bg-red-500 text-white text-sm px-3 py-1 rounded-full animate-bounce font-bold">
-                  URGENT
-                </span>
-                <span className="block mb-2">💬 REJOINDRE LE DISCORD MAINTENANT 💬</span>
-                <span className="text-lg font-normal">
-                  Devinez le secret • Avantages exclusifs • Accès VIP
-                </span>
-              </button>
-            </div>
-            <div className="mt-6 space-y-2">
-              <div className="text-red-400 font-bold animate-pulse text-xl">
-                ⚠️ SEULEMENT {Math.floor(Math.random() * 20 + 5)} PLACES DISPONIBLES ⚠️
-              </div>
-              <div className="text-yellow-400 font-semibold">
-                ⏰ COMPTE À REBOURS ACTIVÉ ⏰
-              </div>
-            </div>
-          </div>
-
-          </div>
-      </section>
-
-      {/* Use Cases */}
-      <section id="use-cases" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-3xl font-bold text-center text-white mb-12">
-            Domaines d'Application
-          </h3>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                domain: "💰 Finance & Trading",
-                agents: "Analyste Quantitatif, Risk Manager, Chercheur Marché",
-                color: "from-gray-900 to-black"
-              },
-              {
-                domain: "🏥 Santé & Médical",
-                agents: "Chercheur Médical, IA Diagnostic, Expert Conformité",
-                color: "from-gray-900 to-black"
-              },
-              {
-                domain: "🏢 Entreprise & Stratégie",
-                agents: "Expert Marché, Analyste Finance, Stratégiste",
-                color: "from-gray-900 to-black"
-              },
-              {
-                domain: "🎓 Éducation & Pédagogie",
-                agents: "Designer Pédagogique, Créateur Contenu, Expert Évaluation",
-                color: "from-gray-900 to-black"
-              },
-              {
-                domain: "🎨 Créatif & Marketing",
-                agents: "Stratégiste Marque, Rédacteur, Expert Réseaux Sociaux",
-                color: "from-gray-900 to-black"
-              },
-              {
-                domain: "🏭 Industrie & Manufacturing",
-                agents: "Ingénieur Process, Responsable Qualité, Expert Logistique",
-                color: "from-gray-900 to-black"
-              }
-            ].map((useCase, index) => (
-              <div key={index} className={`bg-gradient-to-br ${useCase.color} p-6 rounded-xl border border-gray-800 hover:shadow-2xl transition-all duration-300`}>
-                <div className="text-2xl mb-3">{useCase.domain}</div>
-                <p className="text-gray-400 text-sm leading-relaxed">{useCase.agents}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Getting Started */}
-      <section id="getting-started" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-black">
-        <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-white mb-12">
-            Démarrage Rapide (5 Minutes)
-          </h3>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {[
-              {
-                step: "Étape 1",
-                title: "Clone Repository",
-                description: "Téléchargez le framework Swarm Intelligence",
-                code: "git clone https://github.com/DeamonDev888/SWARM-INTELLIGENCE.git"
-              },
-              {
-                step: "Étape 2",
-                title: "Configuration Express",
-                description: "Configurez vos agents spécialisés",
-                code: "npm install && npm run configure"
-              },
-              {
-                step: "Étape 3",
-                title: "Lancement",
-                description: "Déployez votre armée d'agents",
-                code: "claude --agents @claude-agents.json --swarm-mode parallel"
-              }
-            ].map((step, index) => (
-              <div key={index} className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-xl border border-gray-800 shadow-2xl">
-                <div className="text-gray-400 text-sm font-medium mb-2">{step.step}</div>
-                <h4 className="text-xl font-semibold text-white mb-3">{step.title}</h4>
-                <p className="text-gray-500 mb-4">{step.description}</p>
-                <div className="bg-black/50 rounded-lg p-3 font-mono text-xs text-gray-400 border border-gray-800">
-                  {step.code}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-gray-900/80 backdrop-blur-sm rounded-xl p-8 border border-gray-800 shadow-2xl">
-            <h4 className="text-2xl font-bold text-white mb-4">Template Universel</h4>
-            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              Adaptez le swarm à VOTRE domaine spécifique en 5 minutes. Le framework fonctionne pour TOUS les secteurs d'activité.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE', '_blank')}
-                className="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors font-semibold border border-gray-800 shadow-xl"
-              >
-                Télécharger sur GitHub →
-              </button>
-              <button
-                onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
-                className="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors font-semibold shadow-xl"
-              >
-                <span className="flex items-center gap-2">
-                  💬 Rejoindre Discord
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+          {/* Key Metrics */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div>
-              <div className="text-4xl font-bold text-white mb-2">90%</div>
-              <div className="text-gray-400">Plus Rapide</div>
+              <div className="text-3xl font-bold text-white">90%</div>
+              <div className="text-gray-400">Réduction du temps</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-gray-300 mb-2">10+</div>
+              <div className="text-3xl font-bold text-white">12+</div>
               <div className="text-gray-400">Agents Spécialisés</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-gray-300 mb-2">20 min</div>
-              <div className="text-gray-400">Déploiement</div>
+              <div className="text-3xl font-bold text-white">20</div>
+              <div className="text-gray-400">Minutes de déploiement</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-gray-300 mb-2">100%</div>
+              <div className="text-3xl font-bold text-white">100%</div>
               <div className="text-gray-400">Adaptable</div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Overview Section */}
+      <section id="overview" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto">
+          <h3 className="text-3xl font-bold text-white mb-12 text-center">Vue d'Ensemble</h3>
+
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h4 className="text-2xl font-semibold text-white mb-4">Qu'est-ce qu'un Swarm d'Agents ?</h4>
+              <p className="text-gray-400 leading-relaxed mb-4">
+                Un swarm d'agents est une orchestration de multiples agents spécialisés qui travaillent de concert
+                pour accomplir n'importe quelle mission complexe. Imaginez une équipe de 10+ experts virtuels,
+                chacun devenant une autorité dans son domaine, coordonnés par l'intelligence artificielle pour
+                livrer des résultats exceptionnels.
+              </p>
+              <p className="text-gray-400 leading-relaxed">
+                Que votre mission soit dans la recherche, l'analyse, la création, la stratégie, le développement,
+                le conseil, le marketing, la finance, la santé, l'éducation, ou tout autre domaine - le swarm
+                s'adapte à votre besoin spécifique.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-2xl font-semibold text-white mb-4">Pourquoi Choisir le Swarm Intelligence ?</h4>
+              <div className="space-y-4">
+                {[
+                  { title: "Parallélisme", desc: "10+ agents spécialisés travaillant simultanément", impact: "90% plus rapide" },
+                  { title: "Expertise", desc: "Chaque agent devient un expert dans son domaine", impact: "Qualité professionnelle" },
+                  { title: "Efficacité", desc: "Automatisation des tâches répétitives", impact: "Plus de 24h économisées/semaine" },
+                  { title: "Coordination", desc: "Synchronisation intelligente sans intervention", impact: "Flux de travail optimisé" },
+                  { title: "Scalabilité", desc: "Ajoutez/retirez agents selon la mission", impact: "Adaptabilité totale" },
+                  { title: "Polyvalence", desc: "Fonctionne dans TOUS les domaines", impact: "Solution universelle" }
+                ].map((item, index) => (
+                  <div key={index} className="bg-gray-800 p-4 rounded-lg">
+                    <div className="flex justify-between items-start mb-2">
+                      <h5 className="font-semibold text-white">{item.title}</h5>
+                      <span className="text-green-400 text-sm">{item.impact}</span>
+                    </div>
+                    <p className="text-gray-400 text-sm">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Architecture Section */}
+      <section id="architecture" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
+        <div className="max-w-7xl mx-auto">
+          <h3 className="text-3xl font-bold text-white mb-12 text-center">Architecture & Hiérarchie</h3>
+
+          <div className="bg-gray-900 rounded-xl p-8 mb-12">
+            <h4 className="text-xl font-semibold text-white mb-6 text-center">Niveaux de Priorité</h4>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-red-900/20 border border-red-800 rounded-lg p-6">
+                <div className="text-red-400 font-semibold mb-2">🔴 Niveau CRITIQUE</div>
+                <h5 className="text-white font-medium mb-2">Security Guardian</h5>
+                <ul className="text-gray-400 text-sm space-y-1">
+                  <li>• Surveille toutes les actions</li>
+                  <li>• Bloque les opérations dangereuses</li>
+                  <li>• Audit continu</li>
+                </ul>
+              </div>
+
+              <div className="bg-orange-900/20 border border-orange-800 rounded-lg p-6">
+                <div className="text-orange-400 font-semibold mb-2">🟠 Niveau HIGH</div>
+                <h5 className="text-white font-medium mb-2">3 Agents Principaux</h5>
+                <ul className="text-gray-400 text-sm space-y-1">
+                  <li>• UI/UX Designer</li>
+                  <li>• Backend Architect</li>
+                  <li>• Database Master</li>
+                </ul>
+              </div>
+
+              <div className="bg-yellow-900/20 border border-yellow-800 rounded-lg p-6">
+                <div className="text-yellow-400 font-semibold mb-2">🟡 Niveau MEDIUM</div>
+                <h5 className="text-white font-medium mb-2">5 Agents Support</h5>
+                <ul className="text-gray-400 text-sm space-y-1">
+                  <li>• DevOps Commander</li>
+                  <li>• Testing Expert</li>
+                  <li>• Performance Optimizer</li>
+                  <li>• Integration Guru</li>
+                  <li>• Mobile Wizard</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gray-900 rounded-xl p-8">
+            <h4 className="text-xl font-semibold text-white mb-6 text-center">Stratégie d'Exécution</h4>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="border-b border-gray-700">
+                    <th className="pb-3 text-gray-400">Mode</th>
+                    <th className="pb-3 text-gray-400">Agents</th>
+                    <th className="pb-3 text-gray-400">Temps</th>
+                    <th className="pb-3 text-gray-400">Usage</th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-300">
+                  <tr className="border-b border-gray-800">
+                    <td className="py-3 text-white font-medium">Parallel</td>
+                    <td className="py-3">12</td>
+                    <td className="py-3">2-5min</td>
+                    <td className="py-3">Démarrage rapide, tests simples</td>
+                  </tr>
+                  <tr className="border-b border-gray-800">
+                    <td className="py-3 text-white font-medium">Sequential</td>
+                    <td className="py-3">12</td>
+                    <td className="py-3">15-30min</td>
+                    <td className="py-3">Workflows complexes</td>
+                  </tr>
+                  <tr className="border-b border-gray-800">
+                    <td className="py-3 text-white font-medium">Hybrid</td>
+                    <td className="py-3">12</td>
+                    <td className="py-3">5-10min</td>
+                    <td className="py-3">Développement production</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 text-white font-medium">Critical-First</td>
+                    <td className="py-3">3</td>
+                    <td className="py-3">1-2min</td>
+                    <td className="py-3">Urgence, hotfix</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Start Section */}
+      <section id="quickstart" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto">
+          <h3 className="text-3xl font-bold text-white mb-12 text-center">Démarrage Rapide (5 Minutes)</h3>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-gray-800 rounded-lg p-6">
+              <div className="text-gray-400 text-sm font-medium mb-2">Étape 1: Structure de Base (30s)</div>
+              <h4 className="text-xl font-semibold text-white mb-3">Création de l'Arborescence</h4>
+              <div className="bg-black rounded-lg p-4 font-mono text-sm text-gray-300 mb-4">
+                <div>mkdir -p .claude/agents scripts</div>
+              </div>
+              <p className="text-gray-400 text-sm">
+                Créez la structure de répertoires nécessaire pour votre swarm.
+              </p>
+            </div>
+
+            <div className="bg-gray-800 rounded-lg p-6">
+              <div className="text-gray-400 text-sm font-medium mb-2">Étape 2: Configuration Rapide (2 min)</div>
+              <h4 className="text-xl font-semibold text-white mb-3">Configuration JSON</h4>
+              <div className="bg-black rounded-lg p-4 font-mono text-sm text-gray-300 mb-4 overflow-x-auto">
+                <div>{`{`}</div>
+                <div>{`  "agents": [`}</div>
+                <div>{`    { "id": "frontend-guru", "role": "React Expert" },`}</div>
+                <div>{`    { "id": "backend-wizard", "role": "API Expert" }`}</div>
+                <div>{`  ]`}</div>
+                <div>{`}`}</div>
+              </div>
+              <p className="text-gray-400 text-sm">
+                Configurez vos agents spécialisés avec leurs rôles et compétences.
+              </p>
+            </div>
+
+            <div className="bg-gray-800 rounded-lg p-6">
+              <div className="text-gray-400 text-sm font-medium mb-2">Étape 3: Lancement (2 min 30s)</div>
+              <h4 className="text-xl font-semibold text-white mb-3">Déploiement du Swarm</h4>
+              <div className="bg-black rounded-lg p-4 font-mono text-sm text-gray-300 mb-4">
+                <div>claude --agents @claude-agents.json --swarm-mode parallel</div>
+              </div>
+              <p className="text-gray-400 text-sm">
+                Lancez votre swarm d'agents en mode parallèle pour une exécution optimale.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-green-900/20 border border-green-800 rounded-lg p-6 text-center">
+            <h4 className="text-xl font-semibold text-green-400 mb-2">✅ Résultat en 5 minutes !</h4>
+            <p className="text-gray-300">
+              Votre swarm de 12 agents spécialisés est maintenant actif et prêt à travailler.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section id="use-cases" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
+        <div className="max-w-7xl mx-auto">
+          <h3 className="text-3xl font-bold text-white mb-12 text-center">Cas d'Usage Universels</h3>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                title: "Développement Full-Stack",
+                description: "Application web complète de A à Z",
+                agents: "Frontend, Backend, Database, Security, Testing",
+                time: "45 minutes au lieu de 8 heures"
+              },
+              {
+                title: "Application Mobile",
+                description: "Apps iOS et Android natives",
+                agents: "Mobile Wizard, Backend Architect, UI Designer",
+                time: "2 heures pour apps complètes"
+              },
+              {
+                title: "Système d'IA Intégré",
+                description: "Intégration ML/AI dans applications",
+                agents: "AI/ML Specialist, Backend Architect, Integration",
+                time: "IA opérationnelle en 3 heures"
+              },
+              {
+                title: "Finance & Trading",
+                description: "Analyse financière et trading algorithmique",
+                agents: "Quant Analyst, Risk Manager, Market Researcher",
+                time: "Modèles déployés en 1 heure"
+              },
+              {
+                title: "Recherche Médicale",
+                description: "Analyse et protocoles médicaux",
+                agents: "Medical Researcher, Diagnostic AI, Compliance",
+                time: "Protocoles en 2 heures"
+              },
+              {
+                title: "Strategy d'Entreprise",
+                description: "Analyse stratégique et business intelligence",
+                agents: "Market Analyst, Finance Expert, Strategy Master",
+                time: "Rapports complets en 3 heures"
+              }
+            ].map((useCase, index) => (
+              <div key={index} className="bg-gray-900 rounded-lg p-6 border border-gray-800">
+                <h4 className="text-xl font-semibold text-white mb-2">{useCase.title}</h4>
+                <p className="text-gray-400 text-sm mb-3">{useCase.description}</p>
+                <div className="text-xs text-gray-500 mb-2">
+                  <strong>Agents:</strong> {useCase.agents}
+                </div>
+                <div className="text-xs text-green-400">
+                  <strong>Temps:</strong> {useCase.time}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-gray-900 rounded-lg p-8 text-center">
+            <h4 className="text-2xl font-semibold text-white mb-4">Le Template Universel</h4>
+            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+              Ce framework est 100% générique et peut être adapté à n'importe quel domaine d'activité.
+              Modifiez simplement le fichier claude-agents.json selon vos besoins spécifiques.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE', '_blank')}
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              >
+                Voir sur GitHub
+              </button>
+              <button
+                onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
+                className="bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors font-medium"
+              >
+                Rejoindre Discord
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Resources Section */}
+      <section id="resources" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto">
+          <h3 className="text-3xl font-bold text-white mb-12 text-center">Ressources & Support</h3>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="bg-gray-800 rounded-lg p-6 text-center">
+              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">📖</span>
+              </div>
+              <h4 className="text-lg font-semibold text-white mb-2">Documentation</h4>
+              <p className="text-gray-400 text-sm mb-4">Guide complet d'implémentation</p>
+              <a href="https://github.com/DeamonDev888/SWARM-INTELLIGENCE" target="_blank" className="text-blue-400 hover:text-blue-300 text-sm">
+                Consulter →
+              </a>
+            </div>
+
+            <div className="bg-gray-800 rounded-lg p-6 text-center">
+              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">💬</span>
+              </div>
+              <h4 className="text-lg font-semibold text-white mb-2">Communauté</h4>
+              <p className="text-gray-400 text-sm mb-4">Support et échanges techniques</p>
+              <a href="https://discord.gg/Jt83jBebsk" target="_blank" className="text-purple-400 hover:text-purple-300 text-sm">
+                Rejoindre →
+              </a>
+            </div>
+
+            <div className="bg-gray-800 rounded-lg p-6 text-center">
+              <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🛠️</span>
+              </div>
+              <h4 className="text-lg font-semibold text-white mb-2">Outils</h4>
+              <p className="text-gray-400 text-sm mb-4">Scripts d'automatisation</p>
+              <a href="https://www.npmjs.com/package/@anthropic-ai/claude-code" target="_blank" className="text-green-400 hover:text-green-300 text-sm">
+                Installer →
+              </a>
+            </div>
+
+            <div className="bg-gray-800 rounded-lg p-6 text-center">
+              <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">📺</span>
+              </div>
+              <h4 className="text-lg font-semibold text-white mb-2">Tutoriels</h4>
+              <p className="text-gray-400 text-sm mb-4">Vidéos et guides pratiques</p>
+              <a href="#" className="text-red-400 hover:text-red-300 text-sm">
+                Regarder →
+              </a>
+            </div>
+          </div>
+
+          {/* Performance Metrics */}
+          <div className="bg-gray-800 rounded-lg p-8">
+            <h4 className="text-xl font-semibold text-white mb-6 text-center">Métriques de Performance</h4>
+
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-green-400 mb-2">98.5%</div>
+                <div className="text-gray-400">Taux de Succès</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">1.2s</div>
+                <div className="text-gray-400">Temps de Réponse Moyen</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">12</div>
+                <div className="text-gray-400">Agents Concurrents Max</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-3xl font-bold text-white mb-12 text-center">Questions Fréquentes</h3>
+
+          <div className="space-y-6">
+            {[
+              {
+                question: "Qu'est-ce que Swarm Intelligence ?",
+                answer: "C'est une plateforme d'orchestration d'agents IA spécialisés qui travaillent en collaboration pour accomplir des tâches complexes de manière efficace et coordonnée."
+              },
+              {
+                question: "Combien de temps faut-il pour déployer un swarm ?",
+                answer: "Avec notre système de démarrage rapide, vous pouvez déployer un swarm fonctionnel en seulement 5 minutes. La configuration complète prend environ 20 minutes."
+              },
+              {
+                question: "Quels domaines peut-on couvrir ?",
+                answer: "Le framework est universel et fonctionne pour TOUS les domaines : développement, finance, santé, éducation, marketing, industrie, etc."
+              },
+              {
+                question: "Est-ce vraiment gratuit ?",
+                answer: "Oui, le framework Swarm Intelligence est 100% gratuit avec support technique inclus via notre communauté Discord."
+              }
+            ].map((faq, index) => (
+              <div key={index} className="bg-gray-900 rounded-lg p-6 border border-gray-800">
+                <h4 className="text-lg font-semibold text-white mb-2">{faq.question}</h4>
+                <p className="text-gray-400">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="bg-black text-gray-400 py-12 border-t border-gray-900">
+      <footer className="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-gray-800 to-black rounded-xl flex items-center justify-center border border-gray-700">
-                  <span className="text-white font-bold text-lg">SI</span>
+                <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold">SI</span>
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-white">Swarm Intelligence</h4>
@@ -569,26 +526,27 @@ function App() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-white mb-4">Ressources</h4>
+              <h4 className="font-semibold text-white mb-4">Liens Rapides</h4>
               <ul className="space-y-2">
-                <li><a href="https://github.com/DeamonDev888/SWARM-INTELLIGENCE" target="_blank" className="hover:text-white transition-colors">Documentation</a></li>
+                <li><a href="https://github.com/DeamonDev888/SWARM-INTELLIGENCE" target="_blank" className="hover:text-white transition-colors">GitHub</a></li>
                 <li><a href="https://discord.gg/Jt83jBebsk" target="_blank" className="hover:text-white transition-colors">Discord</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Exemples</a></li>
+                <li><a href="https://www.npmjs.com/package/@anthropic-ai/claude-code" target="_blank" className="hover:text-white transition-colors">Claude Code</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-white mb-4">Info</h4>
+              <h4 className="font-semibold text-white mb-4">Informations</h4>
               <ul className="space-y-2 text-gray-500">
                 <li>Version: 2.0</li>
                 <li>Mise à jour: 2025-11-09</li>
                 <li>Licence: MIT</li>
+                <li>100% Gratuit • Support 24/7</li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-            <p>🤖 Généré avec Claude Code - Mode Sombre Professionnel</p>
+            <p>Construit avec Claude Code • Mode Sombre Professionnel</p>
           </div>
         </div>
       </footer>
