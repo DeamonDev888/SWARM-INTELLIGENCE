@@ -525,7 +525,7 @@ function App() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-gray-800 rounded-lg p-6">
-              <div className="text-gray-400 text-sm font-medium mb-2">Étape 1: Structure de Base (30s)</div>
+              <div className="text-gray-400 text-sm font-medium mb-2">Étape 1: Structure de Base (2 min)</div>
               <h4 className="text-xl font-semibold text-white mb-3">Création de l'Arborescence</h4>
               <div className="bg-black rounded-lg p-4 font-mono text-sm text-gray-300 mb-4">
                 <div>mkdir -p .claude/agents scripts</div>
@@ -536,7 +536,7 @@ function App() {
             </div>
 
             <div className="bg-gray-800 rounded-lg p-6">
-              <div className="text-gray-400 text-sm font-medium mb-2">Étape 2: Configuration Rapide (2 min)</div>
+              <div className="text-gray-400 text-sm font-medium mb-2">Étape 2: Configuration Rapide (8 min)</div>
               <h4 className="text-xl font-semibold text-white mb-3">Configuration JSON</h4>
               <div className="bg-black rounded-lg p-4 font-mono text-sm text-gray-300 mb-4 overflow-x-auto">
                 <div>{`{`}</div>
@@ -552,7 +552,7 @@ function App() {
             </div>
 
             <div className="bg-gray-800 rounded-lg p-6">
-              <div className="text-gray-400 text-sm font-medium mb-2">Étape 3: Lancement (2 min 30s)</div>
+              <div className="text-gray-400 text-sm font-medium mb-2">Étape 3: Lancement (10 min)</div>
               <h4 className="text-xl font-semibold text-white mb-3">Déploiement du Swarm</h4>
               <div className="bg-black rounded-lg p-4 font-mono text-sm text-gray-300 mb-4">
                 <div>claude --agents @claude-agents.json --swarm-mode parallel</div>
