@@ -107,7 +107,7 @@ function App() {
               onClick={() => window.open('#quickstart', '_self')}
               className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
-              Commencer (5 min)
+              Commencer (20 min)
             </button>
             <button
               onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE', '_blank')}
@@ -521,7 +521,7 @@ function App() {
       {/* Quick Start Section */}
       <section id="quickstart" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-3xl font-bold text-white mb-12 text-center">Démarrage Rapide (5 Minutes)</h3>
+          <h3 className="text-3xl font-bold text-white mb-12 text-center">Démarrage Rapide (20 Minutes)</h3>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-gray-800 rounded-lg p-6">
@@ -564,7 +564,7 @@ function App() {
           </div>
 
           <div className="bg-green-900/20 border border-green-800 rounded-lg p-6 text-center">
-            <h4 className="text-xl font-semibold text-green-400 mb-2">✅ Résultat en 5 minutes !</h4>
+            <h4 className="text-xl font-semibold text-green-400 mb-2">✅ Résultat en 20 minutes !</h4>
             <p className="text-gray-300">
               Votre swarm de 12 agents spécialisés est maintenant actif et prêt à travailler.
             </p>
