@@ -306,7 +306,7 @@ function App() {
           <div className="bg-gray-900/50 rounded-xl p-10 mb-16 overflow-x-auto">
             <div className="min-w-max relative max-w-7xl mx-auto">
               {/* Top Level - Orchestrator Central */}
-              <div className="text-center mb-14">
+              <div className="text-center mb-8">
                 <div className="inline-block bg-gradient-to-r from-indigo-900/40 to-purple-900/40 border-2 border-indigo-500/50 rounded-xl px-10 py-5 shadow-2xl backdrop-blur-sm">
                   <div className="text-indigo-300 font-bold text-2xl flex items-center gap-4">
                     <span className="text-4xl">🏛️</span>
@@ -316,14 +316,14 @@ function App() {
               </div>
 
               {/* Vertical Connection from Orchestrator */}
-              <div className="flex justify-center mb-16">
-                <div className="w-3 h-20 bg-gradient-to-b from-indigo-600 to-blue-600 relative">
+              <div className="flex justify-center mb-10">
+                <div className="w-3 h-16 bg-gradient-to-b from-indigo-600 to-blue-600 relative">
                   <div className="absolute -left-2 top-1/2 w-5 h-5 bg-indigo-500 rounded-full -translate-y-1/2 shadow-lg shadow-indigo-500/50"></div>
                 </div>
               </div>
 
               {/* Critical Level Branch */}
-              <div className="flex justify-center mb-14">
+              <div className="flex justify-center mb-8">
                 <div className="relative">
                   <div className="h-3 w-40 bg-gradient-to-r from-indigo-600 to-cyan-600 relative">
                     <div className="absolute -left-2 top-1/2 w-5 h-5 bg-indigo-500 rounded-full -translate-y-1/2"></div>
@@ -343,7 +343,7 @@ function App() {
               </div>
 
               {/* Security Guardian Branch */}
-              <div className="flex justify-center mb-16">
+              <div className="flex justify-center mb-10">
                 <div className="relative">
                   <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-3 h-16 bg-cyan-600">
                     <div className="absolute -top-2 left-1/2 w-5 h-5 bg-cyan-500 rounded-full -translate-x-1/2"></div>
@@ -357,12 +357,12 @@ function App() {
               </div>
 
               {/* Continue Vertical Line */}
-              <div className="flex justify-center mb-16">
-                <div className="w-3 h-20 bg-gradient-to-b from-blue-600 to-emerald-600"></div>
+              <div className="flex justify-center mb-10">
+                <div className="w-3 h-14 bg-gradient-to-b from-blue-600 to-emerald-600"></div>
               </div>
 
               {/* High Level Branch */}
-              <div className="flex justify-center mb-14">
+              <div className="flex justify-center mb-8">
                 <div className="relative">
                   <div className="h-3 w-[500px] bg-gradient-to-r from-blue-600 via-emerald-600 to-teal-600 relative">
                     <div className="absolute -left-2 top-1/2 w-5 h-5 bg-blue-500 rounded-full -translate-y-1/2"></div>
@@ -381,7 +381,7 @@ function App() {
               </div>
 
               {/* High Level Agents */}
-              <div className="flex justify-center gap-16 mb-16">
+              <div className="flex justify-center gap-16 mb-10">
                 {/* UI/UX Designer */}
                 <div className="flex flex-col items-center">
                   <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-3 h-16 bg-emerald-600">
@@ -420,12 +420,12 @@ function App() {
               </div>
 
               {/* Continue Vertical Line */}
-              <div className="flex justify-center mb-16">
-                <div className="w-3 h-20 bg-gradient-to-b from-teal-600 to-violet-600"></div>
+              <div className="flex justify-center mb-10">
+                <div className="w-3 h-14 bg-gradient-to-b from-teal-600 to-violet-600"></div>
               </div>
 
               {/* Medium Level Branch */}
-              <div className="flex justify-center mb-14">
+              <div className="flex justify-center mb-8">
                 <div className="relative">
                   <div className="h-3 w-[700px] bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 relative">
                     <div className="absolute -left-2 top-1/2 w-5 h-5 bg-violet-500 rounded-full -translate-y-1/2"></div>
@@ -447,7 +447,7 @@ function App() {
               </div>
 
               {/* Medium Level Agents */}
-              <div className="flex justify-center gap-8 mb-16">
+              <div className="flex justify-center gap-8 mb-10">
                 {/* DevOps Commander */}
                 <div className="flex flex-col items-center">
                   <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-3 h-16 bg-violet-600">
@@ -510,12 +510,12 @@ function App() {
               </div>
 
               {/* Continue Vertical Line */}
-              <div className="flex justify-center mb-16">
-                <div className="w-3 h-20 bg-gradient-to-b from-indigo-600 to-slate-600"></div>
+              <div className="flex justify-center mb-10">
+                <div className="w-3 h-14 bg-gradient-to-b from-indigo-600 to-slate-600"></div>
               </div>
 
               {/* Low Level Branch */}
-              <div className="flex justify-center mb-14">
+              <div className="flex justify-center mb-8">
                 <div className="relative">
                   <div className="h-3 w-80 bg-gradient-to-r from-slate-600 via-gray-600 to-zinc-600 relative">
                     <div className="absolute -left-2 top-1/2 w-5 h-5 bg-slate-500 rounded-full -translate-y-1/2"></div>
@@ -680,7 +680,7 @@ function App() {
             </div>
           </div>
 
-          <div className="bg-gray-900 rounded-xl p-8">
+          <div className="bg-gray-900 rounded-xl p-8 mb-16">
             <h4 className="text-xl font-semibold text-white mb-6 text-center">Stratégie d'Exécution</h4>
 
             <div className="overflow-x-auto">
