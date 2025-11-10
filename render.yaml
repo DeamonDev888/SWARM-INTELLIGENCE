@@ -1,8 +1,14 @@
-version: "1"
+version: 1
 services:
   - type: web
     name: swarm-intelligence
-    env: node
-    buildCommand: "npm run build"
+    runtime: node
+    plan: free
+    buildCommand: "npm install && npm run build"
     startCommand: "npm start"
     healthCheckPath: "/"
+    envVars:
+      - key: NODE_ENV
+        value: production
+    domains:
+      - swarm-intelligence.onrender.com
