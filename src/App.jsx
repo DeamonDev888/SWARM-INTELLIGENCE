@@ -190,93 +190,119 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <h3 className="text-3xl font-bold text-white mb-12 text-center">Architecture & Hiérarchie</h3>
 
-          {/* Beautiful Hierarchy Diagram */}
+          {/* Beautiful Hierarchy Diagram with Clear Lines */}
           <div className="bg-gray-900 rounded-xl p-8 mb-12 overflow-x-auto">
-            <div className="min-w-max">
+            <div className="min-w-max relative">
               {/* Top Level - Orchestrator */}
               <div className="text-center mb-8">
-                <div className="inline-block bg-purple-900/30 border border-purple-700 rounded-lg px-6 py-3 shadow-lg">
+                <div className="inline-block bg-purple-900/30 border-2 border-purple-600 rounded-lg px-6 py-3 shadow-lg">
                   <div className="text-purple-300 font-bold text-lg">🏛️ ORCHESTRATEUR CENTRAL</div>
                 </div>
               </div>
 
-              {/* Connection Lines */}
-              <div className="flex justify-center mb-6">
-                <div className="w-1 h-8 bg-gradient-to-b from-purple-600 to-gray-600"></div>
-              </div>
-
-              {/* Priority Levels */}
-              <div className="flex justify-center gap-4 mb-8">
-                <div className="text-center">
-                  <div className="inline-block bg-red-900/30 border border-red-700 rounded-lg px-4 py-2">
-                    <div className="text-red-400 font-semibold">🔒 CRITIQUE</div>
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="inline-block bg-orange-900/30 border border-orange-700 rounded-lg px-4 py-2">
-                    <div className="text-orange-400 font-semibold">HIGH</div>
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="inline-block bg-yellow-900/30 border border-yellow-700 rounded-lg px-4 py-2">
-                    <div className="text-yellow-400 font-semibold">MEDIUM</div>
-                  </div>
+              {/* Vertical Connection Line from Orchestrator */}
+              <div className="flex justify-center mb-8">
+                <div className="w-1 h-12 bg-gradient-to-b from-purple-600 to-gray-600 relative">
+                  <div className="absolute -left-1 top-1/2 w-3 h-1 bg-purple-600 -translate-y-1/2"></div>
                 </div>
               </div>
 
-              {/* Agent Cards with Connections */}
-              <div className="flex justify-center items-start gap-6">
-                {/* Critical Level */}
-                <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-6 bg-red-600"></div>
-                  <div className="bg-red-900/20 border border-red-800 rounded-lg p-4 text-center shadow-lg">
-                    <div className="text-red-400 font-semibold mb-2">🔒</div>
-                    <div className="text-white text-sm font-medium">Security<br/>Guardian</div>
+              {/* Main Level Container */}
+              <div className="relative mb-8">
+                {/* Horizontal Branch Line */}
+                <div className="flex justify-center mb-6">
+                  <div class="relative h-1 w-80 bg-gray-600">
+                    <div class="absolute -left-1 top-1/2 w-3 h-1 bg-gray-600 -translate-y-1/2"></div>
+                    <div class="absolute -right-1 top-1/2 w-3 h-1 bg-gray-600 -translate-y-1/2"></div>
+                    {/* Branch points */}
+                    <div class="absolute left-1/4 -top-1 w-3 h-1 bg-red-600 -translate-x-1/2"></div>
+                    <div class="absolute left-2/4 -top-1 w-3 h-1 bg-orange-600 -translate-x-1/2"></div>
+                    <div class="absolute left-3/4 -top-1 w-3 h-1 bg-yellow-600 -translate-x-1/2"></div>
                   </div>
                 </div>
 
-                {/* High Level */}
-                <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-6 bg-orange-600"></div>
-                  <div className="flex gap-3">
-                    <div className="bg-orange-900/20 border border-orange-800 rounded-lg p-4 text-center shadow-lg">
-                      <div className="text-orange-400 font-semibold mb-2">🎨</div>
-                      <div className="text-white text-xs font-medium">UI/UX<br/>Designer</div>
+                {/* Priority Labels */}
+                <div className="flex justify-center gap-8 mb-8">
+                  <div className="text-center">
+                    <div className="inline-block bg-red-900/40 border-2 border-red-600 rounded-lg px-4 py-2">
+                      <div className="text-red-400 font-semibold">🔒 CRITIQUE</div>
                     </div>
-                    <div className="bg-orange-900/20 border border-orange-800 rounded-lg p-4 text-center shadow-lg">
-                      <div className="text-orange-400 font-semibold mb-2">🏗️</div>
-                      <div className="text-white text-xs font-medium">Backend<br/>Architect</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="inline-block bg-orange-900/40 border-2 border-orange-600 rounded-lg px-4 py-2">
+                      <div className="text-orange-400 font-semibold">HIGH</div>
                     </div>
-                    <div className="bg-orange-900/20 border border-orange-800 rounded-lg p-4 text-center shadow-lg">
-                      <div className="text-orange-400 font-semibold mb-2">🗄️</div>
-                      <div className="text-white text-xs font-medium">Database<br/>Master</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="inline-block bg-yellow-900/40 border-2 border-yellow-600 rounded-lg px-4 py-2">
+                      <div className="text-yellow-400 font-semibold">MEDIUM</div>
                     </div>
                   </div>
                 </div>
 
-                {/* Medium Level */}
-                <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-6 bg-yellow-600"></div>
-                  <div className="flex gap-2">
-                    <div className="bg-yellow-900/20 border border-yellow-800 rounded-lg p-3 text-center shadow-lg">
-                      <div className="text-yellow-400 text-sm mb-1">🚀</div>
-                      <div className="text-white text-xs">DevOps</div>
+                {/* Agent Cards with Clear Connections */}
+                <div className="flex justify-center items-start gap-8">
+                  {/* Critical Level */}
+                  <div className="flex flex-col items-center">
+                    <div className="w-1 h-8 bg-red-600 relative">
+                      <div className="absolute -top-1 left-1/2 w-3 h-1 bg-red-600 -translate-x-1/2"></div>
+                      <div className="absolute -bottom-1 left-1/2 w-3 h-1 bg-red-600 -translate-x-1/2"></div>
                     </div>
-                    <div className="bg-yellow-900/20 border border-yellow-800 rounded-lg p-3 text-center shadow-lg">
-                      <div className="text-yellow-400 text-sm mb-1">🧪</div>
-                      <div className="text-white text-xs">Testing</div>
+                    <div className="bg-red-900/30 border-2 border-red-600 rounded-lg p-5 text-center shadow-lg min-w-[140px]">
+                      <div className="text-red-400 font-bold mb-2 text-lg">🔒</div>
+                      <div className="text-white text-sm font-medium">Security Guardian</div>
                     </div>
-                    <div className="bg-yellow-900/20 border border-yellow-800 rounded-lg p-3 text-center shadow-lg">
-                      <div className="text-yellow-400 text-sm mb-1">⚡</div>
-                      <div className="text-white text-xs">Perf</div>
+                  </div>
+
+                  {/* High Level */}
+                  <div className="flex flex-col items-center">
+                    <div className="w-1 h-8 bg-orange-600 relative">
+                      <div className="absolute -top-1 left-1/2 w-3 h-1 bg-orange-600 -translate-x-1/2"></div>
+                      <div className="absolute -bottom-1 left-1/2 w-3 h-1 bg-orange-600 -translate-x-1/2"></div>
                     </div>
-                    <div className="bg-yellow-900/20 border border-yellow-800 rounded-lg p-3 text-center shadow-lg">
-                      <div className="text-yellow-400 text-sm mb-1">🔌</div>
-                      <div className="text-white text-xs">Integ</div>
+                    <div className="flex gap-4">
+                      <div className="bg-orange-900/30 border-2 border-orange-600 rounded-lg p-4 text-center shadow-lg min-w-[120px]">
+                        <div className="text-orange-400 font-bold mb-2">🎨</div>
+                        <div className="text-white text-xs font-medium">UI/UX<br/>Designer</div>
+                      </div>
+                      <div className="bg-orange-900/30 border-2 border-orange-600 rounded-lg p-4 text-center shadow-lg min-w-[120px]">
+                        <div className="text-orange-400 font-bold mb-2">🏗️</div>
+                        <div className="text-white text-xs font-medium">Backend<br/>Architect</div>
+                      </div>
+                      <div className="bg-orange-900/30 border-2 border-orange-600 rounded-lg p-4 text-center shadow-lg min-w-[120px]">
+                        <div className="text-orange-400 font-bold mb-2">🗄️</div>
+                        <div className="text-white text-xs font-medium">Database<br/>Master</div>
+                      </div>
                     </div>
-                    <div className="bg-yellow-900/20 border border-yellow-800 rounded-lg p-3 text-center shadow-lg">
-                      <div className="text-yellow-400 text-sm mb-1">📱</div>
-                      <div className="text-white text-xs">Mobile</div>
+                  </div>
+
+                  {/* Medium Level */}
+                  <div className="flex flex-col items-center">
+                    <div className="w-1 h-8 bg-yellow-600 relative">
+                      <div className="absolute -top-1 left-1/2 w-3 h-1 bg-yellow-600 -translate-x-1/2"></div>
+                      <div className="absolute -bottom-1 left-1/2 w-3 h-1 bg-yellow-600 -translate-x-1/2"></div>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="bg-yellow-900/30 border-2 border-yellow-600 rounded-lg p-3 text-center shadow-lg min-w-[80px]">
+                        <div className="text-yellow-400 font-bold mb-1">🚀</div>
+                        <div className="text-white text-xs">DevOps</div>
+                      </div>
+                      <div className="bg-yellow-900/30 border-2 border-yellow-600 rounded-lg p-3 text-center shadow-lg min-w-[80px]">
+                        <div className="text-yellow-400 font-bold mb-1">🧪</div>
+                        <div className="text-white text-xs">Testing</div>
+                      </div>
+                      <div className="bg-yellow-900/30 border-2 border-yellow-600 rounded-lg p-3 text-center shadow-lg min-w-[80px]">
+                        <div className="text-yellow-400 font-bold mb-1">⚡</div>
+                        <div className="text-white text-xs">Perf</div>
+                      </div>
+                      <div className="bg-yellow-900/30 border-2 border-yellow-600 rounded-lg p-3 text-center shadow-lg min-w-[80px]">
+                        <div className="text-yellow-400 font-bold mb-1">🔌</div>
+                        <div className="text-white text-xs">Integ</div>
+                      </div>
+                      <div className="bg-yellow-900/30 border-2 border-yellow-600 rounded-lg p-3 text-center shadow-lg min-w-[80px]">
+                        <div className="text-yellow-400 font-bold mb-1">📱</div>
+                        <div className="text-white text-xs">Mobile</div>
+                      </div>
                     </div>
                   </div>
                 </div>
