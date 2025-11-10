@@ -1701,6 +1701,176 @@ En suivant cette méthode:
 
 ---
 
+## 🛠️ COMPÉTENCES ET OUTILS MCP PAR AGENT
+
+Chaque agent peut être personnalisé avec des compétences spécifiques et des outils MCP (Model Context Protocol) pour augmenter ses capacités d'automatisation et d'intégration.
+
+### 🎯 Comment Configurer les Compétences
+
+#### 1. Structure des Compétences
+```json
+{
+  "agent": {
+    "id": "frontend-guru",
+    "name": "Frontend Master",
+    "skills": [
+      "react-development",
+      "ui-design",
+      "component-architecture",
+      "responsive-design"
+    ],
+    "mcp_tools": [
+      "figma-api",
+      "storybook-cli",
+      "chromium-devtools",
+      "npm-registry"
+    ]
+  }
+}
+```
+
+#### 2. Exemples par Type d'Agent
+
+**🎨 UI/UX Designer**
+```json
+{
+  "skills": ["wireframing", "prototyping", "user-research", "design-systems"],
+  "mcp_tools": ["figma-api", "adobe-creative-sdk", "sketch-plugin", "user-testing-tools"]
+}
+```
+
+**🏗️ Backend Architect**
+```json
+{
+  "skills": ["api-design", "database-modeling", "microservices", "authentication"],
+  "mcp_tools": ["swagger-generator", "postgres-mcp", "redis-client", "jwt-validator"]
+}
+```
+
+**🔒 Security Guardian**
+```json
+{
+  "skills": ["penetration-testing", "vulnerability-assessment", "compliance"],
+  "mcp_tools": ["nmap-scanner", "owasp-checker", "ssl-analyzer", "security-audit-tools"]
+}
+```
+
+**📊 Data Analyst**
+```json
+{
+  "skills": ["statistical-analysis", "data-visualization", "machine-learning"],
+  "mcp_tools": ["pandas-mcp", "matplotlib-cli", "scikit-learn", "sql-query-optimizer"]
+}
+```
+
+**🚀 DevOps Commander**
+```json
+{
+  "skills": ["ci-cd", "containerization", "infrastructure-as-code"],
+  "mcp_tools": ["docker-api", "kubernetes-cli", "github-actions", "terraform-provider"]
+}
+```
+
+#### 3. Outils MCP Populaires
+
+**🎨 Design & Créativité**
+- `figma-api` - Intégration Figma
+- `adobe-creative-sdk` - Suite Adobe
+- `canva-api` - Design graphique
+- `unsplash-client` - Banque d'images
+
+**💻 Développement**
+- `github-api` - Gestion repositories
+- `gitlab-ci` - CI/CD GitLab
+- `npm-registry` - Packages JavaScript
+- `python-pypi` - Packages Python
+
+**📊 Analyse & Data**
+- `sheets-api` - Google Sheets
+- `airtable-client` - Base de données
+- `notion-integration` - Documentation
+- `slack-api` - Communication
+
+**🔧 Outils Système**
+- `filesystem-manager` - Gestion fichiers
+- `database-connector` - Connexions DB
+- `api-client` - Appels HTTP
+- `scheduler-service` - Tâches planifiées
+
+### ⚡ Configuration Rapide
+
+#### Étape 1: Définir les Compétences
+```json
+{
+  "skills": ["competence1", "competence2", "competence3"],
+  "expertise_level": "intermediate",
+  "learning_capability": true
+}
+```
+
+#### Étape 2: Ajouter les Outils MCP
+```json
+{
+  "mcp_tools": [
+    {
+      "name": "outil-mcp",
+      "version": "latest",
+      "config": {},
+      "permissions": ["read", "write"]
+    }
+  ]
+}
+```
+
+#### Étape 3: Activer les Extensions
+```json
+{
+  "extensions": {
+    "enabled": true,
+    "auto_update": true,
+    "custom_plugins": ["plugin-1", "plugin-2"]
+  }
+}
+```
+
+### 🎮 Utilisation Pratique
+
+**Configuration complète d'un agent:**
+```json
+{
+  "id": "fullstack-developer",
+  "name": "Full Stack Expert",
+  "skills": [
+    "react-development",
+    "nodejs-backend",
+    "database-design",
+    "api-integration",
+    "testing-frameworks"
+  ],
+  "mcp_tools": [
+    "github-api",
+    "docker-container",
+    "postgres-mcp",
+    "redis-client",
+    "jwt-validator"
+  ],
+  "capabilities": {
+    "code_generation": true,
+    "api_testing": true,
+    "database_migration": true,
+    "deployment_ready": true
+  }
+}
+```
+
+### 📚 Ressources MCP
+
+- **Documentation officielle:** https://modelcontextprotocol.io/
+- **Liste d'outils:** https://github.com/modelcontextprotocol/servers
+- **Examples pratiques:** https://github.com/anthropics/mcp-examples
+
+---
+
 *Section ajoutée le 2025-11-10 | Spécialement conçue pour les débutants*
 
 ---
