@@ -4,5 +4,5 @@ services:
     name: swarm-intelligence
     env: node
     buildCommand: "npm run build"
-    startCommand: "npm run preview"
+    startCommand: "npm start"
     healthCheckPath: "/"
