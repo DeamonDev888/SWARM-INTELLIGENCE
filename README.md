@@ -8,6 +8,10 @@
 ![20 Minutes](https://img.shields.io/badge/⏱️-20_MINUTES-red?style=for-the-badge)
 ![10+ Agents](https://img.shields.io/badge/🤖-10+_AGENTS-green?style=for-the-badge)
 
+---
+
+🔧 **Last deployment fix: 2025-11-09 19:10** - Adding render.yaml and static.json for proper build configuration
+
 **L'IA Multi-Agent qui Révolutionne Votre Productivité**
 
 [🚀 Commencer](#-démarrage-rapide-5-min) • [📖 Documentation](#-vue-densemble) • [💡 Cas d'Usage](#-cas-dusage-avancés) • [🛠️ Scripts](#-scripts-dautomatisation)
