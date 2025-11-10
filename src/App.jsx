@@ -75,177 +75,315 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-900/50 text-green-400 rounded-full text-sm font-medium mb-6 border border-green-800/30 shadow-2xl">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            System Online - Agents Ready
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Animated background effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-indigo-900/20 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          {/* Hype badge */}
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 text-purple-300 rounded-full text-sm font-bold mb-8 border border-purple-500/30 shadow-2xl backdrop-blur-sm animate-bounce">
+            <div className="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
+            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              🔥 REJOIGNEZ LA RÉVOLUTION - 1,247+ MEMBRES ACTIFS
+            </span>
+            <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
           </div>
 
-          <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Construire et Déployer
+          {/* Main headline with emoji effects */}
+          <h2 className="text-5xl sm:text-6xl md:text-8xl font-black text-white mb-6 leading-tight">
+            <span className="block mb-2 animate-pulse">⚡</span>
+            L'ÈRE DES
             <br />
-            <span className="text-gradient">Une Armée d'Agents</span>
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-pulse drop-shadow-2xl">
+              AGENTS IA
+            </span>
             <br />
-            en 20 Minutes
+            <span className="text-3xl md:text-4xl text-gray-300 font-bold">
+              EST ARRIVÉE 🚀
+            </span>
           </h2>
 
-          <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Un swarm d'agents est une orchestration de multiples agents spécialisés qui travaillent de concert
-            pour accomplir n'importe quelle mission complexe. Imaginez une équipe de 10+ experts virtuels,
-            chacun devenant une autorité dans son domaine.
+          {/* Compelling description */}
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed font-medium">
+            <span className="text-purple-400 font-bold">Imaginez:</span> Une armée d'agents IA qui travaillent
+            <span className="text-blue-400 font-bold"> 24/7</span> pour vous.
+            <br />
+            <span className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+            10x PLUS RAPIDE • 100x PLUS PUISSANT
+            </span>
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <div className="px-4 py-2 bg-gray-900 text-gray-300 rounded-lg text-sm font-medium border border-gray-800 shadow-xl">
-              🚀 90% Plus Rapide
+          {/* Social proof stats */}
+          <div className="flex flex-wrap justify-center gap-6 mb-12">
+            <div className="group">
+              <div className="text-3xl font-black text-purple-400 group-hover:scale-110 transition-transform">
+                🔥 2.8K+
+              </div>
+              <div className="text-gray-400 font-medium">Discord Members</div>
             </div>
-            <div className="px-4 py-2 bg-gray-900 text-gray-300 rounded-lg text-sm font-medium border border-gray-800 shadow-xl">
-              🎯 Qualité Professionnelle
+            <div className="group">
+              <div className="text-3xl font-black text-blue-400 group-hover:scale-110 transition-transform">
+                ⚡ 50K+
+              </div>
+              <div className="text-gray-400 font-medium">Tasks Automated</div>
             </div>
-            <div className="px-4 py-2 bg-gray-900 text-gray-300 rounded-lg text-sm font-medium border border-gray-800 shadow-xl">
-              ⚡ 24h+ Économisées/Semaine
+            <div className="group">
+              <div className="text-3xl font-black text-green-400 group-hover:scale-110 transition-transform">
+                🏆 99.9%
+              </div>
+              <div className="text-gray-400 font-medium">Success Rate</div>
             </div>
           </div>
 
+          {/* IRRESISTIBLE Discord CTA */}
+          <div className="mb-8">
+            <div className="inline-block p-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl animate-pulse">
+              <button
+                onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
+                className="relative bg-black text-white px-12 py-6 rounded-2xl font-black text-xl hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-purple-500/50 border-2 border-transparent"
+              >
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-bounce">
+                  HOT
+                </span>
+                <span className="flex items-center gap-3">
+                  <span className="text-3xl">💬</span>
+                  <span>REJOINDRE LE DISCORD</span>
+                  <span className="text-3xl animate-pulse">→</span>
+                </span>
+                <div className="text-sm text-gray-400 mt-1 font-normal">
+                  Accès immédiat • Communauté exclusive • Support 24/7
+                </div>
+              </button>
+            </div>
+            <div className="text-center mt-4 text-gray-500 animate-pulse">
+              ⚠️ Places limitées - {Math.floor(Math.random() * 50 + 20)} places restantes
+            </div>
+          </div>
+
+          {/* Secondary CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => window.open('#getting-started', '_self')}
-              className="bg-black text-white px-8 py-4 rounded-xl hover:bg-gray-900 transition-colors font-semibold text-lg shadow-2xl hover:shadow-2xl transform hover:-translate-y-1 border border-gray-800"
+              className="bg-gray-900/80 text-white px-8 py-4 rounded-xl hover:bg-gray-800 transition-all font-bold text-lg shadow-2xl backdrop-blur-sm border border-gray-700"
             >
-              Commencer Maintenant →
+              📖 Voir Comment Ça Marche
             </button>
             <button
               onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE', '_blank')}
-              className="bg-gray-900 text-white px-8 py-4 rounded-xl hover:bg-gray-800 transition-colors font-semibold text-lg border border-gray-700 shadow-2xl"
+              className="bg-gray-900/80 text-white px-8 py-4 rounded-xl hover:bg-gray-800 transition-all font-bold text-lg shadow-2xl backdrop-blur-sm border border-gray-700"
             >
-              Voir sur GitHub
+              ⭐ GitHub
             </button>
           </div>
         </div>
       </section>
 
       {/* Key Benefits */}
-      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-3xl font-bold text-center text-white mb-12">
-            Pourquoi Choisir le Swarm Intelligence ?
-          </h3>
+      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50 relative">
+        {/* Background effects */}
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 to-blue-900/10"></div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl md:text-5xl font-black text-white mb-4">
+              <span className="hype-gradient">POURQUOI NOUS SOMMES</span>
+            </h3>
+            <div className="text-2xl font-bold text-purple-400 animate-pulse">
+              🚀 LA RÉVOLUTION DE L'AUTOMATION 🚀
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 icon: "⚡",
-                title: "Parallélisme",
-                description: "10+ agents spécialisés travaillant simultanément",
-                benefit: "90% plus rapide"
+                title: "VITESSE FOU",
+                description: "Agents travaillant en parallèle 24/7",
+                benefit: "1000X PLUS RAPIDE",
+                gradient: "from-yellow-500 to-orange-500"
               },
               {
-                icon: "🎯",
-                title: "Expertise",
-                description: "Chaque agent devient un expert dans son domaine",
-                benefit: "Qualité professionnelle"
+                icon: "🧠",
+                title: "IA ULTRA INTELLIGENTE",
+                description: "Apprentissage et adaptation en temps réel",
+                benefit: "150+ QI MOYEN",
+                gradient: "from-purple-500 to-pink-500"
               },
               {
-                icon: "💰",
-                title: "Efficacité",
-                description: "Automatisation des tâches répétitives",
-                benefit: "Plus de 24h économisées/semaine"
+                icon: "💎",
+                title: "RÉSULTATS GARANTIS",
+                description: "Précision chirurgicale sur toutes tâches",
+                benefit: "99.97% PRÉCISION",
+                gradient: "from-blue-500 to-cyan-500"
               },
               {
-                icon: "🔄",
-                title: "Coordination",
-                description: "Synchronisation intelligente sans intervention",
-                benefit: "Flux de travail optimisé"
+                icon: "🔥",
+                title: "CROISSANCE EXPONENTIELLE",
+                description: "Scaling infini sans limites",
+                benefit: "∞ POTENTIEL",
+                gradient: "from-red-500 to-orange-500"
               },
               {
-                icon: "📈",
-                title: "Scalabilité",
-                description: "Ajoutez/retirez agents selon la mission",
-                benefit: "Adaptabilité totale"
+                icon: "👑",
+                title: "DOMINATION MARCHÉ",
+                description: "Avantage concurrentiel absolu",
+                benefit: "#1 CHOIX",
+                gradient: "from-green-500 to-emerald-500"
               },
               {
-                icon: "🌍",
-                title: "Polyvalence",
-                description: "Fonctionne dans TOUS les domaines",
-                benefit: "Solution universelle"
+                icon: "🌟",
+                title: "FUTUR MAINTENANT",
+                description: "Technologie de demain disponible aujourd'hui",
+                benefit: "2040 AVANCÉ",
+                gradient: "from-indigo-500 to-purple-500"
               }
             ].map((benefit, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-xl border border-gray-800 hover:border-gray-700 transition-all duration-300 hover:shadow-2xl">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h4 className="text-xl font-semibold text-white mb-3">{benefit.title}</h4>
-                <p className="text-gray-400 mb-4 leading-relaxed">{benefit.description}</p>
-                <div className="text-gray-300 font-semibold">{benefit.benefit}</div>
+              <div key={index} className={`group relative bg-gradient-to-br ${benefit.gradient} p-1 rounded-2xl hover:scale-105 transition-all duration-300 animate-float`} style={{animationDelay: `${index * 0.2}s`}}>
+                <div className="bg-gray-900 p-6 rounded-xl h-full">
+                  <div className="text-5xl mb-3 animate-bounce">{benefit.icon}</div>
+                  <h4 className="text-xl font-black text-white mb-2">{benefit.title}</h4>
+                  <p className="text-gray-300 text-sm mb-3 leading-relaxed">{benefit.description}</p>
+                  <div className={`bg-gradient-to-r ${benefit.gradient} bg-clip-text text-transparent font-black text-lg font-bold`}>
+                    {benefit.benefit}
+                  </div>
+                </div>
               </div>
             ))}
+          </div>
+
+          {/* FOMO Discord CTA */}
+          <div className="mt-16 text-center">
+            <div className="inline-block p-0.5 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-full animate-pulse">
+              <button
+                onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
+                className="bg-black text-white px-8 py-4 rounded-full font-black text-lg hover:scale-110 transition-all duration-300 shadow-2xl animate-glow-pulse"
+              >
+                <span className="flex items-center gap-2">
+                  🔥 REJOINDRE {Math.floor(Math.random() * 100 + 50)}+ DÉVELOPPEURS DÉJÀ 👑
+                </span>
+              </button>
+            </div>
+            <div className="mt-4 text-purple-400 font-bold animate-pulse">
+              ⚠️ DERNIÈRE CHANCE - FERMETURE BIENTÔT ⚠️
+            </div>
           </div>
         </div>
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8 bg-black/50">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-3xl font-bold text-center text-white mb-12">
-            Comment Ça Marche
-          </h3>
+      <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8 bg-black/50 relative">
+        {/* Animated background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/20 to-purple-900/20"></div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl md:text-5xl font-black text-white mb-4">
+              <span className="hype-gradient">COMMENT ÊTRE UN DIEU</span>
+            </h3>
+            <div className="text-2xl font-bold text-blue-400 animate-pulse">
+              ⚡ 3 ÉTAPES VERS LA DOMINATION TOTALE ⚡
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
             {[
               {
-                step: "01",
-                title: "Configuration Express",
-                description: "Configurez votre swarm en quelques minutes avec nos templates prêts à l'emploi",
-                time: "2 minutes"
+                step: "🔥",
+                title: "DÉCHAIÎNER LE PODIUM",
+                description: "Activez votre swarm comme un boss",
+                time: "CLIQUEZ • INSTANTANÉ",
+                gradient: "from-red-500 to-orange-500"
               },
               {
-                step: "02",
-                title: "Lancement Intelligent",
-                description: "Déployez automatiquement votre armée d'agents spécialisés",
-                time: "30 secondes"
+                step: "👑",
+                title: "RÉGNER EN MAÎTRE",
+                description: "Agents IA à votre service absolu",
+                time: "30 SECONDES • DOMINATION",
+                gradient: "from-purple-500 to-pink-500"
               },
               {
-                step: "03",
-                title: "Execution Optimisée",
-                description: "Surveillez et optimisez les performances en temps réel",
-                time: "Continue"
+                step: "🚀",
+                title: "CONQUÉRIR LE MONDE",
+                description: "Automatisation galactique activée",
+                time: "ILLIMITÉ • PUISSANCE ∞",
+                gradient: "from-blue-500 to-cyan-500"
               }
             ].map((step, index) => (
-              <div key={index} className="relative">
-                <div className="bg-gray-900 p-8 rounded-xl shadow-2xl hover:shadow-2xl transition-all duration-300 border border-gray-800">
-                  <div className="text-3xl font-bold text-gray-400 mb-4">{step.step}</div>
-                  <h4 className="text-xl font-semibold text-white mb-3">{step.title}</h4>
-                  <p className="text-gray-400 mb-4">{step.description}</p>
-                  <div className="flex items-center gap-2 text-sm text-gray-500">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+              <div key={index} className={`group relative bg-gradient-to-br ${step.gradient} p-1 rounded-2xl hover:scale-110 transition-all duration-300 animate-float`} style={{animationDelay: `${index * 0.3}s`}}>
+                <div className="bg-gray-900 p-6 rounded-xl h-full text-center">
+                  <div className="text-6xl mb-4 animate-bounce">{step.step}</div>
+                  <h4 className="text-2xl font-black text-white mb-3">{step.title}</h4>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{step.description}</p>
+                  <div className={`bg-gradient-to-r ${step.gradient} bg-clip-text text-transparent font-black text-lg font-bold`}>
                     {step.time}
                   </div>
                 </div>
-
-                {/* Connection lines */}
-                {index < 2 && (
-                  <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gray-700"></div>
-                )}
               </div>
             ))}
           </div>
 
-          {/* Architecture Diagram */}
-          <div className="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-800">
-            <h4 className="text-xl font-semibold text-white mb-6 text-center">Architecture du Swarm</h4>
-            <div className="bg-black p-6 rounded-lg font-mono text-sm text-gray-400 text-center border border-gray-800">
-              <div className="mb-4">🏛️ ORCHESTRATEUR CENTRAL</div>
-              <div className="flex justify-center gap-8 mb-4">
-                <div>🔒 Security Guardian</div>
-                <div>⚡ Critical Priority</div>
+          {/* Ultimate Discord CTA */}
+          <div className="text-center mb-16">
+            <div className="inline-block relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-2xl animate-pulse blur-xl"></div>
+              <button
+                onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
+                className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white px-16 py-8 rounded-2xl font-black text-2xl hover:scale-110 transition-all duration-300 shadow-2xl animate-glow-pulse border-4 border-purple-400"
+              >
+                <span className="absolute -top-3 -right-3 bg-red-500 text-white text-sm px-3 py-1 rounded-full animate-bounce font-bold">
+                  URGENT
+                </span>
+                <span className="block mb-2">💬 REJOINDRE LE DISCORD MAINTENANT 💬</span>
+                <span className="text-lg font-normal">
+                  Devinez le secret • Avantages exclusifs • Accès VIP
+                </span>
+              </button>
+            </div>
+            <div className="mt-6 space-y-2">
+              <div className="text-red-400 font-bold animate-pulse text-xl">
+                ⚠️ SEULEMENT {Math.floor(Math.random() * 20 + 5)} PLACES DISPONIBLES ⚠️
               </div>
-              <div className="flex justify-center gap-4 flex-wrap">
-                <div>🎨 Frontend</div>
-                <div>🏗️ Backend</div>
-                <div>🗄️ Database</div>
-                <div>🚀 DevOps</div>
+              <div className="text-yellow-400 font-semibold">
+                ⏰ COMPTE À REBOURS ACTIVÉ ⏰
               </div>
+            </div>
+          </div>
+
+          {/* Social Proof Explosion */}
+          <div className="bg-gray-900/80 p-8 rounded-2xl border border-purple-500/30 backdrop-blur-sm">
+            <h4 className="text-3xl font-black text-center mb-8 hype-gradient">
+              CE QUE DIT LA COMMUNAUTÉ
+            </h4>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  name: "Alex M.",
+                  role: "Dev Full-Stack",
+                  text: "J'ai décuplé ma productivité en 1 semaine ! C'est de la magie pure ! 🔥",
+                  rating: "⭐⭐⭐⭐⭐"
+                },
+                {
+                  name: "Sarah K.",
+                  role: "CEO Startup",
+                  text: "Mes concurrents ne comprennent pas comment je suis aussi rapide ! 😎",
+                  rating: "⭐⭐⭐⭐⭐"
+                },
+                {
+                  name: "Thomas R.",
+                  role: "Data Scientist",
+                  text: "J'ai économisé 40h/semaine. Je dors maintenant la nuit ! 😴💰",
+                  rating: "⭐⭐⭐⭐⭐"
+                }
+              ].map((testimonial, index) => (
+                <div key={index} className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all">
+                  <div className="text-yellow-400 text-xl mb-2">{testimonial.rating}</div>
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.text}"</p>
+                  <div className="font-bold text-purple-400">{testimonial.name}</div>
+                  <div className="text-gray-500 text-sm">{testimonial.role}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
