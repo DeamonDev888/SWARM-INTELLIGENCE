@@ -1592,4 +1592,34 @@ Le template fonctionne pour **TOUS LES DOMAINES** :
 
 ---
 
+## 🌐 VISITEZ NOTRE SITE WEB
+
+<div align="center">
+
+![SWARM INTELLIGENCE](https://img.shields.io/badge/🌐-SITE_WEB-blue?style=for-the-badge&logo=react&logoColor=white)
+![DISPONIBLE](https://img.shields.io/badge/✅-DISPONIBLE-green?style=for-the-badge)
+![LIVE](https://img.shields.io/badge/🚀-LIVE_DEMO-orange?style=for-the-badge)
+
+<br>
+
+[![Bouton Site Web](https://img.shields.io/badge/🚀_DÉCOUVRIR_LE_SITE-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://swarm-intelligence.onrender.com/)
+
+<br>
+
+### 🔗 [**https://swarm-intelligence.onrender.com/**](https://swarm-intelligence.onrender.com/)
+
+<br>
+
+Découvrez notre plateforme web professionnelle :
+- 🎨 **Design moderne et épuré**
+- 📱 **100% Responsive**
+- ⚡ **Performances optimisées**
+- 💬 **Communauté Discord intégrée**
+- 🛠️ **Documentation complète**
+- 💎 **100% Gratuit avec support 24/7**
+
+</div>
+
+---
+
 *Dernière mise à jour: 2025-11-09 | Version: 2.0 | Auteur: Claude Code Team*

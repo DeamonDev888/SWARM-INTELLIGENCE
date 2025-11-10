@@ -91,10 +91,16 @@ function App() {
             <span className="text-blue-400"> Intelligence</span>
           </h2>
 
-          <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-400 mb-6 max-w-3xl mx-auto leading-relaxed">
             L'IA Multi-Agent qui Révolutionne Votre Productivité.
             Orchestrez 10+ agents spécialisés travaillant de concert pour accomplir n'importe quelle mission complexe.
           </p>
+
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-900/30 border border-green-700 rounded-full text-sm text-green-300 mb-8">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span>💎 100% GRATUIT • SUPPORT TECHNIQUE 24/7</span>
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button
@@ -184,40 +190,78 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <h3 className="text-3xl font-bold text-white mb-12 text-center">Architecture & Hiérarchie</h3>
 
-          <div className="bg-gray-900 rounded-xl p-8 mb-12">
-            <h4 className="text-xl font-semibold text-white mb-6 text-center">Niveaux de Priorité</h4>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-red-900/20 border border-red-800 rounded-lg p-6">
-                <div className="text-red-400 font-semibold mb-2">🔴 Niveau CRITIQUE</div>
-                <h5 className="text-white font-medium mb-2">Security Guardian</h5>
-                <ul className="text-gray-400 text-sm space-y-1">
-                  <li>• Surveille toutes les actions</li>
-                  <li>• Bloque les opérations dangereuses</li>
-                  <li>• Audit continu</li>
-                </ul>
+          {/* Beautiful Hierarchy Diagram */}
+          <div className="bg-gray-900 rounded-xl p-8 mb-12 overflow-x-auto">
+            <div className="min-w-max">
+              <div className="text-center mb-8">
+                <div className="inline-block bg-purple-900/30 border border-purple-700 rounded-lg px-6 py-3">
+                  <div className="text-purple-300 font-bold text-lg">🏛️ ORCHESTRATEUR CENTRAL</div>
+                </div>
               </div>
 
-              <div className="bg-orange-900/20 border border-orange-800 rounded-lg p-6">
-                <div className="text-orange-400 font-semibold mb-2">🟠 Niveau HIGH</div>
-                <h5 className="text-white font-medium mb-2">3 Agents Principaux</h5>
-                <ul className="text-gray-400 text-sm space-y-1">
-                  <li>• UI/UX Designer</li>
-                  <li>• Backend Architect</li>
-                  <li>• Database Master</li>
-                </ul>
+              <div className="flex justify-center mb-6">
+                <div className="flex gap-8">
+                  <div className="text-center">
+                    <div className="inline-block bg-red-900/30 border border-red-700 rounded-lg px-4 py-2">
+                      <div className="text-red-400 font-semibold">🔒 CRITIQUE</div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="inline-block bg-orange-900/30 border border-orange-700 rounded-lg px-4 py-2">
+                      <div className="text-orange-400 font-semibold">HIGH</div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="inline-block bg-yellow-900/30 border border-yellow-700 rounded-lg px-4 py-2">
+                      <div className="text-yellow-400 font-semibold">MEDIUM</div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div className="bg-yellow-900/20 border border-yellow-800 rounded-lg p-6">
-                <div className="text-yellow-400 font-semibold mb-2">🟡 Niveau MEDIUM</div>
-                <h5 className="text-white font-medium mb-2">5 Agents Support</h5>
-                <ul className="text-gray-400 text-sm space-y-1">
-                  <li>• DevOps Commander</li>
-                  <li>• Testing Expert</li>
-                  <li>• Performance Optimizer</li>
-                  <li>• Integration Guru</li>
-                  <li>• Mobile Wizard</li>
-                </ul>
+              <div className="flex justify-center gap-6">
+                <div className="bg-red-900/20 border border-red-800 rounded-lg p-4 text-center">
+                  <div className="text-red-400 font-semibold mb-2">🔒</div>
+                  <div className="text-white text-sm font-medium">Security<br/>Guardian</div>
+                </div>
+
+                <div className="flex gap-3">
+                  <div className="bg-orange-900/20 border border-orange-800 rounded-lg p-4 text-center">
+                    <div className="text-orange-400 font-semibold mb-2">🎨</div>
+                    <div className="text-white text-xs font-medium">UI/UX<br/>Designer</div>
+                  </div>
+                  <div className="bg-orange-900/20 border border-orange-800 rounded-lg p-4 text-center">
+                    <div className="text-orange-400 font-semibold mb-2">🏗️</div>
+                    <div className="text-white text-xs font-medium">Backend<br/>Architect</div>
+                  </div>
+                  <div className="bg-orange-900/20 border border-orange-800 rounded-lg p-4 text-center">
+                    <div className="text-orange-400 font-semibold mb-2">🗄️</div>
+                    <div className="text-white text-xs font-medium">Database<br/>Master</div>
+                  </div>
+                </div>
+
+                <div className="flex gap-2">
+                  <div className="bg-yellow-900/20 border border-yellow-800 rounded-lg p-3 text-center">
+                    <div className="text-yellow-400 text-sm mb-1">🚀</div>
+                    <div className="text-white text-xs">DevOps</div>
+                  </div>
+                  <div className="bg-yellow-900/20 border border-yellow-800 rounded-lg p-3 text-center">
+                    <div className="text-yellow-400 text-sm mb-1">🧪</div>
+                    <div className="text-white text-xs">Testing</div>
+                  </div>
+                  <div className="bg-yellow-900/20 border border-yellow-800 rounded-lg p-3 text-center">
+                    <div className="text-yellow-400 text-sm mb-1">⚡</div>
+                    <div className="text-white text-xs">Perf</div>
+                  </div>
+                  <div className="bg-yellow-900/20 border border-yellow-800 rounded-lg p-3 text-center">
+                    <div className="text-yellow-400 text-sm mb-1">🔌</div>
+                    <div className="text-white text-xs">Integ</div>
+                  </div>
+                  <div className="bg-yellow-900/20 border border-yellow-800 rounded-lg p-3 text-center">
+                    <div className="text-yellow-400 text-sm mb-1">📱</div>
+                    <div className="text-white text-xs">Mobile</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -475,35 +519,79 @@ function App() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* Domaines d'Application Génériques */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold text-white mb-12 text-center">Questions Fréquentes</h3>
+        <div className="max-w-7xl mx-auto">
+          <h3 className="text-3xl font-bold text-white mb-12 text-center">Le Template Universel</h3>
 
-          <div className="space-y-6">
+          <p className="text-center text-gray-400 mb-12 max-w-3xl mx-auto">
+            Ce framework est 100% générique et peut être adapté à n'importe quel domaine d'activité.
+            Modifiez simplement le fichier claude-agents.json selon vos besoins spécifiques.
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {[
               {
-                question: "Qu'est-ce que Swarm Intelligence ?",
-                answer: "C'est une plateforme d'orchestration d'agents IA spécialisés qui travaillent en collaboration pour accomplir des tâches complexes de manière efficace et coordonnée."
+                title: "💼 Consulting",
+                description: "Analyste, Stratégiste, Chercheur",
+                usage: "Stratégie, audits, études"
               },
               {
-                question: "Combien de temps faut-il pour déployer un swarm ?",
-                answer: "Avec notre système de démarrage rapide, vous pouvez déployer un swarm fonctionnel en seulement 5 minutes. La configuration complète prend environ 20 minutes."
+                title: "🔬 Recherche",
+                description: "Scientifique, Data Analyst, Writer",
+                usage: "Publications, analyses"
               },
               {
-                question: "Quels domaines peut-on couvrir ?",
-                answer: "Le framework est universel et fonctionne pour TOUS les domaines : développement, finance, santé, éducation, marketing, industrie, etc."
+                title: "🛍️ E-commerce",
+                description: "Merchandiser, Marketer, Analyst",
+                usage: "Lancement produits, campagnes"
               },
               {
-                question: "Est-ce vraiment gratuit ?",
-                answer: "Oui, le framework Swarm Intelligence est 100% gratuit avec support technique inclus via notre communauté Discord."
+                title: "🏢 Immobilier",
+                description: "Analyste, Négociateur, Legal",
+                usage: "Transactions, due diligence"
+              },
+              {
+                title: "⚖️ Juridique",
+                description: "Lawyer, Researcher, Writer",
+                usage: "Contrats, veille légale"
+              },
+              {
+                title: "👥 RH",
+                description: "Recruiter, Trainer, Analyst",
+                usage: "Talent acquisition, formation"
+              },
+              {
+                title: "🏡 Immobilier",
+                description: "Evaluator, Negotiator, Legal",
+                usage: "Transactions, analyses"
+              },
+              {
+                title: "🛡️ Assurance",
+                description: "Underwriter, Adjuster, Analyst",
+                usage: "Évaluation, sinistres"
               }
-            ].map((faq, index) => (
-              <div key={index} className="bg-gray-900 rounded-lg p-6 border border-gray-800">
-                <h4 className="text-lg font-semibold text-white mb-2">{faq.question}</h4>
-                <p className="text-gray-400">{faq.answer}</p>
+            ].map((domain, index) => (
+              <div key={index} className="bg-gray-900 rounded-lg p-6 border border-gray-800 hover:border-blue-600 transition-colors">
+                <h4 className="text-lg font-semibold text-white mb-3">{domain.title}</h4>
+                <p className="text-gray-500 text-sm mb-2">{domain.description}</p>
+                <p className="text-gray-600 text-xs">{domain.usage}</p>
               </div>
             ))}
+          </div>
+
+          <div className="bg-gray-900 rounded-lg p-8 text-center border border-gray-800">
+            <h4 className="text-2xl font-semibold text-white mb-4">Votre domaine n'est pas listé ?</h4>
+            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+              Pas de problème ! Le framework s'adapte à TOUS les secteurs d'activité.
+              Suivez simplement notre méthode en 3 étapes pour créer votre swarm personnalisé.
+            </p>
+            <button
+              onClick={() => window.open('#quickstart', '_self')}
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+            >
+              Créer Votre Swarm →
+            </button>
           </div>
         </div>
       </section>
