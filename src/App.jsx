@@ -1022,7 +1022,7 @@ function App() {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-            <p>Construit avec Claude Code • Mode Sombre Professionnel</p>
+            <p>Swarm Intelligence DeaMoNDeV888</p>
           </div>
         </div>
       </footer>
