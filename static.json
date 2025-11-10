@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "env": {
+    "NPM_CONFIG_PRODUCTION": "false"
+  },
+  "build": {
+    "commands": ["npm install", "npm run build"]
+  },
+  "deploy": {
+    "startCommand": "echo 'Static site deployed'",
+    "staticPublishPath": "./dist"
+  }
+}
