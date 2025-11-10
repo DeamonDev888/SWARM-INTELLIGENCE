@@ -219,13 +219,13 @@ Phase 2: SÉQUENTIEL (5 min)
 mkdir -p .claude/agents scripts
 ```
 
-### Étape 2: Configuration Express (2 min)
+### Étape 2: Configuration Rapide (2 min)
 
 **Fichier: `claude-agents.json`**
 
 ```json
 {
-  "swarm_name": "Production_Swarm_2025",
+  "swarm_name": "Production_Swarm_2030",
   "version": "1.0",
   "agents": [
     {
@@ -308,7 +308,7 @@ claude --agents @claude-agents.json --swarm-mode parallel --monitoring
 
 ### ✅ Résultat en 5 minutes !
 
-Votre swarm de 5 agents spécialisés est maintenant actif et prêt à trabajar !
+Votre swarm de 15 agents spécialisés est maintenant actif et prêt à travailler !
 
 ---
 
