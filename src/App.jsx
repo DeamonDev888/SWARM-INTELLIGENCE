@@ -147,7 +147,7 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* GLM 4.6 Card */}
             <a
-              href="https://zhipuai.cn/"
+              href="https://z.ai/model-api"
               target="_blank"
               rel="noopener noreferrer"
               className="block bg-gradient-to-br from-blue-900/20 to-blue-800/10 border border-blue-700/30 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 hover:border-blue-600/50 hover:scale-[1.02] cursor-pointer"
@@ -195,7 +195,7 @@ function App() {
 
             {/* Minimax M2 Card */}
             <a
-              href="https://www.minimaxi.com/"
+              href="https://www.minimax.io/news/minimax-m2"
               target="_blank"
               rel="noopener noreferrer"
               className="block bg-gradient-to-br from-purple-900/20 to-purple-800/10 border border-purple-700/30 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 hover:border-purple-600/50 hover:scale-[1.02] cursor-pointer"
