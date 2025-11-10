@@ -569,420 +569,167 @@ Votre swarm de 15 agents spécialisés est maintenant actif et prêt à travaill
 
 ## 🎮 SCRIPTS D'AUTOMATISATION
 
-### Script 1: Lancement Rapide
+Nous avons créé des scripts d'automatisation professionnels pour Windows et cross-platform. Tous les scripts sont disponibles dans le dossier `/scripts/` du dépôt.
 
-**Fichier: `scripts/launch-swarm.sh`**
+### 🚀 Scripts Disponibles
 
-```bash
-#!/bin/bash
-# 🚀 Lancement Swarm d'Agents en 30 secondes
+#### 1. **Lancement Rapide Windows**
+**Fichier:** [`scripts/launch-swarm.bat`](scripts/launch-swarm.bat)
 
-set -e
+Script Windows complet avec:
+- ✅ Installation automatique des dépendances
+- ✅ Vérification de l'environnement
+- ✅ Création des fichiers de configuration
+- ✅ Menu interactif de gestion
+- ✅ Monitoring en temps réel
+- ✅ Compatible Windows 10/11 et Server
 
-echo "🚀 Initialisation du Swarm d'Agents Claude Code..."
+**Utilisation:**
+```cmd
+# Lancement simple
+scripts\launch-swarm.bat
 
-# Vérification des prérequis
-if ! command -v claude &> /dev/null; then
-    echo "❌ Claude Code CLI non installé !"
-    echo "📥 Installation: npm install -g @anthropic/claude-code"
-    exit 1
-fi
+# Avec mode spécifique
+scripts\launch-swarm.bat parallel
 
-# Configuration
-AGENTS_FILE="claude-agents.json"
-MODE=${1:-"parallel"}
-MONITORING=${2:-"--monitoring"}
-
-# Création de l'arborescence
-echo "📁 Création de l'arborescence..."
-mkdir -p .claude/agents
-mkdir -p logs
-mkdir -p temp
-
-# Vérification des fichiers de configuration
-if [ ! -f "$AGENTS_FILE" ]; then
-    echo "❌ Fichier $AGENTS_FILE introuvable !"
-    echo "💡 Utilisez le template dans docs/swarm-template.json"
-    exit 1
-fi
-
-# Comptage des agents
-AGENT_COUNT=$(jq '.agents | length' "$AGENTS_FILE")
-echo "🤖 $AGENT_COUNT agents détectés"
-
-# Lancement du swarm
-echo "🎯 Lancement du swarm en mode $MODE..."
-START_TIME=$(date +%s)
-
-claude --agents "@$AGENTS_FILE" --swarm-mode "$MODE" $MONITORING
-
-END_TIME=$(date +%s)
-DURATION=$((END_TIME - START_TIME))
-
-echo "✅ Swarm démarré en ${DURATION}s"
-echo "📊 Consultez logs/swarm.log pour les détails"
+# Avec monitoring
+scripts\launch-swarm.bat hybrid --monitoring
 ```
 
-### Script 2: Gestion Multi-Agents
+#### 2. **Gestionnaire Multi-Agents Cross-Platform**
+**Fichier:** [`scripts/manage-swarm.py`](scripts/manage-swarm.py)
 
-**Fichier: `scripts/manage-swarm.py`**
+Script Python avancé compatible Windows/Linux/Mac avec:
+- ✅ Interface en couleurs et interactive
+- ✅ Lancement parallèle/séquentiel/hybride
+- ✅ Monitoring temps réel avec threads
+- ✅ Gestion des erreurs et timeouts
+- ✅ Création automatique de configuration
+- ✅ Liste détaillée des agents
+- ✅ Support multi-plateforme complet
 
-```python
-#!/usr/bin/env python3
-# 🎮 Gestionnaire de Swarm d'Agents
+**Utilisation:**
+```bash
+# Créer une configuration par défaut
+python scripts/manage-swarm.py --create-config mon-swarm.json
 
-import json
-import subprocess
-import time
-import argparse
-from datetime import datetime
-from typing import List, Dict
+# Lancer le swarm complet
+python scripts/manage-swarm.py claude-agents.json --mode parallel
 
-class SwarmManager:
-    def __init__(self, config_file: str):
-        with open(config_file, 'r') as f:
-            self.config = json.load(f)
-        self.agents = self.config['agents']
-        self.logs = []
+# Lancer un agent spécifique
+python scripts/manage-swarm.py claude-agents.json --agent frontend-guru
 
-    def launch_agent(self, agent_id: str, mode: str = "async") -> Dict:
-        """Lance un agent spécifique"""
-        agent_config = next((a for a in self.agents if a['id'] == agent_id), None)
-        if not agent_config:
-            return {"status": "error", "message": f"Agent {agent_id} not found"}
+# Monitoring en continu
+python scripts/manage-swarm.py claude-agents.json --monitor --interval 15
 
-        cmd = [
-            "claude",
-            "--agent", agent_id,
-            "--mode", mode,
-            "--config", agent_config.get('config', '')
-        ]
+# Lister tous les agents
+python scripts/manage-swarm.py claude-agents.json --list
 
-        result = subprocess.run(cmd, capture_output=True, text=True)
-        return {
-            "agent": agent_id,
-            "status": "success" if result.returncode == 0 else "error",
-            "output": result.stdout,
-            "error": result.stderr
-        }
-
-    def launch_swarm(self, mode: str = "parallel", max_concurrent: int = None):
-        """Lance tout le swarm"""
-        print(f"🚀 Lancement du swarm: {len(self.agents)} agents")
-        print(f"📋 Mode: {mode}")
-        print(f"⚡ Concurrence max: {max_concurrent or 'illimitée'}")
-
-        if mode == "parallel":
-            return self._launch_parallel(max_concurrent)
-        elif mode == "sequential":
-            return self._launch_sequential()
-        elif mode == "hybrid":
-            return self._launch_hybrid()
-
-    def _launch_parallel(self, max_concurrent: int = None):
-        """Lancement en parallèle"""
-        import concurrent.futures
-
-        max_workers = max_concurrent or len(self.agents)
-        results = []
-
-        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-            futures = {executor.submit(self.launch_agent, a['id']): a for a in self.agents}
-            for future in concurrent.futures.as_completed(futures):
-                result = future.result()
-                results.append(result)
-                print(f"✅ {result['agent']}: {result['status']}")
-
-        return results
-
-    def _launch_sequential(self):
-        """Lancement séquentiel"""
-        results = []
-        for agent in self.agents:
-            print(f"🔄 Traitement: {agent['id']}")
-            result = self.launch_agent(agent['id'])
-            results.append(result)
-            time.sleep(1)  # Délai entre agents
-        return results
-
-    def _launch_hybrid(self):
-        """Lancement hybride (critiques en parallèle, others séquentiel)"""
-        critical = [a for a in self.agents if a.get('priority') == 'critical']
-        normal = [a for a in self.agents if a.get('priority') != 'critical']
-
-        print(f"🎯 Lancement hybride: {len(critical)} critiques + {len(normal)} normaux")
-
-        # Phase 1: Agents critiques en parallèle
-        critical_results = self._launch_custom_parallel(critical, max_concurrent=5)
-
-        # Phase 2: Agents normaux séquentiellement
-        normal_results = []
-        for agent in normal:
-            result = self.launch_agent(agent['id'])
-            normal_results.append(result)
-
-        return critical_results + normal_results
-
-    def _launch_custom_parallel(self, agents_list: List, max_concurrent: int):
-        """Lancement parallèle personnalisé"""
-        import concurrent.futures
-
-        with concurrent.futures.ThreadPoolExecutor(max_workers=max_concurrent) as executor:
-            futures = {executor.submit(self.launch_agent, a['id']): a for a in agents_list}
-            results = []
-            for future in concurrent.futures.as_completed(futures):
-                result = future.result()
-                results.append(result)
-        return results
-
-    def monitor_swarm(self, interval: int = 30, duration: int = 300):
-        """Surveillance du swarm"""
-        print(f"👁️ Monitoring du swarm pendant {duration}s (intervalle: {interval}s)")
-
-        start_time = time.time()
-        while time.time() - start_time < duration:
-            status = self.get_swarm_status()
-            print(f"⏰ {datetime.now().strftime('%H:%M:%S')} - Agents actifs: {status['active']}/{status['total']}")
-            time.sleep(interval)
-
-    def get_swarm_status(self) -> Dict:
-        """Statut du swarm"""
-        # Implémentation simplifiée
-        return {
-            "total": len(self.agents),
-            "active": len([a for a in self.agents if a.get('enabled', True)]),
-            "status": "healthy"
-        }
-
-def main():
-    parser = argparse.ArgumentParser(description="🎮 Swarm Manager")
-    parser.add_argument("config", help="Fichier de configuration JSON")
-    parser.add_argument("--mode", choices=["parallel", "sequential", "hybrid"], default="parallel")
-    parser.add_argument("--monitor", action="store_true", help="Activer le monitoring")
-    parser.add_argument("--agent", help="Lancer un agent spécifique")
-    parser.add_argument("--max-concurrent", type=int, help="Nombre max d'agents simultanés")
-
-    args = parser.parse_args()
-
-    manager = SwarmManager(args.config)
-
-    if args.agent:
-        result = manager.launch_agent(args.agent)
-        print(json.dumps(result, indent=2))
-    else:
-        results = manager.launch_swarm(args.mode, args.max_concurrent)
-        print(f"\n✅ {len(results)} agents traités")
-
-        if args.monitor:
-            manager.monitor_swarm()
-
-if __name__ == "__main__":
-    main()
+# Arrêter le swarm
+python scripts/manage-swarm.py claude-agents.json --stop
 ```
 
-### Script 3: Démarrage Ultra-Rapide
+#### 3. **Installation Ultra-Rapide Windows**
+**Fichier:** [`scripts/quick-start.bat`](scripts/quick-start.bat)
 
-**Fichier: `scripts/quick-start.sh`**
+Script d'installation complet en 20 minutes avec:
+- ✅ Détection automatique de l'environnement Windows
+- ✅ Installation Node.js et Claude Code CLI
+- ✅ Configuration de 10 agents spécialisés
+- ✅ Tests de validation complets
+- ✅ Interface utilisateur avec timers
+- ✅ Documentation intégrée
+- ✅ Support Windows natif (cmd/powershell)
 
-```bash
-#!/bin/bash
-# ⚡ Démarrage Ultra-Rapide en 20 Minutes
+**Utilisation:**
+```cmd
+# Lancement complet (20 minutes)
+scripts\quick-start.bat
+```
 
-echo "⚡ QUICK START - SWARM D'AGENTS EN 20 MINUTES"
-echo "=============================================="
+### 📋 Structure des Scripts
 
-# Fonction: Affichage du timer
-show_timer() {
-    local duration=$1
-    local start=$(date +%s)
-    while [ $(( $(date +%s) - start )) -lt $duration ]; do
-        local elapsed=$(( $(date +%s) - start ))
-        local remaining=$(( duration - elapsed ))
-        echo -ne "\r⏱️  Temps restant: $remaining s"
-        sleep 1
-    done
-    echo ""
-}
+```
+scripts/
+├── launch-swarm.bat      # Lancement Windows avec menu interactif
+├── manage-swarm.py       # Gestionnaire Python cross-platform
+└── quick-start.bat       # Installation ultra-rapide Windows
+```
 
-# Étape 1: Setup (2 minutes)
-echo ""
-echo "📦 ÉTAPE 1/4 - SETUP (2 min)"
-show_timer 120
+### ⚙️ Prérequis Système
 
-# Installation des dépendances
-npm install -g @anthropic/claude-code jq curl
+#### Pour les scripts Windows (.bat):
+- ✅ Windows 10/11 ou Windows Server 2016+
+- ✅ Node.js 16+ (auto-détecté et installé si besoin)
+- ✅ PowerShell 5.0+ (inclus dans Windows)
+- ✅ Accès internet pour Claude Code CLI
 
-# Vérification
-if command -v claude &> /dev/null && command -v jq &> /dev/null; then
-    echo "✅ Dépendances installées"
-else
-    echo "❌ Erreur d'installation"
-    exit 1
-fi
+#### Pour le script Python (.py):
+- ✅ Python 3.7+ (optionnel, script autonome)
+- ✅ Claude Code CLI installé
+- ✅ Compatible Windows/Linux/Mac
 
-# Étape 2: Configuration (5 minutes)
-echo ""
-echo "⚙️  ÉTAPE 2/4 - CONFIGURATION (5 min)"
-show_timer 300
+### 🎯 Fonctionnalités Avancées
 
-# Génération automatique du fichier de config
-cat > claude-agents.json << 'EOF'
-{
-  "swarm_name": "QuickStart_Swarm",
-  "version": "1.0",
-  "agents": [
-    {
-      "id": "agent-1",
-      "name": "Frontend Expert",
-      "role": "React/Vue/Angular",
-      "config": ".claude/agents/frontend.json"
-    },
-    {
-      "id": "agent-2",
-      "name": "Backend Architect",
-      "role": "API/Database",
-      "config": ".claude/agents/backend.json"
-    },
-    {
-      "id": "agent-3",
-      "name": "Security Guard",
-      "role": "Cybersecurity",
-      "config": ".claude/agents/security.json"
-    },
-    {
-      "id": "agent-4",
-      "name": "DevOps Master",
-      "role": "CI/CD/Infra",
-      "config": ".claude/agents/devops.json"
-    },
-    {
-      "id": "agent-5",
-      "name": "QA Tester",
-      "role": "Tests/QA",
-      "config": ".claude/agents/testing.json"
-    },
-    {
-      "id": "agent-6",
-      "name": "Mobile Guru",
-      "role": "iOS/Android",
-      "config": ".claude/agents/mobile.json"
-    },
-    {
-      "id": "agent-7",
-      "name": "Data Analyst",
-      "role": "Analytics/ML",
-      "config": ".claude/agents/data.json"
-    },
-    {
-      "id": "agent-8",
-      "name": "UI/UX Designer",
-      "role": "Design/UX",
-      "config": ".claude/agents/design.json"
-    },
-    {
-      "id": "agent-9",
-      "name": "Performance Pro",
-      "role": "Optimization",
-      "config": ".claude/agents/perf.json"
-    },
-    {
-      "id": "agent-10",
-      "name": "Doc Writer",
-      "role": "Documentation",
-      "config": ".claude/agents/docs.json"
-    }
-  ]
-}
-EOF
+#### Monitoring Temps Réel
+- Surveillance des agents actifs
+- Affichage des métriques de performance
+- Alertes personnalisables
+- Logs structurés avec timestamps
 
-# Création des configs d'agents
-mkdir -p .claude/agents
-for i in {1..10}; do
-    cat > .claude/agents/agent-$i.json << EOF
-{
-  "id": "agent-$i",
-  "name": "Agent $i",
-  "capabilities": ["task-execution", "problem-solving"],
-  "resources": {"cpu": "1", "memory": "2GB"},
-  "behavior": {"proactive": true, "collaborative": true}
-}
-EOF
-done
+#### Gestion des Erreurs
+- Détection automatique des problèmes
+- Retry automatique avec backoff exponentiel
+- Mode dégradé si agents critiques
+- Rapports d'erreurs détaillés
 
-AGENT_COUNT=$(jq '.agents | length' claude-agents.json)
-echo "✅ $AGENT_COUNT agents configurés"
+#### Personnalisation
+- Configuration JSON flexible
+- Templates pré-définis par domaine
+- Variables d'environnement supportées
+- Extensibilité via plugins
 
-# Étape 3: Validation (3 minutes)
-echo ""
-echo "🔍 ÉTAPE 3/4 - VALIDATION (3 min)"
-show_timer 180
+### 🛠️ Dépannage Rapide
 
-# Tests de configuration
-if [ -f "claude-agents.json" ]; then
-    echo "✅ Fichier principal: OK"
-else
-    echo "❌ Erreur: fichier principal manquant"
-    exit 1
-fi
+#### Problèmes Communs Windows:
+```cmd
+# Vérifier Claude CLI
+claude --version
 
-AGENT_FILES=$(ls .claude/agents/*.json 2>/dev/null | wc -l)
-if [ $AGENT_FILES -eq 10 ]; then
-    echo "✅ Configurations agents: OK ($AGENT_FILES fichiers)"
-else
-    echo "❌ Erreur: $AGENT_FILES fichiers trouvés (10 attendus)"
-    exit 1
-fi
+# Réinstaller Claude Code
+npm uninstall -g @anthropic/claude-code
+npm install -g @anthropic/claude-code
 
-# Test de connectivité
-if curl -s https://claude.ai > /dev/null; then
-    echo "✅ Connexion Claude: OK"
-else
-    echo "⚠️  Avertissement: connexion incertaine"
-fi
+# Vérifier Python (optionnel)
+python --version
 
-# Étape 4: Lancement (10 minutes)
-echo ""
-echo "🚀 ÉTAPE 4/4 - LANCEMENT (10 min)"
-show_timer 600
+# Exécuter en administrateur si besoin
+# Clic droit > Exécuter en tant qu'administrateur
+```
 
-echo ""
-echo "🎯 LANCEMENT DU SWARM !"
-echo "========================"
-echo "🤖 $AGENT_COUNT agents prêts"
-echo "⚡ Mode: Parallèle"
-echo "👁️  Monitoring: Activé"
-echo ""
+#### Support
+- 📖 Documentation complète dans les scripts
+- 💬 Support communautaire Discord
+- 🐛 Rapport de bugs sur GitHub
+- 📧 Support technique: support@claude-code.ai
 
-# Commandes de lancement (exemples)
-echo "💡 Commandes à exécuter:"
-echo ""
-echo "1. Lancement basique:"
-echo "   claude --agents @claude-agents.json --swarm-mode parallel"
-echo ""
-echo "2. Lancement avec monitoring:"
-echo "   claude --agents @claude-agents.json --swarm-mode parallel --monitor"
-echo ""
-echo "3. Lancement hybride:"
-echo "   claude --agents @claude-agents.json --swarm-mode hybrid"
-echo ""
-echo "4. Lancement séquentiel:"
-echo "   claude --agents @claude-agents.json --swarm-mode sequential"
-echo ""
+### 🚀 Quick Start (3 options)
 
-read -p "Voulez-vous lancer le swarm maintenant ? (y/n) " -n 1 -r
-echo ""
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    echo "🚀 LANCEMENT !"
-    claude --agents @claude-agents.json --swarm-mode parallel --monitor
-else
-    echo "⏸️  Swarm en attente. Pour lancer plus tard:"
-    echo "   claude --agents @claude-agents.json --swarm-mode parallel"
-fi
+**Option 1 - Ultra-Rapide (Windows):**
+```cmd
+scripts\quick-start.bat
+```
 
-echo ""
-echo "✅ PROCEDURE TERMINÉE EN 20 MINUTES !"
-echo "📚 Documentation complète: docs/SWARM_AGENTS_GUIDE.md"
-echo "🎮 Gestionnaire: python3 scripts/manage-swarm.py"
+**Option 2 - Manuel:**
+```cmd
+npm install -g @anthropic/claude-code
+claude --agents @claude-agents.json --swarm-mode parallel
+```
+
+**Option 3 - Avancé:**
+```cmd
+python scripts/manage-swarm.py --create-config mon-swarm.json
+python scripts/manage-swarm.py mon-swarm.json --mode parallel --monitor
 ```
 
 ---

@@ -33,7 +33,7 @@ function App() {
                 Discord
               </button>
               <button
-                onClick={() => window.open('https://www.npmjs.com/package/@anthropic-ai/claude-code', '_blank')}
+                onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE.git', '_blank')}
                 className="bg-black text-white px-4 py-2 rounded-lg border border-gray-700 hover:bg-gray-900 transition-colors"
               >
                 Launch Swarm
@@ -68,7 +68,7 @@ function App() {
                 Discord
               </button>
               <button
-                onClick={() => window.open('https://www.npmjs.com/package/@anthropic-ai/claude-code', '_blank')}
+                onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE.git', '_blank')}
                 className="w-full bg-black text-white px-4 py-2 rounded-lg border border-gray-700 hover:bg-gray-900"
               >
                 Launch Swarm
@@ -276,198 +276,379 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <h3 className="text-3xl font-bold text-white mb-12 text-center">Architecture & Hiérarchie</h3>
 
-          {/* Beautiful Hierarchy Diagram with Clear Lines */}
-          <div className="bg-gray-900 rounded-xl p-8 mb-12 overflow-x-auto">
-            <div className="min-w-max relative">
-              {/* Top Level - Orchestrator */}
-              <div className="text-center mb-8">
-                <div className="inline-block bg-purple-900/30 border-2 border-purple-600 rounded-lg px-6 py-3 shadow-lg">
-                  <div className="text-purple-300 font-bold text-lg">🏛️ ORCHESTRATEUR CENTRAL</div>
+          {/* Architecture Graphique Complète et Harmonisée */}
+          <div className="bg-gray-900/50 rounded-xl p-8 mb-12 overflow-x-auto">
+            <div className="min-w-max relative max-w-6xl mx-auto">
+              {/* Top Level - Orchestrator Central */}
+              <div className="text-center mb-10">
+                <div className="inline-block bg-gradient-to-r from-indigo-900/40 to-purple-900/40 border-2 border-indigo-500/50 rounded-xl px-8 py-4 shadow-2xl backdrop-blur-sm">
+                  <div className="text-indigo-300 font-bold text-xl flex items-center gap-3">
+                    <span className="text-3xl">🏛️</span>
+                    <span>ORCHESTRATEUR CENTRAL</span>
+                  </div>
                 </div>
               </div>
 
-              {/* Vertical Connection Line from Orchestrator */}
+              {/* Vertical Connection from Orchestrator */}
+              <div className="flex justify-center mb-10">
+                <div className="w-2 h-16 bg-gradient-to-b from-indigo-600 to-blue-600 relative">
+                  <div className="absolute -left-1.5 top-1/2 w-4 h-4 bg-indigo-500 rounded-full -translate-y-1/2 shadow-lg shadow-indigo-500/50"></div>
+                </div>
+              </div>
+
+              {/* Critical Level Branch */}
               <div className="flex justify-center mb-8">
-                <div className="w-1 h-12 bg-gradient-to-b from-purple-600 to-gray-600 relative">
-                  <div className="absolute -left-1 top-1/2 w-3 h-1 bg-purple-600 -translate-y-1/2"></div>
+                <div className="relative">
+                  <div className="h-2 w-32 bg-gradient-to-r from-indigo-600 to-cyan-600 relative">
+                    <div className="absolute -left-1.5 top-1/2 w-4 h-4 bg-indigo-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute -right-1.5 top-1/2 w-4 h-4 bg-cyan-500 rounded-full -translate-y-1/2"></div>
+                  </div>
+                  <div className="absolute -top-8 left-1/2 -translate-x-1/2">
+                    <div className="text-center">
+                      <div className="inline-block bg-cyan-900/40 border-2 border-cyan-500/60 rounded-lg px-4 py-2 mb-3">
+                        <div className="text-cyan-400 font-semibold flex items-center gap-2">
+                          <span>🔒</span>
+                          <span>CRITIQUE</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Main Level Container */}
-              <div className="relative mb-8">
-                {/* Horizontal Branch Line */}
-                <div className="flex justify-center mb-6">
-                  <div class="relative h-1 w-80 bg-gray-600">
-                    <div class="absolute -left-1 top-1/2 w-3 h-1 bg-gray-600 -translate-y-1/2"></div>
-                    <div class="absolute -right-1 top-1/2 w-3 h-1 bg-gray-600 -translate-y-1/2"></div>
-                    {/* Branch points */}
-                    <div class="absolute left-1/4 -top-1 w-3 h-1 bg-red-600 -translate-x-1/2"></div>
-                    <div class="absolute left-2/4 -top-1 w-3 h-1 bg-orange-600 -translate-x-1/2"></div>
-                    <div class="absolute left-3/4 -top-1 w-3 h-1 bg-yellow-600 -translate-x-1/2"></div>
+              {/* Security Guardian Branch */}
+              <div className="flex justify-center mb-8">
+                <div className="relative">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-cyan-600">
+                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-cyan-500 rounded-full -translate-x-1/2"></div>
+                  </div>
+                  <div className="bg-cyan-900/30 border-2 border-cyan-500/50 rounded-xl p-6 text-center shadow-2xl min-w-[180px] backdrop-blur-sm hover:border-cyan-400/60 transition-all">
+                    <div className="text-cyan-400 font-bold mb-3 text-2xl">🔒</div>
+                    <div className="text-white text-sm font-semibold mb-2">Security Guardian</div>
+                    <div className="text-cyan-200 text-xs italic">Surveille toutes les actions</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Continue Vertical Line */}
+              <div className="flex justify-center mb-8">
+                <div className="w-2 h-12 bg-gradient-to-b from-blue-600 to-emerald-600"></div>
+              </div>
+
+              {/* High Level Branch */}
+              <div className="flex justify-center mb-8">
+                <div className="relative">
+                  <div className="h-2 w-96 bg-gradient-to-r from-blue-600 via-emerald-600 to-teal-600 relative">
+                    <div className="absolute -left-1.5 top-1/2 w-4 h-4 bg-blue-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-1/3 -top-1.5 w-4 h-4 bg-emerald-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-2/3 -top-1.5 w-4 h-4 bg-teal-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute -right-1.5 top-1/2 w-4 h-4 bg-teal-500 rounded-full -translate-y-1/2"></div>
+                  </div>
+                  <div className="absolute -top-8 left-0 right-0 flex justify-around">
+                    <div className="text-center">
+                      <div className="inline-block bg-emerald-900/40 border-2 border-emerald-500/60 rounded-lg px-3 py-2">
+                        <div className="text-emerald-400 font-semibold">HIGH</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* High Level Agents */}
+              <div className="flex justify-center gap-12 mb-12">
+                {/* UI/UX Designer */}
+                <div className="flex flex-col items-center">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-emerald-600">
+                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-emerald-500 rounded-full -translate-x-1/2"></div>
+                  </div>
+                  <div className="bg-emerald-900/30 border-2 border-emerald-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[160px] backdrop-blur-sm hover:border-emerald-400/60 transition-all">
+                    <div className="text-emerald-400 font-bold mb-2 text-xl">🎨</div>
+                    <div className="text-white text-sm font-semibold mb-2">UI/UX Designer</div>
+                    <div className="text-emerald-200 text-xs">Design System</div>
                   </div>
                 </div>
 
-                {/* Priority Labels */}
-                <div className="flex justify-center gap-8 mb-8">
-                  <div className="text-center">
-                    <div className="inline-block bg-red-900/40 border-2 border-red-600 rounded-lg px-4 py-2">
-                      <div className="text-red-400 font-semibold">🔒 CRITIQUE</div>
-                    </div>
+                {/* Backend Architect */}
+                <div className="flex flex-col items-center">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-teal-600">
+                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-teal-500 rounded-full -translate-x-1/2"></div>
                   </div>
-                  <div className="text-center">
-                    <div className="inline-block bg-orange-900/40 border-2 border-orange-600 rounded-lg px-4 py-2">
-                      <div className="text-orange-400 font-semibold">HIGH</div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="inline-block bg-yellow-900/40 border-2 border-yellow-600 rounded-lg px-4 py-2">
-                      <div className="text-yellow-400 font-semibold">MEDIUM</div>
-                    </div>
+                  <div className="bg-teal-900/30 border-2 border-teal-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[160px] backdrop-blur-sm hover:border-teal-400/60 transition-all">
+                    <div className="text-teal-400 font-bold mb-2 text-xl">🏗️</div>
+                    <div className="text-white text-sm font-semibold mb-2">Backend Architect</div>
+                    <div className="text-teal-200 text-xs">API Architecture</div>
                   </div>
                 </div>
 
-                {/* Agent Cards with Clear Connections */}
-                <div className="flex justify-center items-start gap-8">
-                  {/* Critical Level */}
-                  <div className="flex flex-col items-center">
-                    <div className="w-1 h-8 bg-red-600 relative">
-                      <div className="absolute -top-1 left-1/2 w-3 h-1 bg-red-600 -translate-x-1/2"></div>
-                      <div className="absolute -bottom-1 left-1/2 w-3 h-1 bg-red-600 -translate-x-1/2"></div>
-                    </div>
-                    <div className="bg-red-900/30 border-2 border-red-600 rounded-lg p-5 text-center shadow-lg min-w-[140px]">
-                      <div className="text-red-400 font-bold mb-2 text-lg">🔒</div>
-                      <div className="text-white text-sm font-medium">Security Guardian</div>
+                {/* Database Master */}
+                <div className="flex flex-col items-center">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-blue-600">
+                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-blue-500 rounded-full -translate-x-1/2"></div>
+                  </div>
+                  <div className="bg-blue-900/30 border-2 border-blue-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[160px] backdrop-blur-sm hover:border-blue-400/60 transition-all">
+                    <div className="text-blue-400 font-bold mb-2 text-xl">🗄️</div>
+                    <div className="text-white text-sm font-semibold mb-2">Database Master</div>
+                    <div className="text-blue-200 text-xs">Data Architecture</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Continue Vertical Line */}
+              <div className="flex justify-center mb-8">
+                <div className="w-2 h-12 bg-gradient-to-b from-teal-600 to-violet-600"></div>
+              </div>
+
+              {/* Medium Level Branch */}
+              <div className="flex justify-center mb-8">
+                <div className="relative">
+                  <div className="h-2 w-[600px] bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 relative">
+                    <div className="absolute -left-1.5 top-1/2 w-4 h-4 bg-violet-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-1/6 -top-1.5 w-4 h-4 bg-purple-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-2/6 -top-1.5 w-4 h-4 bg-purple-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-3/6 -top-1.5 w-4 h-4 bg-pink-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-4/6 -top-1.5 w-4 h-4 bg-pink-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-5/6 -top-1.5 w-4 h-4 bg-rose-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute -right-1.5 top-1/2 w-4 h-4 bg-rose-500 rounded-full -translate-y-1/2"></div>
+                  </div>
+                  <div className="absolute -top-8 left-0 right-0 flex justify-center">
+                    <div className="text-center">
+                      <div className="inline-block bg-violet-900/40 border-2 border-violet-500/60 rounded-lg px-4 py-2">
+                        <div className="text-violet-400 font-semibold">MEDIUM</div>
+                      </div>
                     </div>
                   </div>
+                </div>
+              </div>
 
-                  {/* High Level */}
-                  <div className="flex flex-col items-center">
-                    <div className="w-1 h-8 bg-orange-600 relative">
-                      <div className="absolute -top-1 left-1/2 w-3 h-1 bg-orange-600 -translate-x-1/2"></div>
-                      <div className="absolute -bottom-1 left-1/2 w-3 h-1 bg-orange-600 -translate-x-1/2"></div>
-                    </div>
-                    <div className="flex gap-4">
-                      <div className="bg-orange-900/30 border-2 border-orange-600 rounded-lg p-4 text-center shadow-lg min-w-[120px]">
-                        <div className="text-orange-400 font-bold mb-2">🎨</div>
-                        <div className="text-white text-xs font-medium">UI/UX<br/>Designer</div>
-                      </div>
-                      <div className="bg-orange-900/30 border-2 border-orange-600 rounded-lg p-4 text-center shadow-lg min-w-[120px]">
-                        <div className="text-orange-400 font-bold mb-2">🏗️</div>
-                        <div className="text-white text-xs font-medium">Backend<br/>Architect</div>
-                      </div>
-                      <div className="bg-orange-900/30 border-2 border-orange-600 rounded-lg p-4 text-center shadow-lg min-w-[120px]">
-                        <div className="text-orange-400 font-bold mb-2">🗄️</div>
-                        <div className="text-white text-xs font-medium">Database<br/>Master</div>
+              {/* Medium Level Agents */}
+              <div className="flex justify-center gap-6 mb-12">
+                {/* DevOps Commander */}
+                <div className="flex flex-col items-center">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-violet-600">
+                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-violet-500 rounded-full -translate-x-1/2"></div>
+                  </div>
+                  <div className="bg-violet-900/30 border-2 border-violet-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[120px] backdrop-blur-sm hover:border-violet-400/60 transition-all">
+                    <div className="text-violet-400 font-bold mb-2 text-lg">🚀</div>
+                    <div className="text-white text-xs font-semibold">DevOps Commander</div>
+                    <div className="text-violet-200 text-xs">CI/CD</div>
+                  </div>
+                </div>
+
+                {/* Testing Expert */}
+                <div className="flex flex-col items-center">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-purple-600">
+                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-purple-500 rounded-full -translate-x-1/2"></div>
+                  </div>
+                  <div className="bg-purple-900/30 border-2 border-purple-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[120px] backdrop-blur-sm hover:border-purple-400/60 transition-all">
+                    <div className="text-purple-400 font-bold mb-2 text-lg">🧪</div>
+                    <div className="text-white text-xs font-semibold">Testing Expert</div>
+                    <div className="text-purple-200 text-xs">QA Tests</div>
+                  </div>
+                </div>
+
+                {/* Performance Optimizer */}
+                <div className="flex flex-col items-center">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-pink-600">
+                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-pink-500 rounded-full -translate-x-1/2"></div>
+                  </div>
+                  <div className="bg-pink-900/30 border-2 border-pink-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[120px] backdrop-blur-sm hover:border-pink-400/60 transition-all">
+                    <div className="text-pink-400 font-bold mb-2 text-lg">⚡</div>
+                    <div className="text-white text-xs font-semibold">Performance</div>
+                    <div className="text-pink-200 text-xs">Optimizer</div>
+                  </div>
+                </div>
+
+                {/* Integration Guru */}
+                <div className="flex flex-col items-center">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-rose-600">
+                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-rose-500 rounded-full -translate-x-1/2"></div>
+                  </div>
+                  <div className="bg-rose-900/30 border-2 border-rose-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[120px] backdrop-blur-sm hover:border-rose-400/60 transition-all">
+                    <div className="text-rose-400 font-bold mb-2 text-lg">🔌</div>
+                    <div className="text-white text-xs font-semibold">Integration</div>
+                    <div className="text-rose-200 text-xs">Guru</div>
+                  </div>
+                </div>
+
+                {/* Mobile Wizard */}
+                <div className="flex flex-col items-center">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-indigo-600">
+                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-indigo-500 rounded-full -translate-x-1/2"></div>
+                  </div>
+                  <div className="bg-indigo-900/30 border-2 border-indigo-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[120px] backdrop-blur-sm hover:border-indigo-400/60 transition-all">
+                    <div className="text-indigo-400 font-bold mb-2 text-lg">📱</div>
+                    <div className="text-white text-xs font-semibold">Mobile</div>
+                    <div className="text-indigo-200 text-xs">Wizard</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Continue Vertical Line */}
+              <div className="flex justify-center mb-8">
+                <div className="w-2 h-12 bg-gradient-to-b from-indigo-600 to-slate-600"></div>
+              </div>
+
+              {/* Low Level Branch */}
+              <div className="flex justify-center mb-8">
+                <div className="relative">
+                  <div className="h-2 w-64 bg-gradient-to-r from-slate-600 via-gray-600 to-zinc-600 relative">
+                    <div className="absolute -left-1.5 top-1/2 w-4 h-4 bg-slate-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-1/3 -top-1.5 w-4 h-4 bg-gray-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-2/3 -top-1.5 w-4 h-4 bg-zinc-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute -right-1.5 top-1/2 w-4 h-4 bg-zinc-500 rounded-full -translate-y-1/2"></div>
+                  </div>
+                  <div className="absolute -top-8 left-0 right-0 flex justify-center">
+                    <div className="text-center">
+                      <div className="inline-block bg-slate-900/40 border-2 border-slate-500/60 rounded-lg px-4 py-2">
+                        <div className="text-slate-400 font-semibold">LOW</div>
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
 
-                  {/* Medium Level */}
-                  <div className="flex flex-col items-center">
-                    <div className="w-1 h-8 bg-yellow-600 relative">
-                      <div className="absolute -top-1 left-1/2 w-3 h-1 bg-yellow-600 -translate-x-1/2"></div>
-                      <div className="absolute -bottom-1 left-1/2 w-3 h-1 bg-yellow-600 -translate-x-1/2"></div>
-                    </div>
-                    <div className="flex gap-3">
-                      <div className="bg-yellow-900/30 border-2 border-yellow-600 rounded-lg p-3 text-center shadow-lg min-w-[80px]">
-                        <div className="text-yellow-400 font-bold mb-1">🚀</div>
-                        <div className="text-white text-xs">DevOps</div>
-                      </div>
-                      <div className="bg-yellow-900/30 border-2 border-yellow-600 rounded-lg p-3 text-center shadow-lg min-w-[80px]">
-                        <div className="text-yellow-400 font-bold mb-1">🧪</div>
-                        <div className="text-white text-xs">Testing</div>
-                      </div>
-                      <div className="bg-yellow-900/30 border-2 border-yellow-600 rounded-lg p-3 text-center shadow-lg min-w-[80px]">
-                        <div className="text-yellow-400 font-bold mb-1">⚡</div>
-                        <div className="text-white text-xs">Perf</div>
-                      </div>
-                      <div className="bg-yellow-900/30 border-2 border-yellow-600 rounded-lg p-3 text-center shadow-lg min-w-[80px]">
-                        <div className="text-yellow-400 font-bold mb-1">🔌</div>
-                        <div className="text-white text-xs">Integ</div>
-                      </div>
-                      <div className="bg-yellow-900/30 border-2 border-yellow-600 rounded-lg p-3 text-center shadow-lg min-w-[80px]">
-                        <div className="text-yellow-400 font-bold mb-1">📱</div>
-                        <div className="text-white text-xs">Mobile</div>
-                      </div>
-                    </div>
+              {/* Low Level Agents */}
+              <div className="flex justify-center gap-8">
+                {/* AI/ML Specialist */}
+                <div className="flex flex-col items-center">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-slate-600">
+                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-slate-500 rounded-full -translate-x-1/2"></div>
+                  </div>
+                  <div className="bg-slate-900/30 border-2 border-slate-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[140px] backdrop-blur-sm hover:border-slate-400/60 transition-all">
+                    <div className="text-slate-400 font-bold mb-2 text-lg">🤖</div>
+                    <div className="text-white text-xs font-semibold">AI/ML Specialist</div>
+                    <div className="text-slate-200 text-xs">ML Models</div>
+                  </div>
+                </div>
+
+                {/* Docs Master */}
+                <div className="flex flex-col items-center">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-gray-600">
+                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-gray-500 rounded-full -translate-x-1/2"></div>
+                  </div>
+                  <div className="bg-gray-900/30 border-2 border-gray-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[140px] backdrop-blur-sm hover:border-gray-400/60 transition-all">
+                    <div className="text-gray-400 font-bold mb-2 text-lg">📚</div>
+                    <div className="text-white text-xs font-semibold">Docs Master</div>
+                    <div className="text-gray-200 text-xs">Documentation</div>
+                  </div>
+                </div>
+
+                {/* Mobile Wizard (Alternative Position) */}
+                <div className="flex flex-col items-center">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-zinc-600">
+                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-zinc-500 rounded-full -translate-x-1/2"></div>
+                  </div>
+                  <div className="bg-zinc-900/30 border-2 border-zinc-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[140px] backdrop-blur-sm hover:border-zinc-400/60 transition-all">
+                    <div className="text-zinc-400 font-bold mb-2 text-lg">📱</div>
+                    <div className="text-white text-xs font-semibold">Mobile Wizard</div>
+                    <div className="text-zinc-200 text-xs">iOS/Android</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Detailed Cards Section */}
+          {/* Detailed Cards Section - Couleurs Harmonisées */}
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-red-900/20 border border-red-800 rounded-lg p-6">
+            <div className="bg-cyan-900/20 border border-cyan-800/50 rounded-lg p-6 backdrop-blur-sm">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-red-900/50 rounded-lg flex items-center justify-center">
-                  <span className="text-red-400 font-bold">🔴</span>
+                <div className="w-10 h-10 bg-cyan-900/50 rounded-lg flex items-center justify-center">
+                  <span className="text-cyan-400 font-bold">🔒</span>
                 </div>
                 <div>
-                  <h4 className="text-red-400 font-semibold">Niveau CRITIQUE</h4>
-                  <p className="text-red-500 text-sm">1 Agent</p>
+                  <h4 className="text-cyan-400 font-semibold">Niveau CRITIQUE</h4>
+                  <p className="text-cyan-500 text-sm">1 Agent</p>
                 </div>
               </div>
               <div className="space-y-3">
-                <div className="bg-red-900/10 rounded-lg p-3">
+                <div className="bg-cyan-900/10 rounded-lg p-3">
                   <h5 className="text-white font-medium mb-2">Security Guardian</h5>
                   <ul className="text-gray-400 text-sm space-y-1">
                     <li>• Surveille toutes les actions</li>
                     <li>• Bloque les opérations dangereuses</li>
-                    <li>• Audit continu</li>
+                    <li>• Audit continu de sécurité</li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            <div className="bg-orange-900/20 border border-orange-800 rounded-lg p-6">
+            <div className="bg-emerald-900/20 border border-emerald-800/50 rounded-lg p-6 backdrop-blur-sm">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-orange-900/50 rounded-lg flex items-center justify-center">
-                  <span className="text-orange-400 font-bold">🟠</span>
+                <div className="w-10 h-10 bg-emerald-900/50 rounded-lg flex items-center justify-center">
+                  <span className="text-emerald-400 font-bold">🟢</span>
                 </div>
                 <div>
-                  <h4 className="text-orange-400 font-semibold">Niveau HIGH</h4>
-                  <p className="text-orange-500 text-sm">3 Agents</p>
+                  <h4 className="text-emerald-400 font-semibold">Niveau HIGH</h4>
+                  <p className="text-emerald-500 text-sm">3 Agents</p>
                 </div>
               </div>
               <div className="space-y-3">
-                <div className="bg-orange-900/10 rounded-lg p-3">
+                <div className="bg-emerald-900/10 rounded-lg p-3">
                   <h5 className="text-white font-medium mb-2">UI/UX Designer</h5>
                   <p className="text-gray-400 text-xs">Design System, Wireframes, Prototypes</p>
                 </div>
-                <div className="bg-orange-900/10 rounded-lg p-3">
+                <div className="bg-emerald-900/10 rounded-lg p-3">
                   <h5 className="text-white font-medium mb-2">Backend Architect</h5>
                   <p className="text-gray-400 text-xs">API Architecture, Microservices</p>
                 </div>
-                <div className="bg-orange-900/10 rounded-lg p-3">
+                <div className="bg-emerald-900/10 rounded-lg p-3">
                   <h5 className="text-white font-medium mb-2">Database Master</h5>
                   <p className="text-gray-400 text-xs">Data Architecture, Schemas</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-yellow-900/20 border border-yellow-800 rounded-lg p-6">
+            <div className="bg-violet-900/20 border border-violet-800/50 rounded-lg p-6 backdrop-blur-sm">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-yellow-900/50 rounded-lg flex items-center justify-center">
-                  <span className="text-yellow-400 font-bold">🟡</span>
+                <div className="w-10 h-10 bg-violet-900/50 rounded-lg flex items-center justify-center">
+                  <span className="text-violet-400 font-bold">🟣</span>
                 </div>
                 <div>
-                  <h4 className="text-yellow-400 font-semibold">Niveau MEDIUM</h4>
-                  <p className="text-yellow-500 text-sm">5 Agents</p>
+                  <h4 className="text-violet-400 font-semibold">Niveau MEDIUM</h4>
+                  <p className="text-violet-500 text-sm">5 Agents</p>
                 </div>
               </div>
               <div className="space-y-3">
-                <div className="bg-yellow-900/10 rounded-lg p-3">
+                <div className="bg-violet-900/10 rounded-lg p-3">
                   <h5 className="text-white font-medium mb-2">DevOps Commander</h5>
-                  <p className="text-gray-400 text-xs">CI/CD, Kubernetes</p>
+                  <p className="text-gray-400 text-xs">CI/CD, Kubernetes, Infrastructure</p>
                 </div>
-                <div className="bg-yellow-900/10 rounded-lg p-3">
+                <div className="bg-violet-900/10 rounded-lg p-3">
                   <h5 className="text-white font-medium mb-2">Testing Expert</h5>
-                  <p className="text-gray-400 text-xs">Unit Tests, E2E Tests</p>
+                  <p className="text-gray-400 text-xs">Unit Tests, E2E Tests, QA</p>
                 </div>
-                <div className="bg-yellow-900/10 rounded-lg p-3">
+                <div className="bg-violet-900/10 rounded-lg p-3">
                   <h5 className="text-white font-medium mb-2">Performance Optimizer</h5>
                   <p className="text-gray-400 text-xs">Monitoring, Benchmarks</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Fourth Level - LOW */}
+          <div className="mt-6">
+            <div className="bg-slate-900/20 border border-slate-800/50 rounded-lg p-6 backdrop-blur-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-slate-900/50 rounded-lg flex items-center justify-center">
+                  <span className="text-slate-400 font-bold">⚪</span>
+                </div>
+                <div>
+                  <h4 className="text-slate-400 font-semibold">Niveau LOW</h4>
+                  <p className="text-slate-500 text-sm">3 Agents</p>
+                </div>
+              </div>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="bg-slate-900/10 rounded-lg p-3">
+                  <h5 className="text-white font-medium mb-2">AI/ML Specialist</h5>
+                  <p className="text-gray-400 text-xs">ML Models, NLP, Vision</p>
+                </div>
+                <div className="bg-slate-900/10 rounded-lg p-3">
+                  <h5 className="text-white font-medium mb-2">Docs Master</h5>
+                  <p className="text-gray-400 text-xs">API Docs, Guides, README</p>
+                </div>
+                <div className="bg-slate-900/10 rounded-lg p-3">
+                  <h5 className="text-white font-medium mb-2">Mobile Wizard</h5>
+                  <p className="text-gray-400 text-xs">iOS/Android, React Native</p>
                 </div>
               </div>
             </div>
@@ -687,7 +868,7 @@ function App() {
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Outils</h4>
               <p className="text-gray-400 text-sm mb-4">Scripts d'automatisation</p>
-              <a href="https://www.npmjs.com/package/@anthropic-ai/claude-code" target="_blank" className="text-green-400 hover:text-green-300 text-sm">
+              <a href="https://github.com/DeamonDev888/SWARM-INTELLIGENCE.git" target="_blank" className="text-green-400 hover:text-green-300 text-sm">
                 Installer →
               </a>
             </div>
@@ -825,7 +1006,7 @@ function App() {
               <ul className="space-y-2">
                 <li><a href="https://github.com/DeamonDev888/SWARM-INTELLIGENCE" target="_blank" className="hover:text-white transition-colors">GitHub</a></li>
                 <li><a href="https://discord.gg/Jt83jBebsk" target="_blank" className="hover:text-white transition-colors">Discord</a></li>
-                <li><a href="https://www.npmjs.com/package/@anthropic-ai/claude-code" target="_blank" className="hover:text-white transition-colors">Claude Code</a></li>
+                <li><a href="https://github.com/DeamonDev888/SWARM-INTELLIGENCE.git" target="_blank" className="hover:text-white transition-colors">GitHub Repository</a></li>
               </ul>
             </div>
 
