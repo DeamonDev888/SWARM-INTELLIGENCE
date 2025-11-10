@@ -171,7 +171,7 @@ function App() {
                   <div className="flex flex-wrap gap-2 mb-3">
                     <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Reasoning</span>
                     <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Multimodal</span>
-                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">128K context</span>
+                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">256K context</span>
                   </div>
                   <div className="text-xs text-gray-500">
                     <strong>Utilisation:</strong> Analyse complexe, code generation, RAG
