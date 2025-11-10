@@ -146,7 +146,12 @@ function App() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* GLM 4.6 Card */}
-            <div className="bg-gradient-to-br from-blue-900/20 to-blue-800/10 border border-blue-700/30 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 hover:border-blue-600/50">
+            <a
+              href="https://zhipuai.cn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-gradient-to-br from-blue-900/20 to-blue-800/10 border border-blue-700/30 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 hover:border-blue-600/50 hover:scale-[1.02] cursor-pointer"
+            >
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-16 h-16 bg-blue-600/20 rounded-lg p-2 flex-shrink-0">
                   <img
@@ -178,10 +183,23 @@ function App() {
                   </div>
                 </div>
               </div>
-            </div>
+              <div className="text-right">
+                <span className="text-blue-400 text-xs font-semibold flex items-center justify-end gap-1">
+                  Visiter le site
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </span>
+              </div>
+            </a>
 
             {/* Minimax M2 Card */}
-            <div className="bg-gradient-to-br from-purple-900/20 to-purple-800/10 border border-purple-700/30 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 hover:border-purple-600/50">
+            <a
+              href="https://www.minimaxi.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-gradient-to-br from-purple-900/20 to-purple-800/10 border border-purple-700/30 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 hover:border-purple-600/50 hover:scale-[1.02] cursor-pointer"
+            >
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-16 h-16 bg-purple-600/20 rounded-lg p-2 flex-shrink-0">
                   <img
@@ -213,7 +231,15 @@ function App() {
                   </div>
                 </div>
               </div>
-            </div>
+              <div className="text-right">
+                <span className="text-purple-400 text-xs font-semibold flex items-center justify-end gap-1">
+                  Visiter le site
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </span>
+              </div>
+            </a>
           </div>
 
           <div className="text-center">
