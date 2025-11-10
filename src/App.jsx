@@ -525,6 +525,9 @@ function App() {
             </div>
           </div>
 
+          {/* Espace supplémentaire après la section Niveau LOW */}
+          <div className="mb-12"></div>
+
           <div className="bg-gray-900 rounded-xl p-8 mb-16">
             <h4 className="text-xl font-semibold text-white mb-6 text-center">Stratégie d'Exécution</h4>
 
