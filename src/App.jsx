@@ -276,38 +276,38 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <h3 className="text-3xl font-bold text-white mb-12 text-center">Architecture & Hiérarchie</h3>
 
-          {/* Architecture Graphique Complète et Harmonisée */}
-          <div className="bg-gray-900/50 rounded-xl p-8 mb-12 overflow-x-auto">
-            <div className="min-w-max relative max-w-6xl mx-auto">
+          {/* Architecture Graphique Amélioré avec Espacement Optimisé */}
+          <div className="bg-gray-900/50 rounded-xl p-10 mb-16 overflow-x-auto">
+            <div className="min-w-max relative max-w-7xl mx-auto">
               {/* Top Level - Orchestrator Central */}
-              <div className="text-center mb-10">
-                <div className="inline-block bg-gradient-to-r from-indigo-900/40 to-purple-900/40 border-2 border-indigo-500/50 rounded-xl px-8 py-4 shadow-2xl backdrop-blur-sm">
-                  <div className="text-indigo-300 font-bold text-xl flex items-center gap-3">
-                    <span className="text-3xl">🏛️</span>
+              <div className="text-center mb-16">
+                <div className="inline-block bg-gradient-to-r from-indigo-900/40 to-purple-900/40 border-2 border-indigo-500/50 rounded-xl px-10 py-5 shadow-2xl backdrop-blur-sm">
+                  <div className="text-indigo-300 font-bold text-2xl flex items-center gap-4">
+                    <span className="text-4xl">🏛️</span>
                     <span>ORCHESTRATEUR CENTRAL</span>
                   </div>
                 </div>
               </div>
 
               {/* Vertical Connection from Orchestrator */}
-              <div className="flex justify-center mb-10">
-                <div className="w-2 h-16 bg-gradient-to-b from-indigo-600 to-blue-600 relative">
-                  <div className="absolute -left-1.5 top-1/2 w-4 h-4 bg-indigo-500 rounded-full -translate-y-1/2 shadow-lg shadow-indigo-500/50"></div>
+              <div className="flex justify-center mb-16">
+                <div className="w-3 h-20 bg-gradient-to-b from-indigo-600 to-blue-600 relative">
+                  <div className="absolute -left-2 top-1/2 w-5 h-5 bg-indigo-500 rounded-full -translate-y-1/2 shadow-lg shadow-indigo-500/50"></div>
                 </div>
               </div>
 
               {/* Critical Level Branch */}
-              <div className="flex justify-center mb-8">
+              <div className="flex justify-center mb-16">
                 <div className="relative">
-                  <div className="h-2 w-32 bg-gradient-to-r from-indigo-600 to-cyan-600 relative">
-                    <div className="absolute -left-1.5 top-1/2 w-4 h-4 bg-indigo-500 rounded-full -translate-y-1/2"></div>
-                    <div className="absolute -right-1.5 top-1/2 w-4 h-4 bg-cyan-500 rounded-full -translate-y-1/2"></div>
+                  <div className="h-3 w-40 bg-gradient-to-r from-indigo-600 to-cyan-600 relative">
+                    <div className="absolute -left-2 top-1/2 w-5 h-5 bg-indigo-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute -right-2 top-1/2 w-5 h-5 bg-cyan-500 rounded-full -translate-y-1/2"></div>
                   </div>
-                  <div className="absolute -top-8 left-1/2 -translate-x-1/2">
+                  <div className="absolute -top-12 left-1/2 -translate-x-1/2">
                     <div className="text-center">
-                      <div className="inline-block bg-cyan-900/40 border-2 border-cyan-500/60 rounded-lg px-4 py-2 mb-3">
-                        <div className="text-cyan-400 font-semibold flex items-center gap-2">
-                          <span>🔒</span>
+                      <div className="inline-block bg-cyan-900/40 border-2 border-cyan-500/60 rounded-xl px-6 py-3 mb-6">
+                        <div className="text-cyan-400 font-bold text-lg flex items-center gap-3">
+                          <span className="text-2xl">🔒</span>
                           <span>CRITIQUE</span>
                         </div>
                       </div>
@@ -317,37 +317,37 @@ function App() {
               </div>
 
               {/* Security Guardian Branch */}
-              <div className="flex justify-center mb-8">
+              <div className="flex justify-center mb-20">
                 <div className="relative">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-cyan-600">
-                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-cyan-500 rounded-full -translate-x-1/2"></div>
+                  <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-3 h-12 bg-cyan-600">
+                    <div className="absolute -top-2 left-1/2 w-5 h-5 bg-cyan-500 rounded-full -translate-x-1/2"></div>
                   </div>
-                  <div className="bg-cyan-900/30 border-2 border-cyan-500/50 rounded-xl p-6 text-center shadow-2xl min-w-[180px] backdrop-blur-sm hover:border-cyan-400/60 transition-all">
-                    <div className="text-cyan-400 font-bold mb-3 text-2xl">🔒</div>
-                    <div className="text-white text-sm font-semibold mb-2">Security Guardian</div>
-                    <div className="text-cyan-200 text-xs italic">Surveille toutes les actions</div>
+                  <div className="bg-cyan-900/30 border-2 border-cyan-500/50 rounded-xl p-8 text-center shadow-2xl min-w-[200px] backdrop-blur-sm hover:border-cyan-400/60 transition-all transform hover:scale-105">
+                    <div className="text-cyan-400 font-bold mb-4 text-3xl">🔒</div>
+                    <div className="text-white text-base font-semibold mb-3">Security Guardian</div>
+                    <div className="text-cyan-200 text-sm italic">Surveille toutes les actions</div>
                   </div>
                 </div>
               </div>
 
               {/* Continue Vertical Line */}
-              <div className="flex justify-center mb-8">
-                <div className="w-2 h-12 bg-gradient-to-b from-blue-600 to-emerald-600"></div>
+              <div className="flex justify-center mb-20">
+                <div className="w-3 h-20 bg-gradient-to-b from-blue-600 to-emerald-600"></div>
               </div>
 
               {/* High Level Branch */}
-              <div className="flex justify-center mb-8">
+              <div className="flex justify-center mb-16">
                 <div className="relative">
-                  <div className="h-2 w-96 bg-gradient-to-r from-blue-600 via-emerald-600 to-teal-600 relative">
-                    <div className="absolute -left-1.5 top-1/2 w-4 h-4 bg-blue-500 rounded-full -translate-y-1/2"></div>
-                    <div className="absolute left-1/3 -top-1.5 w-4 h-4 bg-emerald-500 rounded-full -translate-y-1/2"></div>
-                    <div className="absolute left-2/3 -top-1.5 w-4 h-4 bg-teal-500 rounded-full -translate-y-1/2"></div>
-                    <div className="absolute -right-1.5 top-1/2 w-4 h-4 bg-teal-500 rounded-full -translate-y-1/2"></div>
+                  <div className="h-3 w-[500px] bg-gradient-to-r from-blue-600 via-emerald-600 to-teal-600 relative">
+                    <div className="absolute -left-2 top-1/2 w-5 h-5 bg-blue-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-1/3 -top-2 w-5 h-5 bg-emerald-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-2/3 -top-2 w-5 h-5 bg-teal-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute -right-2 top-1/2 w-5 h-5 bg-teal-500 rounded-full -translate-y-1/2"></div>
                   </div>
-                  <div className="absolute -top-8 left-0 right-0 flex justify-around">
+                  <div className="absolute -top-12 left-0 right-0 flex justify-center">
                     <div className="text-center">
-                      <div className="inline-block bg-emerald-900/40 border-2 border-emerald-500/60 rounded-lg px-3 py-2">
-                        <div className="text-emerald-400 font-semibold">HIGH</div>
+                      <div className="inline-block bg-emerald-900/40 border-2 border-emerald-500/60 rounded-xl px-6 py-3">
+                        <div className="text-emerald-400 font-bold text-lg">HIGH</div>
                       </div>
                     </div>
                   </div>
@@ -355,14 +355,14 @@ function App() {
               </div>
 
               {/* High Level Agents */}
-              <div className="flex justify-center gap-12 mb-12">
+              <div className="flex justify-center gap-16 mb-20">
                 {/* UI/UX Designer */}
                 <div className="flex flex-col items-center">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-emerald-600">
-                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-emerald-500 rounded-full -translate-x-1/2"></div>
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-3 h-12 bg-emerald-600">
+                    <div className="absolute -top-2 left-1/2 w-5 h-5 bg-emerald-500 rounded-full -translate-x-1/2"></div>
                   </div>
-                  <div className="bg-emerald-900/30 border-2 border-emerald-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[160px] backdrop-blur-sm hover:border-emerald-400/60 transition-all">
-                    <div className="text-emerald-400 font-bold mb-2 text-xl">🎨</div>
+                  <div className="bg-emerald-900/30 border-2 border-emerald-500/50 rounded-xl p-6 text-center shadow-2xl min-w-[180px] backdrop-blur-sm hover:border-emerald-400/60 transition-all transform hover:scale-105">
+                    <div className="text-emerald-400 font-bold mb-3 text-2xl">🎨</div>
                     <div className="text-white text-sm font-semibold mb-2">UI/UX Designer</div>
                     <div className="text-emerald-200 text-xs">Design System</div>
                   </div>
@@ -370,11 +370,11 @@ function App() {
 
                 {/* Backend Architect */}
                 <div className="flex flex-col items-center">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-teal-600">
-                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-teal-500 rounded-full -translate-x-1/2"></div>
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-3 h-12 bg-teal-600">
+                    <div className="absolute -top-2 left-1/2 w-5 h-5 bg-teal-500 rounded-full -translate-x-1/2"></div>
                   </div>
-                  <div className="bg-teal-900/30 border-2 border-teal-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[160px] backdrop-blur-sm hover:border-teal-400/60 transition-all">
-                    <div className="text-teal-400 font-bold mb-2 text-xl">🏗️</div>
+                  <div className="bg-teal-900/30 border-2 border-teal-500/50 rounded-xl p-6 text-center shadow-2xl min-w-[180px] backdrop-blur-sm hover:border-teal-400/60 transition-all transform hover:scale-105">
+                    <div className="text-teal-400 font-bold mb-3 text-2xl">🏗️</div>
                     <div className="text-white text-sm font-semibold mb-2">Backend Architect</div>
                     <div className="text-teal-200 text-xs">API Architecture</div>
                   </div>
@@ -382,11 +382,11 @@ function App() {
 
                 {/* Database Master */}
                 <div className="flex flex-col items-center">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-blue-600">
-                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-blue-500 rounded-full -translate-x-1/2"></div>
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-3 h-12 bg-blue-600">
+                    <div className="absolute -top-2 left-1/2 w-5 h-5 bg-blue-500 rounded-full -translate-x-1/2"></div>
                   </div>
-                  <div className="bg-blue-900/30 border-2 border-blue-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[160px] backdrop-blur-sm hover:border-blue-400/60 transition-all">
-                    <div className="text-blue-400 font-bold mb-2 text-xl">🗄️</div>
+                  <div className="bg-blue-900/30 border-2 border-blue-500/50 rounded-xl p-6 text-center shadow-2xl min-w-[180px] backdrop-blur-sm hover:border-blue-400/60 transition-all transform hover:scale-105">
+                    <div className="text-blue-400 font-bold mb-3 text-2xl">🗄️</div>
                     <div className="text-white text-sm font-semibold mb-2">Database Master</div>
                     <div className="text-blue-200 text-xs">Data Architecture</div>
                   </div>
@@ -394,26 +394,26 @@ function App() {
               </div>
 
               {/* Continue Vertical Line */}
-              <div className="flex justify-center mb-8">
-                <div className="w-2 h-12 bg-gradient-to-b from-teal-600 to-violet-600"></div>
+              <div className="flex justify-center mb-20">
+                <div className="w-3 h-20 bg-gradient-to-b from-teal-600 to-violet-600"></div>
               </div>
 
               {/* Medium Level Branch */}
-              <div className="flex justify-center mb-8">
+              <div className="flex justify-center mb-16">
                 <div className="relative">
-                  <div className="h-2 w-[600px] bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 relative">
-                    <div className="absolute -left-1.5 top-1/2 w-4 h-4 bg-violet-500 rounded-full -translate-y-1/2"></div>
-                    <div className="absolute left-1/6 -top-1.5 w-4 h-4 bg-purple-500 rounded-full -translate-y-1/2"></div>
-                    <div className="absolute left-2/6 -top-1.5 w-4 h-4 bg-purple-500 rounded-full -translate-y-1/2"></div>
-                    <div className="absolute left-3/6 -top-1.5 w-4 h-4 bg-pink-500 rounded-full -translate-y-1/2"></div>
-                    <div className="absolute left-4/6 -top-1.5 w-4 h-4 bg-pink-500 rounded-full -translate-y-1/2"></div>
-                    <div className="absolute left-5/6 -top-1.5 w-4 h-4 bg-rose-500 rounded-full -translate-y-1/2"></div>
-                    <div className="absolute -right-1.5 top-1/2 w-4 h-4 bg-rose-500 rounded-full -translate-y-1/2"></div>
+                  <div className="h-3 w-[700px] bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 relative">
+                    <div className="absolute -left-2 top-1/2 w-5 h-5 bg-violet-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-1/6 -top-2 w-5 h-5 bg-purple-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-2/6 -top-2 w-5 h-5 bg-purple-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-3/6 -top-2 w-5 h-5 bg-pink-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-4/6 -top-2 w-5 h-5 bg-pink-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-5/6 -top-2 w-5 h-5 bg-rose-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute -right-2 top-1/2 w-5 h-5 bg-rose-500 rounded-full -translate-y-1/2"></div>
                   </div>
-                  <div className="absolute -top-8 left-0 right-0 flex justify-center">
+                  <div className="absolute -top-12 left-0 right-0 flex justify-center">
                     <div className="text-center">
-                      <div className="inline-block bg-violet-900/40 border-2 border-violet-500/60 rounded-lg px-4 py-2">
-                        <div className="text-violet-400 font-semibold">MEDIUM</div>
+                      <div className="inline-block bg-violet-900/40 border-2 border-violet-500/60 rounded-xl px-6 py-3">
+                        <div className="text-violet-400 font-bold text-lg">MEDIUM</div>
                       </div>
                     </div>
                   </div>
@@ -421,86 +421,86 @@ function App() {
               </div>
 
               {/* Medium Level Agents */}
-              <div className="flex justify-center gap-6 mb-12">
+              <div className="flex justify-center gap-8 mb-20">
                 {/* DevOps Commander */}
                 <div className="flex flex-col items-center">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-violet-600">
-                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-violet-500 rounded-full -translate-x-1/2"></div>
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-3 h-12 bg-violet-600">
+                    <div className="absolute -top-2 left-1/2 w-5 h-5 bg-violet-500 rounded-full -translate-x-1/2"></div>
                   </div>
-                  <div className="bg-violet-900/30 border-2 border-violet-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[120px] backdrop-blur-sm hover:border-violet-400/60 transition-all">
-                    <div className="text-violet-400 font-bold mb-2 text-lg">🚀</div>
-                    <div className="text-white text-xs font-semibold">DevOps Commander</div>
+                  <div className="bg-violet-900/30 border-2 border-violet-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[140px] backdrop-blur-sm hover:border-violet-400/60 transition-all transform hover:scale-105">
+                    <div className="text-violet-400 font-bold mb-3 text-xl">🚀</div>
+                    <div className="text-white text-sm font-semibold">DevOps Commander</div>
                     <div className="text-violet-200 text-xs">CI/CD</div>
                   </div>
                 </div>
 
                 {/* Testing Expert */}
                 <div className="flex flex-col items-center">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-purple-600">
-                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-purple-500 rounded-full -translate-x-1/2"></div>
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-3 h-12 bg-purple-600">
+                    <div className="absolute -top-2 left-1/2 w-5 h-5 bg-purple-500 rounded-full -translate-x-1/2"></div>
                   </div>
-                  <div className="bg-purple-900/30 border-2 border-purple-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[120px] backdrop-blur-sm hover:border-purple-400/60 transition-all">
-                    <div className="text-purple-400 font-bold mb-2 text-lg">🧪</div>
-                    <div className="text-white text-xs font-semibold">Testing Expert</div>
+                  <div className="bg-purple-900/30 border-2 border-purple-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[140px] backdrop-blur-sm hover:border-purple-400/60 transition-all transform hover:scale-105">
+                    <div className="text-purple-400 font-bold mb-3 text-xl">🧪</div>
+                    <div className="text-white text-sm font-semibold">Testing Expert</div>
                     <div className="text-purple-200 text-xs">QA Tests</div>
                   </div>
                 </div>
 
                 {/* Performance Optimizer */}
                 <div className="flex flex-col items-center">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-pink-600">
-                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-pink-500 rounded-full -translate-x-1/2"></div>
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-3 h-12 bg-pink-600">
+                    <div className="absolute -top-2 left-1/2 w-5 h-5 bg-pink-500 rounded-full -translate-x-1/2"></div>
                   </div>
-                  <div className="bg-pink-900/30 border-2 border-pink-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[120px] backdrop-blur-sm hover:border-pink-400/60 transition-all">
-                    <div className="text-pink-400 font-bold mb-2 text-lg">⚡</div>
-                    <div className="text-white text-xs font-semibold">Performance</div>
+                  <div className="bg-pink-900/30 border-2 border-pink-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[140px] backdrop-blur-sm hover:border-pink-400/60 transition-all transform hover:scale-105">
+                    <div className="text-pink-400 font-bold mb-3 text-xl">⚡</div>
+                    <div className="text-white text-sm font-semibold">Performance</div>
                     <div className="text-pink-200 text-xs">Optimizer</div>
                   </div>
                 </div>
 
                 {/* Integration Guru */}
                 <div className="flex flex-col items-center">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-rose-600">
-                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-rose-500 rounded-full -translate-x-1/2"></div>
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-3 h-12 bg-rose-600">
+                    <div className="absolute -top-2 left-1/2 w-5 h-5 bg-rose-500 rounded-full -translate-x-1/2"></div>
                   </div>
-                  <div className="bg-rose-900/30 border-2 border-rose-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[120px] backdrop-blur-sm hover:border-rose-400/60 transition-all">
-                    <div className="text-rose-400 font-bold mb-2 text-lg">🔌</div>
-                    <div className="text-white text-xs font-semibold">Integration</div>
+                  <div className="bg-rose-900/30 border-2 border-rose-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[140px] backdrop-blur-sm hover:border-rose-400/60 transition-all transform hover:scale-105">
+                    <div className="text-rose-400 font-bold mb-3 text-xl">🔌</div>
+                    <div className="text-white text-sm font-semibold">Integration</div>
                     <div className="text-rose-200 text-xs">Guru</div>
                   </div>
                 </div>
 
                 {/* Mobile Wizard */}
                 <div className="flex flex-col items-center">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-indigo-600">
-                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-indigo-500 rounded-full -translate-x-1/2"></div>
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-3 h-12 bg-indigo-600">
+                    <div className="absolute -top-2 left-1/2 w-5 h-5 bg-indigo-500 rounded-full -translate-x-1/2"></div>
                   </div>
-                  <div className="bg-indigo-900/30 border-2 border-indigo-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[120px] backdrop-blur-sm hover:border-indigo-400/60 transition-all">
-                    <div className="text-indigo-400 font-bold mb-2 text-lg">📱</div>
-                    <div className="text-white text-xs font-semibold">Mobile</div>
+                  <div className="bg-indigo-900/30 border-2 border-indigo-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[140px] backdrop-blur-sm hover:border-indigo-400/60 transition-all transform hover:scale-105">
+                    <div className="text-indigo-400 font-bold mb-3 text-xl">📱</div>
+                    <div className="text-white text-sm font-semibold">Mobile</div>
                     <div className="text-indigo-200 text-xs">Wizard</div>
                   </div>
                 </div>
               </div>
 
               {/* Continue Vertical Line */}
-              <div className="flex justify-center mb-8">
-                <div className="w-2 h-12 bg-gradient-to-b from-indigo-600 to-slate-600"></div>
+              <div className="flex justify-center mb-20">
+                <div className="w-3 h-20 bg-gradient-to-b from-indigo-600 to-slate-600"></div>
               </div>
 
               {/* Low Level Branch */}
-              <div className="flex justify-center mb-8">
+              <div className="flex justify-center mb-16">
                 <div className="relative">
-                  <div className="h-2 w-64 bg-gradient-to-r from-slate-600 via-gray-600 to-zinc-600 relative">
-                    <div className="absolute -left-1.5 top-1/2 w-4 h-4 bg-slate-500 rounded-full -translate-y-1/2"></div>
-                    <div className="absolute left-1/3 -top-1.5 w-4 h-4 bg-gray-500 rounded-full -translate-y-1/2"></div>
-                    <div className="absolute left-2/3 -top-1.5 w-4 h-4 bg-zinc-500 rounded-full -translate-y-1/2"></div>
-                    <div className="absolute -right-1.5 top-1/2 w-4 h-4 bg-zinc-500 rounded-full -translate-y-1/2"></div>
+                  <div className="h-3 w-80 bg-gradient-to-r from-slate-600 via-gray-600 to-zinc-600 relative">
+                    <div className="absolute -left-2 top-1/2 w-5 h-5 bg-slate-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-1/3 -top-2 w-5 h-5 bg-gray-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute left-2/3 -top-2 w-5 h-5 bg-zinc-500 rounded-full -translate-y-1/2"></div>
+                    <div className="absolute -right-2 top-1/2 w-5 h-5 bg-zinc-500 rounded-full -translate-y-1/2"></div>
                   </div>
-                  <div className="absolute -top-8 left-0 right-0 flex justify-center">
+                  <div className="absolute -top-12 left-0 right-0 flex justify-center">
                     <div className="text-center">
-                      <div className="inline-block bg-slate-900/40 border-2 border-slate-500/60 rounded-lg px-4 py-2">
-                        <div className="text-slate-400 font-semibold">LOW</div>
+                      <div className="inline-block bg-slate-900/40 border-2 border-slate-500/60 rounded-xl px-6 py-3">
+                        <div className="text-slate-400 font-bold text-lg">LOW</div>
                       </div>
                     </div>
                   </div>
@@ -508,39 +508,39 @@ function App() {
               </div>
 
               {/* Low Level Agents */}
-              <div className="flex justify-center gap-8">
+              <div className="flex justify-center gap-12">
                 {/* AI/ML Specialist */}
                 <div className="flex flex-col items-center">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-slate-600">
-                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-slate-500 rounded-full -translate-x-1/2"></div>
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-3 h-12 bg-slate-600">
+                    <div className="absolute -top-2 left-1/2 w-5 h-5 bg-slate-500 rounded-full -translate-x-1/2"></div>
                   </div>
-                  <div className="bg-slate-900/30 border-2 border-slate-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[140px] backdrop-blur-sm hover:border-slate-400/60 transition-all">
-                    <div className="text-slate-400 font-bold mb-2 text-lg">🤖</div>
-                    <div className="text-white text-xs font-semibold">AI/ML Specialist</div>
+                  <div className="bg-slate-900/30 border-2 border-slate-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[160px] backdrop-blur-sm hover:border-slate-400/60 transition-all transform hover:scale-105">
+                    <div className="text-slate-400 font-bold mb-3 text-xl">🤖</div>
+                    <div className="text-white text-sm font-semibold">AI/ML Specialist</div>
                     <div className="text-slate-200 text-xs">ML Models</div>
                   </div>
                 </div>
 
                 {/* Docs Master */}
                 <div className="flex flex-col items-center">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-gray-600">
-                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-gray-500 rounded-full -translate-x-1/2"></div>
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-3 h-12 bg-gray-600">
+                    <div className="absolute -top-2 left-1/2 w-5 h-5 bg-gray-500 rounded-full -translate-x-1/2"></div>
                   </div>
-                  <div className="bg-gray-900/30 border-2 border-gray-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[140px] backdrop-blur-sm hover:border-gray-400/60 transition-all">
-                    <div className="text-gray-400 font-bold mb-2 text-lg">📚</div>
-                    <div className="text-white text-xs font-semibold">Docs Master</div>
+                  <div className="bg-gray-900/30 border-2 border-gray-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[160px] backdrop-blur-sm hover:border-gray-400/60 transition-all transform hover:scale-105">
+                    <div className="text-gray-400 font-bold mb-3 text-xl">📚</div>
+                    <div className="text-white text-sm font-semibold">Docs Master</div>
                     <div className="text-gray-200 text-xs">Documentation</div>
                   </div>
                 </div>
 
                 {/* Mobile Wizard (Alternative Position) */}
                 <div className="flex flex-col items-center">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-2 h-8 bg-zinc-600">
-                    <div className="absolute -top-1.5 left-1/2 w-4 h-4 bg-zinc-500 rounded-full -translate-x-1/2"></div>
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-3 h-12 bg-zinc-600">
+                    <div className="absolute -top-2 left-1/2 w-5 h-5 bg-zinc-500 rounded-full -translate-x-1/2"></div>
                   </div>
-                  <div className="bg-zinc-900/30 border-2 border-zinc-500/50 rounded-xl p-4 text-center shadow-2xl min-w-[140px] backdrop-blur-sm hover:border-zinc-400/60 transition-all">
-                    <div className="text-zinc-400 font-bold mb-2 text-lg">📱</div>
-                    <div className="text-white text-xs font-semibold">Mobile Wizard</div>
+                  <div className="bg-zinc-900/30 border-2 border-zinc-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[160px] backdrop-blur-sm hover:border-zinc-400/60 transition-all transform hover:scale-105">
+                    <div className="text-zinc-400 font-bold mb-3 text-xl">📱</div>
+                    <div className="text-white text-sm font-semibold">Mobile Wizard</div>
                     <div className="text-zinc-200 text-xs">iOS/Android</div>
                   </div>
                 </div>
