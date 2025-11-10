@@ -2,10 +2,7 @@ version: "1"
 services:
   - type: web
     name: swarm-intelligence
-    env: static
+    env: node
     buildCommand: "npm run build"
-    staticPublishPath: "dist"
-    routes:
-      - type: rewrite
-        source: "/*"
-        destination: "/index.html"
+    startCommand: "npm run preview"
+    healthCheckPath: "/"
