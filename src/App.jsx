@@ -158,16 +158,38 @@ function App() {
               Modèles IA Supportés
             </h3>
             <div className="flex flex-wrap justify-center gap-8">
-              <div className="group bg-gray-900/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-2xl">
-                  GLM
+              <div className="group bg-gray-900/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 text-center max-w-xs">
+                <div className="relative mb-4">
+                  <img
+                    src="/asset/image.png"
+                    alt="GLM 4.6 Model"
+                    className="w-20 h-20 mx-auto rounded-lg object-cover shadow-2xl"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextElementSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-2xl" style={{display: 'none'}}>
+                    GLM
+                  </div>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-2">GLM 4.6</h4>
                 <p className="text-gray-400 text-sm">Modèle de pointe pour analyses avancées</p>
               </div>
-              <div className="group bg-gray-900/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-2xl">
-                  MM
+              <div className="group bg-gray-900/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 text-center max-w-xs">
+                <div className="relative mb-4">
+                  <img
+                    src="/asset/IMG_2210.png"
+                    alt="Minimax M2 Model"
+                    className="w-20 h-20 mx-auto rounded-lg object-cover shadow-2xl"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextElementSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="w-20 h-20 mx-auto bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-2xl" style={{display: 'none'}}>
+                    MM
+                  </div>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-2">Minimax M2</h4>
                 <p className="text-gray-400 text-sm">Performance maximale pour tâches complexes</p>
@@ -389,42 +411,7 @@ function App() {
             </div>
           </div>
 
-          {/* Social Proof Explosion */}
-          <div className="bg-gray-900/80 p-8 rounded-2xl border border-purple-500/30 backdrop-blur-sm">
-            <h4 className="text-3xl font-black text-center mb-8 hype-gradient">
-              CE QUE DIT LA COMMUNAUTÉ
-            </h4>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  name: "Alex M.",
-                  role: "Dev Full-Stack",
-                  text: "J'ai décuplé ma productivité en 1 semaine ! C'est de la magie pure ! 🔥",
-                  rating: "⭐⭐⭐⭐⭐"
-                },
-                {
-                  name: "Sarah K.",
-                  role: "CEO Startup",
-                  text: "Mes concurrents ne comprennent pas comment je suis aussi rapide ! 😎",
-                  rating: "⭐⭐⭐⭐⭐"
-                },
-                {
-                  name: "Thomas R.",
-                  role: "Data Scientist",
-                  text: "J'ai économisé 40h/semaine. Je dors maintenant la nuit ! 😴💰",
-                  rating: "⭐⭐⭐⭐⭐"
-                }
-              ].map((testimonial, index) => (
-                <div key={index} className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all">
-                  <div className="text-yellow-400 text-xl mb-2">{testimonial.rating}</div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.text}"</p>
-                  <div className="font-bold text-purple-400">{testimonial.name}</div>
-                  <div className="text-gray-500 text-sm">{testimonial.role}</div>
-                </div>
-              ))}
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Use Cases */}
