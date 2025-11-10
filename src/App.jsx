@@ -139,6 +139,92 @@ function App() {
         </div>
       </section>
 
+      {/* Models Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900/50 to-black">
+        <div className="max-w-7xl mx-auto">
+          <h3 className="text-3xl font-bold text-white mb-12 text-center">Modèles IA Avancés Intégrés</h3>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* GLM 4.6 Card */}
+            <div className="bg-gradient-to-br from-blue-900/20 to-blue-800/10 border border-blue-700/30 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 hover:border-blue-600/50">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-16 h-16 bg-blue-600/20 rounded-lg p-2 flex-shrink-0">
+                  <img
+                    src="/asset/image.png"
+                    alt="GLM 4.6 Model"
+                    className="w-full h-full object-contain rounded"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="w-full h-full hidden items-center justify-center text-blue-400 text-2xl font-bold">
+                    GLM
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-xl font-semibold text-white mb-2">GLM 4.6</h4>
+                  <p className="text-gray-400 text-sm mb-3">
+                    Modèle de langage avancé avec reasoning complexes et traitement multimodal.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Reasoning</span>
+                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Multimodal</span>
+                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">128K context</span>
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    <strong>Utilisation:</strong> Analyse complexe, code generation, RAG
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Minimax M2 Card */}
+            <div className="bg-gradient-to-br from-purple-900/20 to-purple-800/10 border border-purple-700/30 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 hover:border-purple-600/50">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-16 h-16 bg-purple-600/20 rounded-lg p-2 flex-shrink-0">
+                  <img
+                    src="/asset/IMG_2210.png"
+                    alt="Minimax M2 Model"
+                    className="w-full h-full object-contain rounded"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="w-full h-full hidden items-center justify-center text-purple-400 text-2xl font-bold">
+                    M2
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-xl font-semibold text-white mb-2">Minimax M2</h4>
+                  <p className="text-gray-400 text-sm mb-3">
+                    Modèle de nouvelle génération avec performances exceptionnelles en traitement du langage.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full">High Performance</span>
+                    <span className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full">Low Latency</span>
+                    <span className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full">Scalable</span>
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    <strong>Utilisation:</strong> Production, API services, realtime
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <p className="text-gray-400 text-sm max-w-2xl mx-auto">
+              Ces modèles sont directement intégrés dans notre écosystème Swarm pour offrir des performances optimales
+              dans vos workflows multi-agents. Profitez de la puissance de l'IA de pointe sans configuration complexe.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Overview Section */}
       <section id="overview" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
