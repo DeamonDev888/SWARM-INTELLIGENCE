@@ -2,11 +2,60 @@ import { useState, useEffect } from 'react'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const [loadingPercentage, setLoadingPercentage] = useState(0)
+  const [showContent, setShowContent] = useState(false)
+
+  useEffect(() => {
+    // Simulate loading process
+    const loadingInterval = setInterval(() => {
+      setLoadingPercentage(prev => {
+        const newPercentage = prev + Math.floor(Math.random() * 15) + 5
+        if (newPercentage >= 100) {
+          clearInterval(loadingInterval)
+          return 100
+        }
+        return newPercentage
+      })
+    }, 200)
+
+    // Show content after loading
+    setTimeout(() => {
+      setIsLoading(false)
+      setTimeout(() => {
+        setShowContent(true)
+      }, 500)
+    }, 3000)
+
+    return () => {
+      clearInterval(loadingInterval)
+    }
+  }, [])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black to-gray-900">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800 shadow-2xl">
+      {/* LOADING SCREEN */}
+      {isLoading && (
+        <div className="loading-overlay">
+          <div className="loading-logo logo-spin">
+            SI
+          </div>
+          <div className="loading-text">
+            Swarm Intelligence
+          </div>
+          <div className="loading-progress">
+            <div className="loading-progress-bar"></div>
+          </div>
+          <div className="loading-percentage">
+            {loadingPercentage}% - Initializing AI Agents...
+          </div>
+        </div>
+      )}
+
+      {/* MAIN CONTENT WITH ENTRANCE ANIMATION */}
+      <div className={`${showContent ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
+        {/* Navigation */}
+        <nav className={`sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800 shadow-2xl ${showContent ? 'professional-fade-in' : 'initial-hidden'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center gap-3">
@@ -33,10 +82,7 @@ function App() {
                   💬 Discord
                 </span>
               </button>
-              <button
-                onClick={() => window.open('https://www.npmjs.com/package/@anthropic-ai/claude-code', '_blank')}
-                className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium shadow-2xl hover:shadow-2xl border border-gray-800"
-              >
+              <button className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium shadow-2xl hover:shadow-2xl border border-gray-800">
                 Launch Swarm
               </button>
             </div>
@@ -69,10 +115,7 @@ function App() {
                   💬 Discord
                 </span>
               </button>
-              <button
-                onClick={() => window.open('https://www.npmjs.com/package/@anthropic-ai/claude-code', '_blank')}
-                className="w-full bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 font-medium shadow-xl border border-gray-800"
-              >
+              <button className="w-full bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 font-medium shadow-xl border border-gray-800">
                 Launch Swarm
               </button>
             </div>
@@ -81,7 +124,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className={`py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden ${showContent ? 'professional-fade-in' : 'initial-hidden'}`}>
         {/* Animated background effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-indigo-900/20 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl animate-pulse"></div>
@@ -89,7 +132,7 @@ function App() {
 
         <div className="max-w-7xl mx-auto text-center relative z-10">
           {/* Hype badge */}
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 text-purple-300 rounded-full text-sm font-bold mb-8 border border-purple-500/30 shadow-2xl backdrop-blur-sm animate-bounce">
+          <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 text-purple-300 rounded-full text-sm font-bold mb-8 border border-purple-500/30 shadow-2xl backdrop-blur-sm animate-bounce ${showContent ? 'entrance-explosion delay-200' : 'initial-hidden'}`}>
             <div className="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               🔥 REJOIGNEZ LA RÉVOLUTION - 1,247+ MEMBRES ACTIFS
@@ -98,9 +141,11 @@ function App() {
           </div>
 
           {/* Main headline with emoji effects */}
-          <h2 className="text-5xl sm:text-6xl md:text-8xl font-black text-white mb-6 leading-tight">
+          <h2 className={`text-5xl sm:text-6xl md:text-8xl font-black text-white mb-6 leading-tight ${showContent ? 'text-unlock delay-400' : 'initial-hidden'}`}>
             <span className="block mb-2 animate-pulse">⚡</span>
-            L'ÈRE DES
+            <span className={`hype-gradient ${showContent ? 'glitch-effect' : ''}`}>
+              L'ÈRE DES
+            </span>
             <br />
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-pulse drop-shadow-2xl">
               AGENTS IA
@@ -112,7 +157,7 @@ function App() {
           </h2>
 
           {/* Compelling description */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed font-medium">
+          <p className={`text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed font-medium ${showContent ? 'text-unlock delay-600' : 'initial-hidden'}`}>
             <span className="text-purple-400 font-bold">Imaginez:</span> Une armée d'agents IA qui travaillent
             <span className="text-blue-400 font-bold"> 24/7</span> pour vous.
             <br />
@@ -121,17 +166,8 @@ function App() {
             </span>
           </p>
 
-          {/* Free Service & Support Info */}
-          <div className="mb-8">
-            <div className="inline-flex items-center gap-4 px-6 py-3 bg-gradient-to-r from-green-600/20 to-emerald-600/20 text-green-300 rounded-full text-sm font-bold border border-green-500/30 shadow-2xl backdrop-blur-sm">
-              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-green-400 font-bold text-lg">💎 100% GRATUIT • SUPPORT TECHNIQUE 24/7</span>
-              <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
-            </div>
-          </div>
-
           {/* Social proof stats */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
+          <div className={`flex flex-wrap justify-center gap-6 mb-12 ${showContent ? 'hype-slide-in delay-800' : 'initial-hidden'}`}>
             <div className="group">
               <div className="text-3xl font-black text-purple-400 group-hover:scale-110 transition-transform">
                 🔥 2.8K+
@@ -152,31 +188,8 @@ function App() {
             </div>
           </div>
 
-          {/* AI Models Support */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">
-              Modèles IA Supportés
-            </h3>
-            <div className="flex flex-wrap justify-center gap-8">
-              <div className="group bg-gray-900/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-2xl">
-                  GLM
-                </div>
-                <h4 className="text-xl font-bold text-white mb-2">GLM 4.6</h4>
-                <p className="text-gray-400 text-sm">Modèle de pointe pour analyses avancées</p>
-              </div>
-              <div className="group bg-gray-900/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-2xl">
-                  MM
-                </div>
-                <h4 className="text-xl font-bold text-white mb-2">Minimax M2</h4>
-                <p className="text-gray-400 text-sm">Performance maximale pour tâches complexes</p>
-              </div>
-            </div>
-          </div>
-
           {/* IRRESISTIBLE Discord CTA */}
-          <div className="mb-8">
+          <div className={`mb-8 ${showContent ? 'entrance-explosion delay-1000' : 'initial-hidden'}`}>
             <div className="inline-block p-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl animate-pulse">
               <button
                 onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
@@ -219,12 +232,12 @@ function App() {
       </section>
 
       {/* Key Benefits */}
-      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50 relative">
+      <section id="features" className={`py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50 relative ${showContent ? 'professional-fade-in delay-1800' : 'initial-hidden'}`}>
         {/* Background effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 to-blue-900/10"></div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-12">
+          <div className={`text-center mb-12 ${showContent ? 'hype-slide-in delay-2000' : 'initial-hidden'}`}>
             <h3 className="text-4xl md:text-5xl font-black text-white mb-4">
               <span className="hype-gradient">POURQUOI NOUS SOMMES</span>
             </h3>
@@ -278,7 +291,7 @@ function App() {
                 gradient: "from-indigo-500 to-purple-500"
               }
             ].map((benefit, index) => (
-              <div key={index} className={`group relative bg-gradient-to-br ${benefit.gradient} p-1 rounded-2xl hover:scale-105 transition-all duration-300 animate-float`} style={{animationDelay: `${index * 0.2}s`}}>
+              <div key={index} className={`group relative bg-gradient-to-br ${benefit.gradient} p-1 rounded-2xl hover:scale-105 transition-all duration-300 ${showContent ? `entrance-explosion delay-${2200 + index * 200}` : 'initial-hidden'}`}>
                 <div className="bg-gray-900 p-6 rounded-xl h-full">
                   <div className="text-5xl mb-3 animate-bounce">{benefit.icon}</div>
                   <h4 className="text-xl font-black text-white mb-2">{benefit.title}</h4>
@@ -311,12 +324,12 @@ function App() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8 bg-black/50 relative">
+      <section id="how-it-works" className={`py-20 px-4 sm:px-6 lg:px-8 bg-black/50 relative ${showContent ? 'professional-fade-in delay-3400' : 'initial-hidden'}`}>
         {/* Animated background */}
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/20 to-purple-900/20"></div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-12">
+          <div className={`text-center mb-12 ${showContent ? 'hype-slide-in delay-3600' : 'initial-hidden'}`}>
             <h3 className="text-4xl md:text-5xl font-black text-white mb-4">
               <span className="hype-gradient">COMMENT ÊTRE UN DIEU</span>
             </h3>
@@ -349,7 +362,7 @@ function App() {
                 gradient: "from-blue-500 to-cyan-500"
               }
             ].map((step, index) => (
-              <div key={index} className={`group relative bg-gradient-to-br ${step.gradient} p-1 rounded-2xl hover:scale-110 transition-all duration-300 animate-float`} style={{animationDelay: `${index * 0.3}s`}}>
+              <div key={index} className={`group relative bg-gradient-to-br ${step.gradient} p-1 rounded-2xl hover:scale-110 transition-all duration-300 ${showContent ? `entrance-explosion delay-${3800 + index * 200}` : 'initial-hidden'}`}>
                 <div className="bg-gray-900 p-6 rounded-xl h-full text-center">
                   <div className="text-6xl mb-4 animate-bounce">{step.step}</div>
                   <h4 className="text-2xl font-black text-white mb-3">{step.title}</h4>
@@ -428,11 +441,13 @@ function App() {
       </section>
 
       {/* Use Cases */}
-      <section id="use-cases" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+      <section id="use-cases" className={`py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50 ${showContent ? 'professional-fade-in delay-4600' : 'initial-hidden'}`}>
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-3xl font-bold text-center text-white mb-12">
-            Domaines d'Application
-          </h3>
+          <div className={`text-center mb-12 ${showContent ? 'text-unlock delay-4800' : 'initial-hidden'}`}>
+            <h3 className="text-3xl font-bold text-white">
+              Domaines d'Application
+            </h3>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -467,7 +482,7 @@ function App() {
                 color: "from-gray-900 to-black"
               }
             ].map((useCase, index) => (
-              <div key={index} className={`bg-gradient-to-br ${useCase.color} p-6 rounded-xl border border-gray-800 hover:shadow-2xl transition-all duration-300`}>
+              <div key={index} className={`bg-gradient-to-br ${useCase.color} p-6 rounded-xl border border-gray-800 hover:shadow-2xl transition-all duration-300 ${showContent ? `hover-lift delay-${5000 + index * 100}` : 'initial-hidden'}`}>
                 <div className="text-2xl mb-3">{useCase.domain}</div>
                 <p className="text-gray-400 text-sm leading-relaxed">{useCase.agents}</p>
               </div>
@@ -477,11 +492,13 @@ function App() {
       </section>
 
       {/* Getting Started */}
-      <section id="getting-started" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-black">
+      <section id="getting-started" className={`py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-black ${showContent ? 'professional-fade-in delay-5800' : 'initial-hidden'}`}>
         <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-white mb-12">
-            Démarrage Rapide (5 Minutes)
-          </h3>
+          <div className={`mb-12 ${showContent ? 'text-unlock delay-6000' : 'initial-hidden'}`}>
+            <h3 className="text-3xl font-bold text-white">
+              Démarrage Rapide (5 Minutes)
+            </h3>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
@@ -504,7 +521,7 @@ function App() {
                 code: "claude --agents @claude-agents.json --swarm-mode parallel"
               }
             ].map((step, index) => (
-              <div key={index} className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-xl border border-gray-800 shadow-2xl">
+              <div key={index} className={`bg-gray-900/80 backdrop-blur-sm p-6 rounded-xl border border-gray-800 shadow-2xl ${showContent ? `hover-lift delay-${6200 + index * 200}` : 'initial-hidden'}`}>
                 <div className="text-gray-400 text-sm font-medium mb-2">{step.step}</div>
                 <h4 className="text-xl font-semibold text-white mb-3">{step.title}</h4>
                 <p className="text-gray-500 mb-4">{step.description}</p>
@@ -541,22 +558,22 @@ function App() {
       </section>
 
       {/* Stats */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+      <section className={`py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50 ${showContent ? 'professional-fade-in delay-7000' : 'initial-hidden'}`}>
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
+            <div className={showContent ? 'text-unlock delay-7200' : 'initial-hidden'}>
               <div className="text-4xl font-bold text-white mb-2">90%</div>
               <div className="text-gray-400">Plus Rapide</div>
             </div>
-            <div>
+            <div className={showContent ? 'text-unlock delay-7400' : 'initial-hidden'}>
               <div className="text-4xl font-bold text-gray-300 mb-2">10+</div>
               <div className="text-gray-400">Agents Spécialisés</div>
             </div>
-            <div>
+            <div className={showContent ? 'text-unlock delay-7600' : 'initial-hidden'}>
               <div className="text-4xl font-bold text-gray-300 mb-2">20 min</div>
               <div className="text-gray-400">Déploiement</div>
             </div>
-            <div>
+            <div className={showContent ? 'text-unlock delay-7800' : 'initial-hidden'}>
               <div className="text-4xl font-bold text-gray-300 mb-2">100%</div>
               <div className="text-gray-400">Adaptable</div>
             </div>
@@ -564,8 +581,11 @@ function App() {
         </div>
       </section>
 
+      </div>
+      </div>
+
       {/* Footer */}
-      <footer className="bg-black text-gray-400 py-12 border-t border-gray-900">
+      <footer className={`bg-black text-gray-400 py-12 border-t border-gray-900 ${showContent ? 'professional-fade-in delay-8000' : 'initial-hidden'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
