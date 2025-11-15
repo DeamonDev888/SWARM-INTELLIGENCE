@@ -11,11 +11,11 @@ function App() {
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">SI</span>
+                <span className="text-white font-bold">KC</span>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-white">Swarm Intelligence</h1>
-                <p className="text-xs text-gray-400">Multi-Agent Platform</p>
+                <h1 className="text-xl font-bold text-white">KiloCode CLI</h1>
+                <p className="text-xs text-gray-400">AI Development Interface</p>
               </div>
             </div>
 
@@ -27,16 +27,16 @@ function App() {
               <a href="#use-cases" className="text-gray-400 hover:text-white transition-colors">Cas d'Usage</a>
               <a href="#resources" className="text-gray-400 hover:text-white transition-colors">Ressources</a>
               <button
-                onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
+                onClick={() => window.open('https://docs.kilocode.org/', '_blank')}
                 className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
               >
-                Discord
+                Documentation
               </button>
               <button
-                onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE.git', '_blank')}
+                onClick={() => window.open('https://community.kilocode.org/', '_blank')}
                 className="bg-black text-white px-4 py-2 rounded-lg border border-gray-700 hover:bg-gray-900 transition-colors"
               >
-                Launch Swarm
+                Communauté
               </button>
             </div>
 
@@ -62,16 +62,16 @@ function App() {
               <a href="#use-cases" className="block px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white">Cas d'Usage</a>
               <a href="#resources" className="block px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white">Ressources</a>
               <button
-                onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
+                onClick={() => window.open('https://docs.kilocode.org/', '_blank')}
                 className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 mb-2"
               >
-                Discord
+                Documentation
               </button>
               <button
-                onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE.git', '_blank')}
+                onClick={() => window.open('https://community.kilocode.org/', '_blank')}
                 className="w-full bg-black text-white px-4 py-2 rounded-lg border border-gray-700 hover:bg-gray-900"
               >
-                Launch Swarm
+                Communauté
               </button>
             </div>
           </div>
@@ -87,18 +87,18 @@ function App() {
           </div>
 
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Swarm
-            <span className="text-blue-400"> Intelligence</span>
+            KiloCode
+            <span className="text-blue-400"> CLI</span>
           </h2>
 
           <p className="text-xl text-gray-400 mb-6 max-w-3xl mx-auto leading-relaxed">
-            L'IA Multi-Agent qui Révolutionne Votre Productivité.
-            Orchestrez 10+ agents spécialisés travaillant de concert pour accomplir n'importe quelle mission complexe.
+            Interface de ligne de commande avancée pour l'IA de développement.
+            Orchestration intelligente de sous-agents spécialisés pour transformer votre workflow de développement.
           </p>
 
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-900/30 border border-green-700 rounded-full text-sm text-green-300 mb-8">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            <span>💎 100% GRATUIT • SUPPORT TECHNIQUE 24/7</span>
+            <span>🚀 5 MODES IA • 2 MODÈLES GRATUITS • CLI PRÊT À L'EMPLOI</span>
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
           </div>
 
@@ -107,33 +107,33 @@ function App() {
               onClick={() => window.open('#quickstart', '_self')}
               className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
-              Commencer (20 min)
+              Installer CLI
             </button>
             <button
-              onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE', '_blank')}
+              onClick={() => window.open('#quickstart', '_self')}
               className="bg-gray-800 text-white px-8 py-3 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors font-medium"
             >
-              Documentation
+              Guide d'Utilisation
             </button>
           </div>
 
           {/* Key Metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div>
-              <div className="text-3xl font-bold text-white">90%</div>
-              <div className="text-gray-400">Réduction du temps</div>
+              <div className="text-3xl font-bold text-white">5</div>
+              <div className="text-gray-400">Modes de Fonctionnement</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">12+</div>
-              <div className="text-gray-400">Agents Spécialisés</div>
+              <div className="text-3xl font-bold text-white">2</div>
+              <div className="text-gray-400">Modèles IA Gratuits</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">20</div>
-              <div className="text-gray-400">Minutes de déploiement</div>
+              <div className="text-3xl font-bold text-white">256K</div>
+              <div className="text-gray-400">Contexte Maximum</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">100%</div>
-              <div className="text-gray-400">Adaptable</div>
+              <div className="text-3xl font-bold text-white">$0.00</div>
+              <div className="text-gray-400">Coût par Utilisation</div>
             </div>
           </div>
         </div>
@@ -142,56 +142,38 @@ function App() {
       {/* Models Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900/50 to-black">
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-3xl font-bold text-white mb-12 text-center">Modèles IA Avancés Intégrés</h3>
+          <h3 className="text-3xl font-bold text-white mb-12 text-center">Modèles IA Intégrés KiloCode CLI</h3>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* GLM 4.6 Card */}
-            <a
-              href="https://z.ai/model-api"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block bg-gradient-to-br from-blue-900/20 to-blue-800/10 border border-blue-700/30 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 hover:border-blue-600/50 hover:scale-[1.02] cursor-pointer"
-            >
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* KiloCode Features Card */}
+            <div className="block bg-gradient-to-br from-blue-900/20 to-blue-800/10 border border-blue-700/30 rounded-xl p-6">
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 bg-blue-600/20 rounded-lg p-2 flex-shrink-0">
-                  <img
-                    src="/asset/image.png"
-                    alt="GLM 4.6 Model"
-                    className="w-full h-full object-contain rounded"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.style.display = 'none';
-                      e.target.nextSibling.style.display = 'flex';
-                    }}
-                  />
-                  <div className="w-full h-full hidden items-center justify-center text-blue-400 text-2xl font-bold">
-                    GLM
-                  </div>
+                <div className="w-16 h-16 bg-blue-600/20 rounded-lg p-2 flex-shrink-0 flex items-center justify-center">
+                  <span className="text-blue-400 text-3xl">⚡</span>
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-xl font-semibold text-white mb-2">GLM 4.6</h4>
+                  <h4 className="text-xl font-semibold text-white mb-2">Modes de Fonctionnement</h4>
                   <p className="text-gray-400 text-sm mb-3">
-                    Modèle de langage avancé avec reasoning complexes et traitement multimodal.
+                    5 modes spécialisés pour maximiser votre productivité de développement.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-3">
-                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Reasoning</span>
-                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Multimodal</span>
-                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">256K context</span>
+                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Architect</span>
+                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Code</span>
+                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Ask</span>
+                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Debug</span>
+                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Orchestrator</span>
                   </div>
                   <div className="text-xs text-gray-500">
-                    <strong>Utilisation:</strong> Analyse complexe, code generation, RAG
+                    <strong>Usage:</strong> Architecture, développement, assistance, débogage, orchestration
                   </div>
                 </div>
               </div>
               <div className="text-right">
-                <span className="text-blue-400 text-xs font-semibold flex items-center justify-end gap-1">
-                  Visiter le site
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
+                <span className="text-blue-400 text-xs font-semibold">
+                  CLI Intégré
                 </span>
               </div>
-            </a>
+            </div>
 
             {/* Minimax M2 Card */}
             <a
@@ -217,17 +199,17 @@ function App() {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-xl font-semibold text-white mb-2">Minimax M2</h4>
+                  <h4 className="text-xl font-semibold text-white mb-2">⭐ minimax/minimax-m2:free</h4>
                   <p className="text-gray-400 text-sm mb-3">
-                    Modèle de nouvelle génération avec performances exceptionnelles en traitement du langage.
+                    MiniMax: MiniMax M2 (gratuit) - Modèle de nouvelle génération optimisé pour le reasoning.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-3">
-                    <span className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full">High Performance</span>
-                    <span className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full">Low Latency</span>
-                    <span className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full">Scalable</span>
+                    <span className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full">204K contexte</span>
+                    <span className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full">$0.00/$0.00</span>
+                    <span className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full">Reasoning</span>
                   </div>
                   <div className="text-xs text-gray-500">
-                    <strong>Utilisation:</strong> Production, API services, realtime
+                    <strong>Utilisation:</strong> Architecture logicielle, planning de projets complexes
                   </div>
                 </div>
               </div>
@@ -240,12 +222,60 @@ function App() {
                 </span>
               </div>
             </a>
+
+            {/* xAI Grok Card */}
+            <a
+              href="https://x.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-gradient-to-br from-green-900/20 to-green-800/10 border border-green-700/30 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 hover:border-green-600/50 hover:scale-[1.02] cursor-pointer"
+            >
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-16 h-16 bg-green-600/20 rounded-lg p-2 flex-shrink-0">
+                  <img
+                    src="/asset/image.png"
+                    alt="xAI Grok Model"
+                    className="w-full h-full object-contain rounded"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="w-full h-full hidden items-center justify-center text-green-400 text-2xl font-bold">
+                    GROK
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-xl font-semibold text-white mb-2">⭐ x-ai/grok-code-fast-1</h4>
+                  <p className="text-gray-400 text-sm mb-3">
+                    xAI: Grok Code Fast 1 (gratuit) - Modèle de codage ultra-rapide pour développement moderne.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="px-2 py-1 bg-green-600/20 text-green-300 text-xs rounded-full">256K contexte</span>
+                    <span className="px-2 py-1 bg-green-600/20 text-green-300 text-xs rounded-full">$0.00/$0.00</span>
+                    <span className="px-2 py-1 bg-green-600/20 text-green-300 text-xs rounded-full">Cache, Reasoning</span>
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    <strong>Utilisation:</strong> Développement rapide, génération de code, outils de développement
+                  </div>
+                </div>
+              </div>
+              <div className="text-right">
+                <span className="text-green-400 text-xs font-semibold flex items-center justify-end gap-1">
+                  Visiter le site
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </span>
+              </div>
+            </a>
           </div>
 
           <div className="text-center">
             <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-              Ces modèles sont directement intégrés dans notre écosystème Swarm pour offrir des performances optimales
-              dans vos workflows multi-agents. Profitez de la puissance de l'IA de pointe sans configuration complexe.
+              Ces modèles sont directement intégrés dans KiloCode CLI pour optimiser vos workflows de développement.
+              Profitez de la puissance de l'IA avancée avec une interface simple et efficace.
             </p>
           </div>
         </div>
@@ -258,30 +288,28 @@ function App() {
 
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div>
-              <h4 className="text-2xl font-semibold text-white mb-4">Qu'est-ce qu'un Swarm d'Agents ?</h4>
+              <h4 className="text-2xl font-semibold text-white mb-4">Qu'est-ce que KiloCode CLI ?</h4>
               <p className="text-gray-400 leading-relaxed mb-4">
-                Un swarm d'agents est une orchestration de multiples agents spécialisés qui travaillent de concert
-                pour accomplir n'importe quelle mission complexe. Imaginez une équipe de 10+ experts virtuels,
-                chacun devenant une autorité dans son domaine, coordonnés par l'intelligence artificielle pour
-                livrer des résultats exceptionnels.
+                KiloCode CLI est un outil de ligne de commande avancé qui permet d'interagir avec des modèles d'IA
+                pour l'assistance au développement logiciel. L'une de ses fonctionnalités les plus puissantes est le
+                système de sous-agents, qui permet de déléguer des tâches spécifiques à des agents spécialisés.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                Que votre mission soit dans la recherche, l'analyse, la création, la stratégie, le développement,
-                le conseil, le marketing, la finance, la santé, l'éducation, ou tout autre domaine - le swarm
-                s'adapte à votre besoin spécifique.
+                Que vous soyez développeur, architecte, ou chef de projet, KiloCode CLI s'adapte à votre workflow
+                avec 5 modes de fonctionnement optimisés pour chaque type de tâche de développement.
               </p>
             </div>
 
             <div>
-              <h4 className="text-2xl font-semibold text-white mb-4">Pourquoi Choisir le Swarm Intelligence ?</h4>
+              <h4 className="text-2xl font-semibold text-white mb-4">Pourquoi Choisir KiloCode CLI ?</h4>
               <div className="space-y-4">
                 {[
-                  { title: "Parallélisme", desc: "10+ agents spécialisés travaillant simultanément", impact: "90% plus rapide" },
-                  { title: "Expertise", desc: "Chaque agent devient un expert dans son domaine", impact: "Qualité professionnelle" },
-                  { title: "Efficacité", desc: "Automatisation des tâches répétitives", impact: "Plus de 24h économisées/semaine" },
-                  { title: "Coordination", desc: "Synchronisation intelligente sans intervention", impact: "Flux de travail optimisé" },
-                  { title: "Scalabilité", desc: "Ajoutez/retirez agents selon la mission", impact: "Adaptabilité totale" },
-                  { title: "Polyvalence", desc: "Fonctionne dans TOUS les domaines", impact: "Solution universelle" }
+                  { title: "5 Modes Spécialisés", desc: "Architect, Code, Ask, Debug, Orchestrator", impact: "Productivité optimale" },
+                  { title: "2 Modèles Gratuits", desc: "xAI Grok et MiniMax M2 sans coût", impact: "$0.00 par utilisation" },
+                  { title: "256K Contexte", desc: "Fenêtre de contexte massive pour projets complexes", impact: "Projets à grande échelle" },
+                  { title: "CLI Intégré", desc: "Interface simple et puissante", impact: "Workflow simplifié" },
+                  { title: "Configuration Flexible", desc: "Support de multiples providers IA", impact: "Adaptabilité totale" },
+                  { title: "Mode Autonome", desc: "Support CI/CD et automatisation", impact: "Intégration parfaite" }
                 ].map((item, index) => (
                   <div key={index} className="bg-gray-800 p-4 rounded-lg">
                     <div className="flex justify-between items-start mb-2">
@@ -300,144 +328,113 @@ function App() {
       {/* Architecture Section */}
       <section id="architecture" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-3xl font-bold text-white mb-12 text-center">Architecture & Hiérarchie</h3>
+          <h3 className="text-3xl font-bold text-white mb-12 text-center">Modes de Fonctionnement</h3>
 
           {/* Architecture Graphique - Structure Compacte sans Superposition */}
           <div className="bg-gray-900/50 rounded-xl p-10 mb-16">
             <div className="space-y-8">
-              {/* Orchestrator Central */}
+              {/* KiloCode CLI Central */}
               <div className="text-center">
                 <div className="inline-block bg-gradient-to-r from-indigo-900/40 to-purple-900/40 border-2 border-indigo-500/50 rounded-xl px-10 py-5 shadow-2xl backdrop-blur-sm">
                   <div className="text-indigo-300 font-bold text-2xl flex items-center gap-4">
-                    <span className="text-4xl">🏛️</span>
-                    <span>ORCHESTRATEUR CENTRAL</span>
+                    <span className="text-4xl">⚡</span>
+                    <span>KILOCODE CLI</span>
                   </div>
                 </div>
               </div>
 
-              {/* Critical Level */}
+              {/* Architect Mode */}
               <div className="relative">
                 <div className="flex justify-center items-center gap-8">
                   <div className="text-center">
                     <div className="inline-block bg-cyan-900/40 border-2 border-cyan-500/60 rounded-xl px-6 py-3 mb-4">
                       <div className="text-cyan-400 font-bold text-lg flex items-center gap-3">
-                        <span className="text-2xl">🔒</span>
-                        <span>CRITIQUE</span>
+                        <span className="text-2xl">🏗️</span>
+                        <span>ARCHITECT</span>
                       </div>
                     </div>
                     <div className="bg-cyan-900/30 border-2 border-cyan-500/50 rounded-xl p-8 text-center shadow-2xl min-w-[200px] backdrop-blur-sm hover:border-cyan-400/60 transition-all transform hover:scale-105">
-                      <div className="text-cyan-400 font-bold mb-4 text-3xl">🔒</div>
-                      <div className="text-white text-base font-semibold mb-3">Security Guardian</div>
-                      <div className="text-cyan-200 text-sm italic">Surveille toutes les actions</div>
+                      <div className="text-cyan-400 font-bold mb-4 text-3xl">🏗️</div>
+                      <div className="text-white text-base font-semibold mb-3">Mode Architect</div>
+                      <div className="text-cyan-200 text-sm italic">Conception et architecture logicielle</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* High Level */}
+              {/* Code & Ask Modes */}
               <div className="relative">
                 <div className="text-center mb-4">
                   <div className="inline-block bg-emerald-900/40 border-2 border-emerald-500/60 rounded-xl px-6 py-3">
-                    <div className="text-emerald-400 font-bold text-lg">HIGH</div>
+                    <div className="text-emerald-400 font-bold text-lg">HIGH PRIORITY</div>
                   </div>
                 </div>
                 <div className="flex justify-center gap-16">
                   <div className="bg-emerald-900/30 border-2 border-emerald-500/50 rounded-xl p-6 text-center shadow-2xl min-w-[180px] backdrop-blur-sm hover:border-emerald-400/60 transition-all transform hover:scale-105">
-                    <div className="text-emerald-400 font-bold mb-3 text-2xl">🎨</div>
-                    <div className="text-white text-sm font-semibold mb-2">UI/UX Designer</div>
-                    <div className="text-emerald-200 text-xs">Design System</div>
+                    <div className="text-emerald-400 font-bold mb-3 text-2xl">💻</div>
+                    <div className="text-white text-sm font-semibold mb-2">Mode Code</div>
+                    <div className="text-emerald-200 text-xs">Écriture & Modification</div>
                   </div>
                   <div className="bg-teal-900/30 border-2 border-teal-500/50 rounded-xl p-6 text-center shadow-2xl min-w-[180px] backdrop-blur-sm hover:border-teal-400/60 transition-all transform hover:scale-105">
-                    <div className="text-teal-400 font-bold mb-3 text-2xl">🏗️</div>
-                    <div className="text-white text-sm font-semibold mb-2">Backend Architect</div>
-                    <div className="text-teal-200 text-xs">API Architecture</div>
-                  </div>
-                  <div className="bg-blue-900/30 border-2 border-blue-500/50 rounded-xl p-6 text-center shadow-2xl min-w-[180px] backdrop-blur-sm hover:border-blue-400/60 transition-all transform hover:scale-105">
-                    <div className="text-blue-400 font-bold mb-3 text-2xl">🗄️</div>
-                    <div className="text-white text-sm font-semibold mb-2">Database Master</div>
-                    <div className="text-blue-200 text-xs">Data Architecture</div>
+                    <div className="text-teal-400 font-bold mb-3 text-2xl">❓</div>
+                    <div className="text-white text-sm font-semibold mb-2">Mode Ask</div>
+                    <div className="text-teal-200 text-xs">Questions & Réponses</div>
                   </div>
                 </div>
               </div>
 
-              {/* Medium Level */}
+              {/* Debug & Orchestrator Modes */}
               <div className="relative">
                 <div className="text-center mb-4">
                   <div className="inline-block bg-violet-900/40 border-2 border-violet-500/60 rounded-xl px-6 py-3">
-                    <div className="text-violet-400 font-bold text-lg">MEDIUM</div>
+                    <div className="text-violet-400 font-bold text-lg">SPECIALIZED</div>
                   </div>
                 </div>
                 <div className="flex justify-center gap-8">
                   <div className="bg-violet-900/30 border-2 border-violet-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[140px] backdrop-blur-sm hover:border-violet-400/60 transition-all transform hover:scale-105">
-                    <div className="text-violet-400 font-bold mb-3 text-xl">🚀</div>
-                    <div className="text-white text-sm font-semibold">DevOps Commander</div>
-                    <div className="text-violet-200 text-xs">CI/CD</div>
+                    <div className="text-violet-400 font-bold mb-3 text-xl">🔧</div>
+                    <div className="text-white text-sm font-semibold">Mode Debug</div>
+                    <div className="text-violet-200 text-xs">Diagnostic & Résolution</div>
                   </div>
                   <div className="bg-purple-900/30 border-2 border-purple-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[140px] backdrop-blur-sm hover:border-purple-400/60 transition-all transform hover:scale-105">
-                    <div className="text-purple-400 font-bold mb-3 text-xl">🧪</div>
-                    <div className="text-white text-sm font-semibold">Testing Expert</div>
-                    <div className="text-purple-200 text-xs">QA Tests</div>
+                    <div className="text-purple-400 font-bold mb-3 text-xl">🎯</div>
+                    <div className="text-white text-sm font-semibold">Mode Orchestrator</div>
+                    <div className="text-purple-200 text-xs">Coordination Avancée</div>
                   </div>
                   <div className="bg-pink-900/30 border-2 border-pink-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[140px] backdrop-blur-sm hover:border-pink-400/60 transition-all transform hover:scale-105">
-                    <div className="text-pink-400 font-bold mb-3 text-xl">⚡</div>
-                    <div className="text-white text-sm font-semibold">Performance</div>
-                    <div className="text-pink-200 text-xs">Optimizer</div>
+                    <div className="text-pink-400 font-bold mb-3 text-xl">⚙️</div>
+                    <div className="text-white text-sm font-semibold">Debug OS</div>
+                    <div className="text-pink-200 text-xs">Diagnostic Système</div>
                   </div>
                   <div className="bg-rose-900/30 border-2 border-rose-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[140px] backdrop-blur-sm hover:border-rose-400/60 transition-all transform hover:scale-105">
-                    <div className="text-rose-400 font-bold mb-3 text-xl">🔌</div>
-                    <div className="text-white text-sm font-semibold">Integration</div>
-                    <div className="text-rose-200 text-xs">Guru</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Low Level */}
-              <div className="relative">
-                <div className="text-center mb-4">
-                  <div className="inline-block bg-slate-900/40 border-2 border-slate-500/60 rounded-xl px-6 py-3">
-                    <div className="text-slate-400 font-bold text-lg">LOW</div>
-                  </div>
-                </div>
-                <div className="flex justify-center gap-12">
-                  <div className="bg-slate-900/30 border-2 border-slate-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[160px] backdrop-blur-sm hover:border-slate-400/60 transition-all transform hover:scale-105">
-                    <div className="text-slate-400 font-bold mb-3 text-xl">🤖</div>
-                    <div className="text-white text-sm font-semibold">AI/ML Specialist</div>
-                    <div className="text-slate-200 text-xs">ML Models</div>
-                  </div>
-                  <div className="bg-gray-900/30 border-2 border-gray-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[160px] backdrop-blur-sm hover:border-gray-400/60 transition-all transform hover:scale-105">
-                    <div className="text-gray-400 font-bold mb-3 text-xl">📚</div>
-                    <div className="text-white text-sm font-semibold">Docs Master</div>
-                    <div className="text-gray-200 text-xs">Documentation</div>
-                  </div>
-                  <div className="bg-zinc-900/30 border-2 border-zinc-500/50 rounded-xl p-5 text-center shadow-2xl min-w-[160px] backdrop-blur-sm hover:border-zinc-400/60 transition-all transform hover:scale-105">
-                    <div className="text-zinc-400 font-bold mb-3 text-xl">📱</div>
-                    <div className="text-white text-sm font-semibold">Mobile Wizard</div>
-                    <div className="text-zinc-200 text-xs">iOS/Android</div>
+                    <div className="text-rose-400 font-bold mb-3 text-xl">⌨️</div>
+                    <div className="text-white text-sm font-semibold">Debug Keyboard</div>
+                    <div className="text-rose-200 text-xs">Diagnostic Périphériques</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Detailed Cards Section - Couleurs Harmonisées */}
+          {/* Detailed Cards Section - Modes CLI */}
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-cyan-900/20 border border-cyan-800/50 rounded-lg p-6 backdrop-blur-sm">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-cyan-900/50 rounded-lg flex items-center justify-center">
-                  <span className="text-cyan-400 font-bold">🔒</span>
+                  <span className="text-cyan-400 font-bold">🏗️</span>
                 </div>
                 <div>
-                  <h4 className="text-cyan-400 font-semibold">Niveau CRITIQUE</h4>
-                  <p className="text-cyan-500 text-sm">1 Agent</p>
+                  <h4 className="text-cyan-400 font-semibold">Mode Architect</h4>
+                  <p className="text-cyan-500 text-sm">-m architect</p>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="bg-cyan-900/10 rounded-lg p-3">
-                  <h5 className="text-white font-medium mb-2">Security Guardian</h5>
+                  <h5 className="text-white font-medium mb-2">Usage Principal</h5>
                   <ul className="text-gray-400 text-sm space-y-1">
-                    <li>• Surveille toutes les actions</li>
-                    <li>• Bloque les opérations dangereuses</li>
-                    <li>• Audit continu de sécurité</li>
+                    <li>• Conception d'architecture logicielle</li>
+                    <li>• Planification de structure de projet</li>
+                    <li>• Design patterns et bonnes pratiques</li>
                   </ul>
                 </div>
               </div>
@@ -446,25 +443,21 @@ function App() {
             <div className="bg-emerald-900/20 border border-emerald-800/50 rounded-lg p-6 backdrop-blur-sm">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-emerald-900/50 rounded-lg flex items-center justify-center">
-                  <span className="text-emerald-400 font-bold">🟢</span>
+                  <span className="text-emerald-400 font-bold">💻</span>
                 </div>
                 <div>
-                  <h4 className="text-emerald-400 font-semibold">Niveau HIGH</h4>
-                  <p className="text-emerald-500 text-sm">3 Agents</p>
+                  <h4 className="text-emerald-400 font-semibold">Mode Code</h4>
+                  <p className="text-emerald-500 text-sm">-m code</p>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="bg-emerald-900/10 rounded-lg p-3">
-                  <h5 className="text-white font-medium mb-2">UI/UX Designer</h5>
-                  <p className="text-gray-400 text-xs">Design System, Wireframes, Prototypes</p>
+                  <h5 className="text-white font-medium mb-2">Fonctions</h5>
+                  <p className="text-gray-400 text-xs">Génération et modification de code</p>
                 </div>
                 <div className="bg-emerald-900/10 rounded-lg p-3">
-                  <h5 className="text-white font-medium mb-2">Backend Architect</h5>
-                  <p className="text-gray-400 text-xs">API Architecture, Microservices</p>
-                </div>
-                <div className="bg-emerald-900/10 rounded-lg p-3">
-                  <h5 className="text-white font-medium mb-2">Database Master</h5>
-                  <p className="text-gray-400 text-xs">Data Architecture, Schemas</p>
+                  <h5 className="text-white font-medium mb-2">Mode Ask</h5>
+                  <p className="text-gray-400 text-xs">Questions et assistance générale</p>
                 </div>
               </div>
             </div>
@@ -472,54 +465,21 @@ function App() {
             <div className="bg-violet-900/20 border border-violet-800/50 rounded-lg p-6 backdrop-blur-sm">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-violet-900/50 rounded-lg flex items-center justify-center">
-                  <span className="text-violet-400 font-bold">🟣</span>
+                  <span className="text-violet-400 font-bold">🔧</span>
                 </div>
                 <div>
-                  <h4 className="text-violet-400 font-semibold">Niveau MEDIUM</h4>
-                  <p className="text-violet-500 text-sm">5 Agents</p>
+                  <h4 className="text-violet-400 font-semibold">Modes Spécialisés</h4>
+                  <p className="text-violet-500 text-sm">Debug & Orchestrator</p>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="bg-violet-900/10 rounded-lg p-3">
-                  <h5 className="text-white font-medium mb-2">DevOps Commander</h5>
-                  <p className="text-gray-400 text-xs">CI/CD, Kubernetes, Infrastructure</p>
+                  <h5 className="text-white font-medium mb-2">Debug</h5>
+                  <p className="text-gray-400 text-xs">Diagnostic système et résolution</p>
                 </div>
                 <div className="bg-violet-900/10 rounded-lg p-3">
-                  <h5 className="text-white font-medium mb-2">Testing Expert</h5>
-                  <p className="text-gray-400 text-xs">Unit Tests, E2E Tests, QA</p>
-                </div>
-                <div className="bg-violet-900/10 rounded-lg p-3">
-                  <h5 className="text-white font-medium mb-2">Performance Optimizer</h5>
-                  <p className="text-gray-400 text-xs">Monitoring, Benchmarks</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Fourth Level - LOW */}
-          <div className="mt-6">
-            <div className="bg-slate-900/20 border border-slate-800/50 rounded-lg p-6 backdrop-blur-sm">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-slate-900/50 rounded-lg flex items-center justify-center">
-                  <span className="text-slate-400 font-bold">⚪</span>
-                </div>
-                <div>
-                  <h4 className="text-slate-400 font-semibold">Niveau LOW</h4>
-                  <p className="text-slate-500 text-sm">3 Agents</p>
-                </div>
-              </div>
-              <div className="grid md:grid-cols-3 gap-4">
-                <div className="bg-slate-900/10 rounded-lg p-3">
-                  <h5 className="text-white font-medium mb-2">AI/ML Specialist</h5>
-                  <p className="text-gray-400 text-xs">ML Models, NLP, Vision</p>
-                </div>
-                <div className="bg-slate-900/10 rounded-lg p-3">
-                  <h5 className="text-white font-medium mb-2">Docs Master</h5>
-                  <p className="text-gray-400 text-xs">API Docs, Guides, README</p>
-                </div>
-                <div className="bg-slate-900/10 rounded-lg p-3">
-                  <h5 className="text-white font-medium mb-2">Mobile Wizard</h5>
-                  <p className="text-gray-400 text-xs">iOS/Android, React Native</p>
+                  <h5 className="text-white font-medium mb-2">Orchestrator</h5>
+                  <p className="text-gray-400 text-xs">Coordination de tâches complexes</p>
                 </div>
               </div>
             </div>
@@ -529,42 +489,48 @@ function App() {
           <div className="mb-12"></div>
 
           <div className="bg-gray-900 rounded-xl p-8 mb-16">
-            <h4 className="text-xl font-semibold text-white mb-6 text-center">Stratégie d'Exécution</h4>
+            <h4 className="text-xl font-semibold text-white mb-6 text-center">Configuration des Modes</h4>
 
             <div className="overflow-x-auto">
               <table className="w-full text-left">
                 <thead>
                   <tr className="border-b border-gray-700">
-                    <th className="pb-3 text-gray-400">Mode</th>
-                    <th className="pb-3 text-gray-400">Agents</th>
-                    <th className="pb-3 text-gray-400">Temps</th>
+                    <th className="pb-3 text-gray-400">Mode CLI</th>
+                    <th className="pb-3 text-gray-400">Commande</th>
                     <th className="pb-3 text-gray-400">Usage</th>
+                    <th className="pb-3 text-gray-400">Options</th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
                   <tr className="border-b border-gray-800">
-                    <td className="py-3 text-white font-medium">Parallel</td>
-                    <td className="py-3">12</td>
-                    <td className="py-3">2-5min</td>
-                    <td className="py-3">Démarrage rapide, tests simples</td>
+                    <td className="py-3 text-white font-medium">Architect</td>
+                    <td className="py-3 font-mono text-sm">-m architect</td>
+                    <td className="py-3">Architecture logicielle, design patterns</td>
+                    <td className="py-3">--auto, --parallel</td>
                   </tr>
                   <tr className="border-b border-gray-800">
-                    <td className="py-3 text-white font-medium">Sequential</td>
-                    <td className="py-3">12</td>
-                    <td className="py-3">15-30min</td>
-                    <td className="py-3">Workflows complexes</td>
+                    <td className="py-3 text-white font-medium">Code</td>
+                    <td className="py-3 font-mono text-sm">-m code</td>
+                    <td className="py-3">Génération et modification de code</td>
+                    <td className="py-3">--auto, --parallel</td>
                   </tr>
                   <tr className="border-b border-gray-800">
-                    <td className="py-3 text-white font-medium">Hybrid</td>
-                    <td className="py-3">12</td>
-                    <td className="py-3">5-10min</td>
-                    <td className="py-3">Développement production</td>
+                    <td className="py-3 text-white font-medium">Ask</td>
+                    <td className="py-3 font-mono text-sm">-m ask</td>
+                    <td className="py-3">Questions et assistance générale</td>
+                    <td className="py-3">--auto</td>
+                  </tr>
+                  <tr className="border-b border-gray-800">
+                    <td className="py-3 text-white font-medium">Debug</td>
+                    <td className="py-3 font-mono text-sm">debug os/keyboard</td>
+                    <td className="py-3">Diagnostic et résolution de problèmes</td>
+                    <td className="py-3">--continue</td>
                   </tr>
                   <tr>
-                    <td className="py-3 text-white font-medium">Critical-First</td>
-                    <td className="py-3">3</td>
-                    <td className="py-3">1-2min</td>
-                    <td className="py-3">Urgence, hotfix</td>
+                    <td className="py-3 text-white font-medium">Orchestrator</td>
+                    <td className="py-3 font-mono text-sm">-m orchestrator</td>
+                    <td className="py-3">Coordination de workflows complexes</td>
+                    <td className="py-3">--parallel, -w</td>
                   </tr>
                 </tbody>
               </table>
@@ -576,52 +542,50 @@ function App() {
       {/* Quick Start Section */}
       <section id="quickstart" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-3xl font-bold text-white mb-12 text-center">Démarrage Rapide (20 Minutes)</h3>
+          <h3 className="text-3xl font-bold text-white mb-12 text-center">Démarrage Rapide (5 Minutes)</h3>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-gray-800 rounded-lg p-6">
-              <div className="text-gray-400 text-sm font-medium mb-2">Étape 1: Structure de Base (2 min)</div>
-              <h4 className="text-xl font-semibold text-white mb-3">Création de l'Arborescence</h4>
+              <div className="text-gray-400 text-sm font-medium mb-2">Étape 1: Configuration (1 min)</div>
+              <h4 className="text-xl font-semibold text-white mb-3">Configuration du Provider</h4>
               <div className="bg-black rounded-lg p-4 font-mono text-sm text-gray-300 mb-4">
-                <div>mkdir -p .claude/agents scripts</div>
+                <div>export KILOCODE_PROVIDER=minimax</div>
+                <div>export KILOCODE_MODEL=minimax/minimax-m2:free</div>
               </div>
               <p className="text-gray-400 text-sm">
-                Créez la structure de répertoires nécessaire pour votre swarm.
+                Configurez votre provider IA et modèle préféré.
               </p>
             </div>
 
             <div className="bg-gray-800 rounded-lg p-6">
-              <div className="text-gray-400 text-sm font-medium mb-2">Étape 2: Configuration Rapide (8 min)</div>
-              <h4 className="text-xl font-semibold text-white mb-3">Configuration JSON</h4>
+              <div className="text-gray-400 text-sm font-medium mb-2">Étape 2: Test Installation (2 min)</div>
+              <h4 className="text-xl font-semibold text-white mb-3">Test de Connexion</h4>
               <div className="bg-black rounded-lg p-4 font-mono text-sm text-gray-300 mb-4 overflow-x-auto">
-                <div>{`{`}</div>
-                <div>{`  "agents": [`}</div>
-                <div>{`    { "id": "frontend-guru", "role": "React Expert" },`}</div>
-                <div>{`    { "id": "backend-wizard", "role": "API Expert" }`}</div>
-                <div>{`  ]`}</div>
-                <div>{`}`}</div>
+                <div>kilocode -m ask --auto</div>
+                <div>"Confirmer que KiloCode fonctionne"</div>
               </div>
               <p className="text-gray-400 text-sm">
-                Configurez vos agents spécialisés avec leurs rôles et compétences.
+                Vérifiez que votre installation fonctionne correctement.
               </p>
             </div>
 
             <div className="bg-gray-800 rounded-lg p-6">
-              <div className="text-gray-400 text-sm font-medium mb-2">Étape 3: Lancement (10 min)</div>
-              <h4 className="text-xl font-semibold text-white mb-3">Déploiement du Swarm</h4>
+              <div className="text-gray-400 text-sm font-medium mb-2">Étape 3: Premier Usage (2 min)</div>
+              <h4 className="text-xl font-semibold text-white mb-3">Premier Code</h4>
               <div className="bg-black rounded-lg p-4 font-mono text-sm text-gray-300 mb-4">
-                <div>claude --agents @claude-agents.json --swarm-mode parallel</div>
+                <div>kilocode -m code</div>
+                <div>"Créer une fonction hello world"</div>
               </div>
               <p className="text-gray-400 text-sm">
-                Lancez votre swarm d'agents en mode parallèle pour une exécution optimale.
+                Lancez votre première génération de code avec KiloCode CLI.
               </p>
             </div>
           </div>
 
           <div className="bg-green-900/20 border border-green-800 rounded-lg p-6 text-center">
-            <h4 className="text-xl font-semibold text-green-400 mb-2">✅ Résultat en 20 minutes !</h4>
+            <h4 className="text-xl font-semibold text-green-400 mb-2">✅ KiloCode CLI prêt en 5 minutes !</h4>
             <p className="text-gray-300">
-              Votre swarm de 12 agents spécialisés est maintenant actif et prêt à travailler.
+              Votre environnement de développement IA est maintenant configuré et opérationnel.
             </p>
           </div>
         </div>
@@ -630,78 +594,78 @@ function App() {
       {/* Use Cases Section */}
       <section id="use-cases" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-3xl font-bold text-white mb-12 text-center">Cas d'Usage Universels</h3>
+          <h3 className="text-3xl font-bold text-white mb-12 text-center">Cas d'Usage Pratiques</h3>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
               {
-                title: "Développement Full-Stack",
-                description: "Application web complète de A à Z",
-                agents: "Frontend, Backend, Database, Security, Testing",
-                time: "45 minutes au lieu de 8 heures"
+                title: "Architecture Logicielle",
+                description: "Conception d'architecture pour nouveaux projets",
+                mode: "kilocode -m architect",
+                example: "Concevoir l'architecture d'une app React avec API REST"
               },
               {
-                title: "Application Mobile",
-                description: "Apps iOS et Android natives",
-                agents: "Mobile Wizard, Backend Architect, UI Designer",
-                time: "2 heures pour apps complètes"
+                title: "Génération de Code",
+                description: "Création et modification de code source",
+                mode: "kilocode -m code",
+                example: "Créer une fonction de validation d'email en JavaScript"
               },
               {
-                title: "Système d'IA Intégré",
-                description: "Intégration ML/AI dans applications",
-                agents: "AI/ML Specialist, Backend Architect, Integration",
-                time: "IA opérationnelle en 3 heures"
+                title: "Assistance Développement",
+                description: "Questions et conseils de développement",
+                mode: "kilocode -m ask",
+                example: "Quelles sont les meilleures pratiques pour l'optimisation React ?"
               },
               {
-                title: "Finance & Trading",
-                description: "Analyse financière et trading algorithmique",
-                agents: "Quant Analyst, Risk Manager, Market Researcher",
-                time: "Modèles déployés en 1 heure"
+                title: "Debug & Diagnostic",
+                description: "Résolution de problèmes système",
+                mode: "kilocode debug os",
+                example: "Diagnostic complet du système et optimisation"
               },
               {
-                title: "Recherche Médicale",
-                description: "Analyse et protocoles médicaux",
-                agents: "Medical Researcher, Diagnostic AI, Compliance",
-                time: "Protocoles en 2 heures"
+                title: "Orchestration Complexe",
+                description: "Coordination de workflows de développement",
+                mode: "kilocode -m orchestrator",
+                example: "Migrer une base de données de MySQL vers PostgreSQL"
               },
               {
-                title: "Strategy d'Entreprise",
-                description: "Analyse stratégique et business intelligence",
-                agents: "Market Analyst, Finance Expert, Strategy Master",
-                time: "Rapports complets en 3 heures"
+                title: "Développement Itératif",
+                description: "Amélioration continue avec continuation",
+                mode: "kilocode --continue -m code",
+                example: "Améliorer la gestion d'erreurs dans la fonction validateUser"
               }
             ].map((useCase, index) => (
               <div key={index} className="bg-gray-900 rounded-lg p-6 border border-gray-800">
                 <h4 className="text-xl font-semibold text-white mb-2">{useCase.title}</h4>
                 <p className="text-gray-400 text-sm mb-3">{useCase.description}</p>
                 <div className="text-xs text-gray-500 mb-2">
-                  <strong>Agents:</strong> {useCase.agents}
+                  <strong>Commande:</strong> <code className="bg-gray-800 px-2 py-1 rounded">{useCase.mode}</code>
                 </div>
-                <div className="text-xs text-green-400">
-                  <strong>Temps:</strong> {useCase.time}
+                <div className="text-xs text-blue-400">
+                  <strong>Exemple:</strong> {useCase.example}
                 </div>
               </div>
             ))}
           </div>
 
           <div className="bg-gray-900 rounded-lg p-8 text-center">
-            <h4 className="text-2xl font-semibold text-white mb-4">Le Template Universel</h4>
+            <h4 className="text-2xl font-semibold text-white mb-4">Configuration Flexible</h4>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              Ce framework est 100% générique et peut être adapté à n'importe quel domaine d'activité.
-              Modifiez simplement le fichier claude-agents.json selon vos besoins spécifiques.
+              KiloCode CLI s'adapte à tous vos workflows de développement.
+              Configurez simplement vos variables d'environnement et vos modèles préférés.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE', '_blank')}
+                onClick={() => window.open('https://docs.kilocode.org/', '_blank')}
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
               >
-                Voir sur GitHub
+                Documentation Officielle
               </button>
               <button
-                onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
+                onClick={() => window.open('https://community.kilocode.org/', '_blank')}
                 className="bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors font-medium"
               >
-                Rejoindre Discord
+                Communauté
               </button>
             </div>
           </div>
@@ -719,8 +683,8 @@ function App() {
                 <span className="text-2xl">📖</span>
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Documentation</h4>
-              <p className="text-gray-400 text-sm mb-4">Guide complet d'implémentation</p>
-              <a href="https://github.com/DeamonDev888/SWARM-INTELLIGENCE" target="_blank" className="text-blue-400 hover:text-blue-300 text-sm">
+              <p className="text-gray-400 text-sm mb-4">Guide complet d'utilisation CLI</p>
+              <a href="https://docs.kilocode.org/" target="_blank" className="text-blue-400 hover:text-blue-300 text-sm">
                 Consulter →
               </a>
             </div>
@@ -731,7 +695,7 @@ function App() {
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Communauté</h4>
               <p className="text-gray-400 text-sm mb-4">Support et échanges techniques</p>
-              <a href="https://discord.gg/Jt83jBebsk" target="_blank" className="text-purple-400 hover:text-purple-300 text-sm">
+              <a href="https://community.kilocode.org/" target="_blank" className="text-purple-400 hover:text-purple-300 text-sm">
                 Rejoindre →
               </a>
             </div>
@@ -740,9 +704,9 @@ function App() {
               <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🛠️</span>
               </div>
-              <h4 className="text-lg font-semibold text-white mb-2">Outils</h4>
-              <p className="text-gray-400 text-sm mb-4">Scripts d'automatisation</p>
-              <a href="https://github.com/DeamonDev888/SWARM-INTELLIGENCE.git" target="_blank" className="text-green-400 hover:text-green-300 text-sm">
+              <h4 className="text-lg font-semibold text-white mb-2">Exemples</h4>
+              <p className="text-gray-400 text-sm mb-4">Scripts et exemples pratiques</p>
+              <a href="https://github.com/Kilo-Org/kilocode-examples" target="_blank" className="text-green-400 hover:text-green-300 text-sm">
                 Installer →
               </a>
             </div>
@@ -865,38 +829,38 @@ function App() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">SI</span>
+                  <span className="text-white font-bold">KC</span>
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-white">Swarm Intelligence</h4>
-                  <p className="text-sm text-gray-500">Multi-Agent Platform</p>
+                  <h4 className="text-xl font-bold text-white">KiloCode CLI</h4>
+                  <p className="text-sm text-gray-500">AI Development Interface</p>
                 </div>
               </div>
-              <p className="text-gray-500">L'IA Multi-Agent qui Révolutionne Votre Productivité</p>
+              <p className="text-gray-500">Interface de ligne de commande avancée pour l'IA de développement</p>
             </div>
 
             <div>
               <h4 className="font-semibold text-white mb-4">Liens Rapides</h4>
               <ul className="space-y-2">
-                <li><a href="https://github.com/DeamonDev888/SWARM-INTELLIGENCE" target="_blank" className="hover:text-white transition-colors">GitHub</a></li>
-                <li><a href="https://discord.gg/Jt83jBebsk" target="_blank" className="hover:text-white transition-colors">Discord</a></li>
-                <li><a href="https://github.com/DeamonDev888/SWARM-INTELLIGENCE.git" target="_blank" className="hover:text-white transition-colors">GitHub Repository</a></li>
+                <li><a href="https://docs.kilocode.org/" target="_blank" className="hover:text-white transition-colors">Documentation</a></li>
+                <li><a href="https://community.kilocode.org/" target="_blank" className="hover:text-white transition-colors">Communauté</a></li>
+                <li><a href="https://github.com/Kilo-Org/kilocode-examples" target="_blank" className="hover:text-white transition-colors">Exemples</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold text-white mb-4">Informations</h4>
               <ul className="space-y-2 text-gray-500">
-                <li>Version: 2.0</li>
-                <li>Mise à jour: 2025-11-09</li>
+                <li>Version: 2.1.0+</li>
+                <li>Mise à jour: 2025-11-15</li>
                 <li>Licence: MIT</li>
-                <li>100% Gratuit • Support 24/7</li>
+                <li>2 Modèles Gratuits • CLI Prêt</li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-            <p>Swarm Intelligence DeaMoNDeV888</p>
+            <p>KiloCode CLI - Transformez votre workflow de développement avec l'IA</p>
           </div>
         </div>
       </footer>
