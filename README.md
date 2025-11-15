@@ -4,7 +4,7 @@
 <div align="center">
 
 ![SWARM INTELLIGENCE](https://img.shields.io/badge/🚀-SWARM_INTELLIGENCE-blue?style=for-the-badge)
-![Claude Code](https://img.shields.io/badge/⚡-CLAUDE_CODE-000?style=for-the-badge)
+![KiloCode CLI](https://img.shields.io/badge/⚡-KILOCODE_CLI-000?style=for-the-badge)
 ![20 Minutes](https://img.shields.io/badge/⏱️-20_MINUTES-red?style=for-the-badge)
 ![10+ Agents](https://img.shields.io/badge/🤖-10+_AGENTS-green?style=for-the-badge)
 
@@ -344,7 +344,7 @@ Votre swarm de 15 agents spécialisés est maintenant actif et prêt à travaill
     "id": "frontend-guru",
     "name": "Frontend Master",
     "version": "2.0",
-    "author": "Claude Code Swarm",
+    "author": "KiloCode CLI Swarm",
     "description": "Expert en développement frontend moderne",
     "tags": ["react", "vue", "angular", "typescript", "ui/ux"]
   },
