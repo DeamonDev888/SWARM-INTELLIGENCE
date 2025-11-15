@@ -104,7 +104,7 @@ function App() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button
-              onClick={() => window.open('#quickstart', '_self')}
+              onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE/blob/main/README.md', '_blank')}
               className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
               Découvrir le Secret
@@ -831,7 +831,7 @@ function App() {
               Suivez simplement notre méthode en 3 étapes pour créer votre swarm personnalisé.
             </p>
             <button
-              onClick={() => window.open('#quickstart', '_self')}
+              onClick={() => window.open('/', '_self')}
               className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
               Créer Votre Swarm →
