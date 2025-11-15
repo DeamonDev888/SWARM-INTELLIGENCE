@@ -146,28 +146,94 @@ export KILOCODE_MODEL=x-ai/grok-code-fast-1
 ## 🏗️ ARCHITECTURE DU SWARM
 
 ### Hiérarchie des Agents
+
+```mermaid
+graph TB
+    %% Styles
+    classDef orchestrator fill:#4F46E5,stroke:#312E81,stroke-width:4px,color:#FFFFFF,font-weight:bold,font-size:16px
+    classDef critical fill:#DC2626,stroke:#B91C1C,stroke-width:3px,color:#FFFFFF,font-weight:bold
+    classDef high fill:#059669,stroke:#047857,stroke-width:3px,color:#FFFFFF,font-weight:bold
+    classDef medium fill:#D97706,stroke:#B45309,stroke-width:3px,color:#FFFFFF,font-weight:bold
+    classDef low fill:#6B7280,stroke:#4B5563,stroke-width:3px,color:#FFFFFF,font-weight:bold
+
+    %% Orchestrator
+    ORCHESTRATOR(["🏛️<br/>ORCHESTRATEUR<br/>CENTRAL<br/>Coordinator & Delegation<br/>🧠 Strategic Planning"]):::orchestrator
+
+    %% Critical Level
+    SECURITY(["🔒<br/>SECURITY<br/>GUARDIAN<br/>🔐 Cybersecurity & Audit<br/>⚡ Critical Priority"]):::critical
+
+    %% High Priority Cluster
+    subgraph "🟢 HIGH PRIORITY (3 Agents)"
+        FRONTEND(["💻<br/>FRONTEND<br/>EXPERT<br/>React/Vue/Angular<br/>⚡ Fast UI"]):::high
+        BACKEND(["⚙️<br/>BACKEND<br/>ARCHITECT<br/>Node.js/Python/APIs<br/>🛠️ Scalable APIs"]):::high
+        DATABASE(["🗄️<br/>DATABASE<br/>MASTER<br/>PostgreSQL/MySQL<br/>🎯 Data Architecture"]):::high
+    end
+
+    %% Medium Priority Cluster
+    subgraph "🟣 MEDIUM PRIORITY (5 Agents)"
+        DEVOPS(["🚀<br/>DEVOPS<br/>ENGINEER<br/>CI/CD/Infrastructure<br/>🔄 Automation"]):::medium
+        TESTING(["🧪<br/>TESTING<br/>EXPERT<br/>QA/E2E Testing<br/>✅ Quality Assurance"]):::medium
+        PERFORMANCE(["⚡<br/>PERFORMANCE<br/>OPTIMIZER<br/>Load/Speed Tuning<br/>🚀 Optimization"]):::medium
+        INTEGRATION(["🔗<br/>INTEGRATION<br/>SPECIALIST<br/>API/Microservices<br/>🤝 System Integration"]):::medium
+        DOCUMENTATION(["📚<br/>DOCUMENTATION<br/>EXPERT<br/>API/Docs Generation<br/>📝 Technical Writing"]):::medium
+    end
+
+    %% Low Priority Cluster
+    subgraph "⚪ LOW PRIORITY (3 Agents)"
+        AIML(["🤖<br/>AI/ML<br/>SPECIALIST<br/>ML/Data Science<br/>🎨 Intelligence"]):::low
+        MOBILE(["📱<br/>MOBILE<br/>EXPERT<br/>iOS/Android Dev<br/>📲 Mobile Apps"]):::low
+        DESIGN(["🎨<br/>UI/UX<br/>DESIGNER<br/>User Interface/UX<br/>✨ Design Systems"]):::low
+    end
+
+    %% Connections with styling
+    ORCHESTRATOR --> SECURITY
+    SECURITY --> FRONTEND
+    FRONTEND --> BACKEND
+    BACKEND --> DATABASE
+
+    DATABASE --> DEVOPS
+    DEVOPS --> TESTING
+    TESTING --> PERFORMANCE
+    PERFORMANCE --> INTEGRATION
+    INTEGRATION --> DOCUMENTATION
+
+    DOCUMENTATION --> AIML
+    AIML --> MOBILE
+    MOBILE --> DESIGN
+
+    %% Legend
+    subgraph "📊 LEGEND"
+        direction LR
+        CRITICAL_NODE(["🔴 CRITICAL<br/>Security & High Risk"]):::critical
+        HIGH_NODE(["🟢 HIGH<br/>Core Development"]):::high
+        MEDIUM_NODE(["🟡 MEDIUM<br/>Supporting Tech"]):::medium
+        LOW_NODE(["⚫ LOW<br/>Enhancement Features"]):::low
+    end
+```
+
+#### Vue Arborescente Textuelle
 ```
 🏛️ ORCHESTRATEUR CENTRAL
-    ↓
-🔒 CRITIQUE (1 agent)
-├── Security Guardian
-    ↓  
-🟢 HIGH (3 agents)
-├── Frontend Expert
-├── Backend Expert  
-└── Database Master
-    ↓
-🟣 MEDIUM (5 agents)
-├── DevOps Engineer
-├── Testing Expert
-├── Performance Optimizer
-├── Integration Specialist
-└── Documentation Expert
-    ↓
-⚪ LOW (3 agents)
-├── AI/ML Specialist
-├── Mobile Expert
-└── UI/UX Designer
+╠═ 🔒 CRITIQUE (1 agent)
+║   ╚═ Security Guardian
+║       ╠═ 🟢 HIGH (3 agents)
+║       ║   ├─ Frontend Expert
+║       ║   ├─ Backend Expert
+║       ║   └─ Database Master
+║       ║       ╠═ 🟣 MEDIUM (5 agents)
+║       ║       ║   ├─ DevOps Engineer
+║       ║       ║   ├─ Testing Expert
+║       ║       ║   ├─ Performance Optimizer
+║       ║       ║   ├─ Integration Specialist
+║       ║       ║   └─ Documentation Expert
+║       ║       ║       ╚═ ⚪ LOW (3 agents)
+║       ║       ║           ├─ AI/ML Specialist
+║       ║       ║           ├─ Mobile Expert
+║       ║       ║           └─ UI/UX Designer
+║       ╚═ 🧵 CROSS-CUTTING
+║           ├─ 🔄 Ordonnancement Intelligent
+║           ├─ 📊 Monitoring & Métriques
+║           └─ 🔐 Sécurité Intégré
 ```
 
 ### Stratégies d'Exécution
