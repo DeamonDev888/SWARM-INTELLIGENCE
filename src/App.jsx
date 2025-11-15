@@ -27,13 +27,13 @@ function App() {
               <a href="#use-cases" className="text-gray-400 hover:text-white transition-colors">Cas d'Usage</a>
               <a href="#resources" className="text-gray-400 hover:text-white transition-colors">Ressources</a>
               <button
-                onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE/blob/main/README.md', '_blank')}
+                onClick={() => window.open('https://hackmd.io/@1-f9TrSqR0iVfHGkGYO3zw/SkR1rBIx-l', '_blank')}
                 className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Documentation
               </button>
               <button
-                onClick={() => window.open('https://community.kilocode.org/', '_blank')}
+                onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
                 className="bg-black text-white px-4 py-2 rounded-lg border border-gray-700 hover:bg-gray-900 transition-colors"
               >
                 Communauté
@@ -62,13 +62,13 @@ function App() {
               <a href="#use-cases" className="block px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white">Cas d'Usage</a>
               <a href="#resources" className="block px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white">Ressources</a>
               <button
-                onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE/blob/main/README.md', '_blank')}
+                onClick={() => window.open('https://hackmd.io/@1-f9TrSqR0iVfHGkGYO3zw/SkR1rBIx-l', '_blank')}
                 className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 mb-2"
               >
                 Documentation
               </button>
               <button
-                onClick={() => window.open('https://community.kilocode.org/', '_blank')}
+                onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
                 className="w-full bg-black text-white px-4 py-2 rounded-lg border border-gray-700 hover:bg-gray-900"
               >
                 Communauté
