@@ -11,11 +11,11 @@ function App() {
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">KC</span>
+                <span className="text-white font-bold">SI</span>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-white">KiloCode CLI</h1>
-                <p className="text-xs text-gray-400">AI Development Interface</p>
+                <h1 className="text-xl font-bold text-white">Swarm Intelligence</h1>
+                <p className="text-xs text-gray-400">Multi-Agent Platform</p>
               </div>
             </div>
 
@@ -83,22 +83,22 @@ function App() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-full text-sm text-gray-300 mb-8">
             <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-            <span>Construire et Déployer Une Armée d'Agents en 20 Minutes</span>
+            <span>🚀 Le Secret de l'IA Multi-Agent Révelé</span>
           </div>
 
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            KiloCode
-            <span className="text-blue-400"> CLI</span>
+            Swarm
+            <span className="text-blue-400"> Intelligence</span>
           </h2>
 
           <p className="text-xl text-gray-400 mb-6 max-w-3xl mx-auto leading-relaxed">
-            Interface de ligne de commande avancée pour l'IA de développement.
+            L'IA Multi-Agent qui Révolutionne Votre Productivité.
             Orchestration intelligente de sous-agents spécialisés pour transformer votre workflow de développement.
           </p>
 
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-900/30 border border-green-700 rounded-full text-sm text-green-300 mb-8">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            <span>🚀 5 MODES IA • 2 MODÈLES GRATUITS • CLI PRÊT À L'EMPLOI</span>
+            <span>🚀 5 MODES IA • 2 MODÈLES GRATUITS • PLATEFORME PRÊTE À L'EMPLOI</span>
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
           </div>
 
@@ -107,33 +107,33 @@ function App() {
               onClick={() => window.open('#quickstart', '_self')}
               className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
-              Installer CLI
+              Découvrir le Secret
             </button>
             <button
-              onClick={() => window.open('#quickstart', '_self')}
+              onClick={() => window.open('https://discord.gg/Jt83jBebsk', '_blank')}
               className="bg-gray-800 text-white px-8 py-3 rounded-lg border border-gray-700 hover:bg-gray-700 transition-colors font-medium"
             >
-              Guide d'Utilisation
+              Rejoindre Discord
             </button>
           </div>
 
           {/* Key Metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div>
-              <div className="text-3xl font-bold text-white">5</div>
-              <div className="text-gray-400">Modes de Fonctionnement</div>
+              <div className="text-3xl font-bold text-white">90%</div>
+              <div className="text-gray-400">Plus Rapide</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">2</div>
-              <div className="text-gray-400">Modèles IA Gratuits</div>
+              <div className="text-3xl font-bold text-white">12+</div>
+              <div className="text-gray-400">Agents Spécialisés</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">256K</div>
-              <div className="text-gray-400">Contexte Maximum</div>
+              <div className="text-3xl font-bold text-white">20</div>
+              <div className="text-gray-400">Minutes de Déploiement</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">$0.00</div>
-              <div className="text-gray-400">Coût par Utilisation</div>
+              <div className="text-3xl font-bold text-white">100%</div>
+              <div className="text-gray-400">Gratuit</div>
             </div>
           </div>
         </div>
@@ -142,7 +142,7 @@ function App() {
       {/* Models Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900/50 to-black">
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-3xl font-bold text-white mb-12 text-center">Modèles IA Intégrés KiloCode CLI</h3>
+          <h3 className="text-3xl font-bold text-white mb-12 text-center">Les Modèles Secrêts de l'IA</h3>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* GLM 4.6 Card */}
