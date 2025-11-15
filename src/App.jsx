@@ -27,7 +27,7 @@ function App() {
               <a href="#use-cases" className="text-gray-400 hover:text-white transition-colors">Cas d'Usage</a>
               <a href="#resources" className="text-gray-400 hover:text-white transition-colors">Ressources</a>
               <button
-                onClick={() => window.open('https://docs.kilocode.org/', '_blank')}
+                onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE/blob/main/README.md', '_blank')}
                 className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Documentation
@@ -62,7 +62,7 @@ function App() {
               <a href="#use-cases" className="block px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white">Cas d'Usage</a>
               <a href="#resources" className="block px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white">Ressources</a>
               <button
-                onClick={() => window.open('https://docs.kilocode.org/', '_blank')}
+                onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE/blob/main/README.md', '_blank')}
                 className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 mb-2"
               >
                 Documentation
@@ -674,7 +674,7 @@ function App() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => window.open('https://docs.kilocode.org/', '_blank')}
+                onClick={() => window.open('https://github.com/DeamonDev888/SWARM-INTELLIGENCE/blob/main/README.md', '_blank')}
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
               >
                 Documentation Officielle
@@ -702,7 +702,7 @@ function App() {
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Documentation</h4>
               <p className="text-gray-400 text-sm mb-4">Guide complet d'utilisation CLI</p>
-              <a href="https://docs.kilocode.org/" target="_blank" className="text-blue-400 hover:text-blue-300 text-sm">
+              <a href="https://github.com/DeamonDev888/SWARM-INTELLIGENCE/blob/main/README.md" target="_blank" className="text-blue-400 hover:text-blue-300 text-sm">
                 Consulter →
               </a>
             </div>
@@ -860,7 +860,7 @@ function App() {
             <div>
               <h4 className="font-semibold text-white mb-4">Liens Rapides</h4>
               <ul className="space-y-2">
-                <li><a href="https://docs.kilocode.org/" target="_blank" className="hover:text-white transition-colors">Documentation</a></li>
+                <li><a href="https://github.com/DeamonDev888/SWARM-INTELLIGENCE/blob/main/README.md" target="_blank" className="hover:text-white transition-colors">Documentation</a></li>
                 <li><a href="https://community.kilocode.org/" target="_blank" className="hover:text-white transition-colors">Communauté</a></li>
                 <li><a href="https://github.com/Kilo-Org/kilocode-examples" target="_blank" className="hover:text-white transition-colors">Exemples</a></li>
               </ul>
