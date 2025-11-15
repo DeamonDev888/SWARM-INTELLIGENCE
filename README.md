@@ -148,66 +148,54 @@ export KILOCODE_MODEL=x-ai/grok-code-fast-1
 ### Hiérarchie des Agents
 
 ```mermaid
-graph TB
-    %% Styles
-    classDef orchestrator fill:#4F46E5,stroke:#312E81,stroke-width:4px,color:#FFFFFF,font-weight:bold,font-size:16px
-    classDef critical fill:#DC2626,stroke:#B91C1C,stroke-width:3px,color:#FFFFFF,font-weight:bold
-    classDef high fill:#059669,stroke:#047857,stroke-width:3px,color:#FFFFFF,font-weight:bold
-    classDef medium fill:#D97706,stroke:#B45309,stroke-width:3px,color:#FFFFFF,font-weight:bold
-    classDef low fill:#6B7280,stroke:#4B5563,stroke-width:3px,color:#FFFFFF,font-weight:bold
+graph TD
+    %% 🚀 ULTRA PREMIUM STYLE SHEET
+    classDef orchestrator fill:#1e1b4b,stroke:#3b82f6,stroke-width:5px,stroke-dasharray: 10 5,color:#60a5fa,font-weight:bolder,font-size:18px,text-align:center
+    classDef critical fill:#7f1d1d,stroke:#dc2626,stroke-width:4px,color:#fca5a5,font-weight:bold,shadow:lg
+    classDef high fill:#064e3b,stroke:#10b981,stroke-width:3px,color:#6ee7b7,font-weight:bold,shadow:md
+    classDef medium fill:#78350f,stroke:#f59e0b,stroke-width:3px,color:#fcd34d,font-weight:bold,shadow:sm
+    classDef low fill:#111827,stroke:#6b7280,stroke-width:2px,color:#d1d5db,font-weight:normal
 
-    %% Orchestrator
-    ORCHESTRATOR(["🏛️<br/>ORCHESTRATEUR<br/>CENTRAL<br/>Coordinator & Delegation<br/>🧠 Strategic Planning"]):::orchestrator
+    %% 🎭 ELITE AGENT NODES WITH ICONS
+    ORCHESTRATOR{{🎖️<br/><br/>ORCHESTRATEUR<br/>ULTIMATE<br/>🧠 MASTER COORDINATOR<br/>⚔️ STRATEGIC<br/>BRAINSTORM<br/><br/>🎖️}}:::orchestrator
 
-    %% Critical Level
-    SECURITY(["🔒<br/>SECURITY<br/>GUARDIAN<br/>🔐 Cybersecurity & Audit<br/>⚡ Critical Priority"]):::critical
+    SECURITY(["🔐<br/><br/>SECURITY<br/>GUARDIAN<br/>🛡️ CYBER<br/>DEFENDER<br/>⚡ CRITICAL<br/>SHIELD<br/><br/>🔐"]:::critical)
 
-    %% High Priority Cluster
-    subgraph "🟢 HIGH PRIORITY (3 Agents)"
-        FRONTEND(["💻<br/>FRONTEND<br/>EXPERT<br/>React/Vue/Angular<br/>⚡ Fast UI"]):::high
-        BACKEND(["⚙️<br/>BACKEND<br/>ARCHITECT<br/>Node.js/Python/APIs<br/>🛠️ Scalable APIs"]):::high
-        DATABASE(["🗄️<br/>DATABASE<br/>MASTER<br/>PostgreSQL/MySQL<br/>🎯 Data Architecture"]):::high
-    end
+    FRONTEND(["💎<br/><br/>FRONTEND<br/>NINJA<br/>⚛️ REACT<br/>MASTER<br/>🚀 BLAZING<br/>FAST UI<br/><br/>💎"]:::high)
+    BACKEND(["⚙️<br/><br/>BACKEND<br/>ARCHITECT<br/>🐍 PYTHON<br/>ARTISAN<br/>🔥 SCALABLE<br/>API FORGE<br/><br/>⚙️"]:::high)
+    DATABASE(["🎯<br/><br/>DATABASE<br/>MASTER<br/>🗄️ DATA<br/>COMMANDER<br/>🚀 HYPER<br/>PERFORMANCE<br/><br/>🎯"]:::high)
 
-    %% Medium Priority Cluster
-    subgraph "🟣 MEDIUM PRIORITY (5 Agents)"
-        DEVOPS(["🚀<br/>DEVOPS<br/>ENGINEER<br/>CI/CD/Infrastructure<br/>🔄 Automation"]):::medium
-        TESTING(["🧪<br/>TESTING<br/>EXPERT<br/>QA/E2E Testing<br/>✅ Quality Assurance"]):::medium
-        PERFORMANCE(["⚡<br/>PERFORMANCE<br/>OPTIMIZER<br/>Load/Speed Tuning<br/>🚀 Optimization"]):::medium
-        INTEGRATION(["🔗<br/>INTEGRATION<br/>SPECIALIST<br/>API/Microservices<br/>🤝 System Integration"]):::medium
-        DOCUMENTATION(["📚<br/>DOCUMENTATION<br/>EXPERT<br/>API/Docs Generation<br/>📝 Technical Writing"]):::medium
-    end
+    DEVOPS(["🚀<br/><br/>DEVOPS<br/>COMMANDO<br/>⚡ CI/CD<br/>WARRIOR<br/>🔄 INFRA<br/>AUTOMATION<br/><br/>🚀"]:::medium)
+    TESTING(["🧪<br/><br/>TESTING<br/>SAGE<br/>🔍 QA<br/>VIRTUOSO<br/>✅ FLAWLESS<br/>QUALITY<br/><br/>🧪"]:::medium)
+    PERFORMANCE(["⚡<br/><br/>PERFORMANCE<br/>PHANTOM<br/>📊 SPEED<br/>DEMON<br/>🚀 LIGHTNING<br/>OPTIMIZER<br/><br/>⚡"]:::medium)
+    INTEGRATION(["🔗<br/><br/>INTEGRATION<br/>ARTIST<br/>🌐 API<br/>HARMONY<br/>🤝 SYSTEM<br/>SYMPHONY<br/><br/>🔗"]:::medium)
+    DOCUMENTATION(["📚<br/><br/>DOCUMENTATION<br/>SCRIBE<br/>📖 TECH<br/>STORYTELLER<br/>✨ FLAWLESS<br/>LORE<br/><br/>📚"]:::medium)
 
-    %% Low Priority Cluster
-    subgraph "⚪ LOW PRIORITY (3 Agents)"
-        AIML(["🤖<br/>AI/ML<br/>SPECIALIST<br/>ML/Data Science<br/>🎨 Intelligence"]):::low
-        MOBILE(["📱<br/>MOBILE<br/>EXPERT<br/>iOS/Android Dev<br/>📲 Mobile Apps"]):::low
-        DESIGN(["🎨<br/>UI/UX<br/>DESIGNER<br/>User Interface/UX<br/>✨ Design Systems"]):::low
-    end
+    AIML(["🎨<br/><br/>AI/ML<br/>VISIONARY<br/>🤖 INTELLIGENCE<br/>FORGE<br/>🧠 ML<br/>ALCHEMY<br/><br/>🎨"]:::low)
+    MOBILE(["📱<br/><br/>MOBILE<br/>MAGICIAN<br/>📱 IOS/ANDROID<br/>SORCERER<br/>✨ FLUID<br/>MOBILE UI<br/><br/>📱"]:::low)
+    DESIGN(["🎭<br/><br/>UI/UX<br/>ENCHANTER<br/>✨ DESIGN<br/>MAESTRO<br/>🌟 PIXEL<br/>POETRY<br/><br/>🎭"]:::low)
 
-    %% Connections with styling
-    ORCHESTRATOR --> SECURITY
-    SECURITY --> FRONTEND
-    FRONTEND --> BACKEND
-    BACKEND --> DATABASE
+    %% ✨ EPIC CONNECTIONS WITH GRADIENTS
+    ORCHESTRATOR -.->|👑 DELEGATES| SECURITY
+    SECURITY -.->|🔥 IGNITES| FRONTEND
+    FRONTEND -.->|🔗 CHAINS| BACKEND
+    BACKEND -.->|🎯 TARGETS| DATABASE
+    DATABASE -.->|🚀 BLASTS| DEVOPS
+    DEVOPS -.->|🧪 TESTS| TESTING
+    TESTING -.->|⚡ ACCELERATES| PERFORMANCE
+    PERFORMANCE -.->|🔗 INTEGRATES| INTEGRATION
+    INTEGRATION -.->|📚 DOCUMENTATES| DOCUMENTATION
+    DOCUMENTATION -.->|🎨 EVOLVES| AIML
+    AIML -.->|📱 MOBILIZES| MOBILE
+    MOBILE -.->|🎭 DESIGNS| DESIGN
 
-    DATABASE --> DEVOPS
-    DEVOPS --> TESTING
-    TESTING --> PERFORMANCE
-    PERFORMANCE --> INTEGRATION
-    INTEGRATION --> DOCUMENTATION
-
-    DOCUMENTATION --> AIML
-    AIML --> MOBILE
-    MOBILE --> DESIGN
-
-    %% Legend
-    subgraph "📊 LEGEND"
+    %% 🌈 LEGEND WITH GLORY
+    subgraph "🏆 LEGEND OF THE SWARM"
         direction LR
-        CRITICAL_NODE(["🔴 CRITICAL<br/>Security & High Risk"]):::critical
-        HIGH_NODE(["🟢 HIGH<br/>Core Development"]):::high
-        MEDIUM_NODE(["🟡 MEDIUM<br/>Supporting Tech"]):::medium
-        LOW_NODE(["⚫ LOW<br/>Enhancement Features"]):::low
+        CRITICAL{{"🔴<br/>CRITICAL<br/>🛡️ FORTRESS"}}:::critical
+        HIGH{{"🟢<br/>HIGH<br/>💎 DIAMOND"}}:::high
+        MEDIUM{{"🟡<br/>MEDIUM<br/>🏅 GOLD"}}:::medium
+        LOW{{"⚫<br/>LOW<br/>🌑 SHADOW"}}:::low
     end
 ```
 
