@@ -145,35 +145,53 @@ function App() {
           <h3 className="text-3xl font-bold text-white mb-12 text-center">Modèles IA Intégrés KiloCode CLI</h3>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* KiloCode Features Card */}
-            <div className="block bg-gradient-to-br from-blue-900/20 to-blue-800/10 border border-blue-700/30 rounded-xl p-6">
+            {/* GLM 4.6 Card */}
+            <a
+              href="https://z.ai/model-api"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-gradient-to-br from-blue-900/20 to-blue-800/10 border border-blue-700/30 rounded-xl p-6 hover:shadow-2xl transition-all duration-300 hover:border-blue-600/50 hover:scale-[1.02] cursor-pointer"
+            >
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 bg-blue-600/20 rounded-lg p-2 flex-shrink-0 flex items-center justify-center">
-                  <span className="text-blue-400 text-3xl">⚡</span>
+                <div className="w-16 h-16 bg-blue-600/20 rounded-lg p-2 flex-shrink-0">
+                  <img
+                    src="/asset/image.png"
+                    alt="GLM 4.6 Model"
+                    className="w-full h-full object-contain rounded"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="w-full h-full hidden items-center justify-center text-blue-400 text-2xl font-bold">
+                    GLM
+                  </div>
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-xl font-semibold text-white mb-2">Modes de Fonctionnement</h4>
+                  <h4 className="text-xl font-semibold text-white mb-2">GLM 4.6</h4>
                   <p className="text-gray-400 text-sm mb-3">
-                    5 modes spécialisés pour maximiser votre productivité de développement.
+                    Modèle de langage avancé avec reasoning complexes et traitement multimodal.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-3">
-                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Architect</span>
-                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Code</span>
-                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Ask</span>
-                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Debug</span>
-                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Orchestrator</span>
+                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Reasoning</span>
+                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">Multimodal</span>
+                    <span className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full">256K context</span>
                   </div>
                   <div className="text-xs text-gray-500">
-                    <strong>Usage:</strong> Architecture, développement, assistance, débogage, orchestration
+                    <strong>Utilisation:</strong> Analyse complexe, code generation, RAG
                   </div>
                 </div>
               </div>
               <div className="text-right">
-                <span className="text-blue-400 text-xs font-semibold">
-                  CLI Intégré
+                <span className="text-blue-400 text-xs font-semibold flex items-center justify-end gap-1">
+                  Visiter le site
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
                 </span>
               </div>
-            </div>
+            </a>
 
             {/* Minimax M2 Card */}
             <a
@@ -199,7 +217,7 @@ function App() {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-xl font-semibold text-white mb-2">⭐ minimax/minimax-m2:free</h4>
+                  <h4 className="text-xl font-semibold text-white mb-2">minimax/minimax-m2:free</h4>
                   <p className="text-gray-400 text-sm mb-3">
                     MiniMax: MiniMax M2 (gratuit) - Modèle de nouvelle génération optimisé pour le reasoning.
                   </p>
@@ -247,7 +265,7 @@ function App() {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-xl font-semibold text-white mb-2">⭐ x-ai/grok-code-fast-1</h4>
+                  <h4 className="text-xl font-semibold text-white mb-2">x-ai/grok-code-fast-1</h4>
                   <p className="text-gray-400 text-sm mb-3">
                     xAI: Grok Code Fast 1 (gratuit) - Modèle de codage ultra-rapide pour développement moderne.
                   </p>
