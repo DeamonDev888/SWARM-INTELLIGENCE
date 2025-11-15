@@ -148,53 +148,56 @@ export KILOCODE_MODEL=x-ai/grok-code-fast-1
 ### Hiérarchie des Agents
 
 ```mermaid
-graph TD
-    %% 🌟 ULTRA PREMIUM 4K STYLE
-    classDef orchestrator fill:#1e1b4b,stroke:#3b82f6,stroke-width:5px,stroke-dasharray:10,color:#60a5fa,font-weight:bolder
-    classDef critical fill:#7f1d1d,stroke:#dc2626,stroke-width:4px,color:#fca5a5,font-weight:bold
-    classDef high fill:#064e3b,stroke:#10b981,stroke-width:3px,color:#6ee7b7,font-weight:bold
-    classDef medium fill:#78350f,stroke:#f59e0b,stroke-width:3px,color:#fcd34d,font-weight:bold
-    classDef low fill:#111827,stroke:#6b7280,stroke-width:2px,color:#d1d5db
+flowchart TD
+    %% 🎨 ULTRA COMPACT 4K STYLE
+    classDef orchestrator fill:#1e1b4b,stroke:#3b82f6,stroke-width:4px,color:#60a5fa,font-weight:bolder,font-size:12px
+    classDef critical fill:#7f1d1d,stroke:#dc2626,stroke-width:3px,color:#fca5a5,font-weight:bold,font-size:11px
+    classDef high fill:#064e3b,stroke:#10b981,stroke-width:3px,color:#6ee7b7,font-weight:bold,font-size:11px
+    classDef medium fill:#78350f,stroke:#f59e0b,stroke-width:2px,color:#fcd34d,font-weight:bold,font-size:10px
+    classDef low fill:#374151,stroke:#6b7280,stroke-width:2px,color:#d1d5db,font-size:10px
 
-    %% 🎖️ ELITE SWARM AGENTS
-    ORCHESTRATOR[🎖️ ORCHESTRATEUR ULTIMATE<br/>🧠 MASTER COORDINATOR<br/>⚔️ STRATEGIC PLANNING]:::orchestrator
+    %% 🏛️ COMMAND CENTER
+    ORCHESTRATOR[🎖️<br/>ORCHESTRATEUR<br/>ULTIMATE]:::orchestrator
 
-    SECURITY[🔐 SECURITY GUARDIAN<br/>🛡️ CYBER DEFENDER<br/>⚡ CRITICAL SHIELD]:::critical
+    %% 🔒 CRITICAL LAYER
+    SECURITY[🔐<br/>SECURITY<br/>GUARDIAN]:::critical
 
-    FRONTEND[💎 FRONTEND NINJA<br/>⚛️ REACT MASTER<br/>🚀 BLAZING FAST UI]:::high
-    BACKEND[⚙️ BACKEND ARCHITECT<br/>🐍 PYTHON ARTISAN<br/>🔥 SCALABLE API FORGE]:::high
-    DATABASE[🎯 DATABASE MASTER<br/>🗄️ DATA COMMANDER<br/>🚀 HYPER PERFORMANCE]:::high
+    %% 🟢 HIGH PRIORITY CLUSTER
+    subgraph HIGH_CLUSTER[🟢 HIGH PRIORITY]
+        FRONTEND[💎<br/>FRONTEND<br/>NINJA]:::high
+        BACKEND[⚙️<br/>BACKEND<br/>ARCHITECT]:::high
+        DATABASE[🎯<br/>DATABASE<br/>MASTER]:::high
+    end
 
-    DEVOPS[🚀 DEVOPS COMMANDO<br/>⚡ CI/CD WARRIOR<br/>🔄 INFRA AUTOMATION]:::medium
-    TESTING[🧪 TESTING SAGE<br/>🔍 QA VIRTUOSO<br/>✅ FLAWLESS QUALITY]:::medium
-    PERFORMANCE[⚡ PERFORMANCE PHANTOM<br/>📊 SPEED DEMON<br/>🚀 LIGHTNING OPTIMIZER]:::medium
-    INTEGRATION[🔗 INTEGRATION ARTIST<br/>🌐 API HARMONY<br/>🤝 SYSTEM SYMPHONY]:::medium
-    DOCUMENTATION[📚 DOCUMENTATION SCRIBE<br/>📖 TECH STORYTELLER<br/>✨ FLAWLESS LORE]:::medium
+    %% 🟡 MEDIUM PRIORITY CLUSTER
+    subgraph MEDIUM_CLUSTER[🟡 MEDIUM PRIORITY]
+        DEVOPS[🚀<br/>DEVOPS<br/>COMMANDO]:::medium
+        TESTING[🧪<br/>TESTING<br/>SAGE]:::medium
+        PERFORMANCE[⚡<br/>PERFORMANCE<br/>PHANTOM]:::medium
+        INTEGRATION[🔗<br/>INTEGRATION<br/>ARTIST]:::medium
+        DOCUMENTATION[📚<br/>DOCUMENTATION<br/>SCRIBE]:::medium
+    end
 
-    AIML[🎨 AI/ML VISIONARY<br/>🤖 INTELLIGENCE FORGE<br/>🧠 ML ALCHEMY]:::low
-    MOBILE[📱 MOBILE MAGICIAN<br/>📱 IOS/ANDROID SORCERER<br/>✨ FLUID MOBILE UI]:::low
-    DESIGN[🎭 UI/UX ENCHANTER<br/>✨ DESIGN MAESTRO<br/>🌟 PIXEL POETRY]:::low
+    %% ⚪ LOW PRIORITY CLUSTER
+    subgraph LOW_CLUSTER[⚫ LOW PRIORITY]
+        AIML[🎨<br/>AI/ML<br/>VISIONARY]:::low
+        MOBILE[📱<br/>MOBILE<br/>MAGICIAN]:::low
+        DESIGN[🎭<br/>UI/UX<br/>ENCHANTER]:::low
+    end
 
-    %% ⚡ POWERFUL CONNECTIONS
-    ORCHESTRATOR -->|👑 DELEGATES TO| SECURITY
-    SECURITY -->|🔥 IGNITES| FRONTEND
-    FRONTEND -->|🔗 CHAINS| BACKEND
-    BACKEND -->|🎯 TARGETS| DATABASE
-    DATABASE -->|🚀 BLASTS| DEVOPS
-    DEVOPS -->|🧪 TESTS| TESTING
-    TESTING -->|⚡ ACCELERATES| PERFORMANCE
-    PERFORMANCE -->|🔗 INTEGRATES| INTEGRATION
-    INTEGRATION -->|📚 DOCUMENTATES| DOCUMENTATION
-    DOCUMENTATION -->|🎨 EVOLVES| AIML
-    AIML -->|📱 MOBILIZES| MOBILE
-    MOBILE -->|🎭 DESIGNS| DESIGN
+    %% ⚡ COMPACT CONNECTIONS
+    ORCHESTRATOR -->|👑| SECURITY
+    SECURITY --> HIGH_CLUSTER
+    HIGH_CLUSTER --> MEDIUM_CLUSTER
+    MEDIUM_CLUSTER --> LOW_CLUSTER
 
-    %% 🏆 LEGEND OF CHAMPIONS
-    subgraph LEGEND[🏆 EPIC AGENT TIERS]
-        CRITICAL[🔴 CRITICAL - 🛡️ FORTRESS]:::critical
-        HIGH[🟢 HIGH - 💎 DIAMOND]:::high
-        MEDIUM[🟡 MEDIUM - 🏅 GOLD]:::medium
-        LOW[⚫ LOW - 🌑 SHADOW]:::low
+    %% 🏆 LEGEND
+    subgraph LEGEND[🏆 TIERS LEGEND]
+        direction LR
+        CRIT[🔴 CRITICAL<br/>🛡️ FORTRESS]:::critical
+        HIG[🟢 HIGH<br/>💎 DIAMOND]:::high
+        MED[🟡 MEDIUM<br/>🏅 GOLD]:::medium
+        LO[⚫ LOW<br/>🌑 SHADOW]:::low
     end
 ```
 
